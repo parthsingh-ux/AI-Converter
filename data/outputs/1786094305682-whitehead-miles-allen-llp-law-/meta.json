@@ -1,0 +1,34 @@
+{
+  "id": "1786094305682-whitehead-miles-allen-llp-law-",
+  "timestamp": 1786094305682,
+  "title": "Whitehead Miles & Allen LLP - Law Firm Website",
+  "inputType": "multi_files",
+  "summary": {
+    "colors": [
+      "#2B2723",
+      "#A62A2A",
+      "#6E665C",
+      "#EDE7DD",
+      "#DBD3C6",
+      "#1A1612",
+      "#FAF6F0"
+    ],
+    "fonts": [
+      "Cormorant Garamond",
+      "Source Sans 3",
+      "Inter"
+    ],
+    "section_count": 14
+  },
+  "tokenUsage": {
+    "promptTokens": 114860,
+    "outputTokens": 10042,
+    "totalTokens": 125652,
+    "tokenLimitPerMinute": 250000,
+    "tokensRemainingPerMinute": 135140,
+    "usedModelName": "gemini-flash-latest"
+  },
+  "downloadUrl": "/api/download/1786094305682-whitehead-miles-allen-llp-law-?type=zip",
+  "jsonDownloadUrl": "/api/download/1786094305682-whitehead-miles-allen-llp-law-?type=json",
+  "createdAt": "2026-08-07T09:18:25.682Z"
+}

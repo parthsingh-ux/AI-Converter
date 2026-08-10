@@ -1,0 +1,23 @@
+{
+  "id": "1786016280190-plumbio-plumbing-services-them",
+  "timestamp": 1786016280190,
+  "title": "Plumbio Plumbing & Services Theme",
+  "inputType": "image",
+  "summary": {
+    "colors": [
+      "#184a8c",
+      "#3898ec",
+      "#ff5722",
+      "#ffffff",
+      "#0f172a"
+    ],
+    "fonts": [
+      "Montserrat",
+      "Inter"
+    ],
+    "section_count": 1
+  },
+  "downloadUrl": "/api/download/1786016280190-plumbio-plumbing-services-them?type=zip",
+  "jsonDownloadUrl": "/api/download/1786016280190-plumbio-plumbing-services-them?type=json",
+  "createdAt": "2026-08-06T11:38:00.190Z"
+}

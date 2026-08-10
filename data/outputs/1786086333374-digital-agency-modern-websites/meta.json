@@ -1,0 +1,34 @@
+{
+  "id": "1786086333374-digital-agency-modern-websites",
+  "timestamp": 1786086333374,
+  "title": "Digital Agency - Modern Websites That Grow Your Business",
+  "inputType": "json",
+  "summary": {
+    "colors": [
+      "#0f172a",
+      "#1e293b",
+      "#3b82f6",
+      "#64748b",
+      "#f8fafc",
+      "#ffffff",
+      "#10b981",
+      "#e2e8f0"
+    ],
+    "fonts": [
+      "Inter",
+      "Poppins"
+    ],
+    "section_count": 4
+  },
+  "tokenUsage": {
+    "promptTokens": 2723,
+    "outputTokens": 12567,
+    "totalTokens": 16511,
+    "tokenLimitPerMinute": 250000,
+    "tokensRemainingPerMinute": 247277,
+    "usedModelName": "gemini-3.6-flash"
+  },
+  "downloadUrl": "/api/download/1786086333374-digital-agency-modern-websites?type=zip",
+  "jsonDownloadUrl": "/api/download/1786086333374-digital-agency-modern-websites?type=json",
+  "createdAt": "2026-08-07T07:05:33.374Z"
+}

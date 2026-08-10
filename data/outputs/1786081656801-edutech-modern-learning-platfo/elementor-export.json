@@ -1,0 +1,768 @@
+{
+  "version": "0.4",
+  "title": "EduTech Modern Learning Platform Hero",
+  "type": "page",
+  "page_settings": {},
+  "content": [
+    {
+      "id": "h101f2a",
+      "elType": "container",
+      "settings": {
+        "display": "flex",
+        "flex_direction": "row",
+        "flex_justify_content": "space-between",
+        "flex_align_items": "center",
+        "background_color": "#ffffff",
+        "padding": {
+          "top": "20",
+          "bottom": "20",
+          "left": "50",
+          "right": "50",
+          "unit": "px"
+        }
+      },
+      "elements": [
+        {
+          "id": "h102f2b",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "row",
+            "flex_align_items": "center"
+          },
+          "elements": [
+            {
+              "id": "h103f2c",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "EduSphere",
+                "title_color": "#1e293b",
+                "typography_font_family": "Inter",
+                "typography_font_size": {
+                  "size": 24,
+                  "unit": "px"
+                },
+                "typography_font_weight": "800"
+              }
+            }
+          ]
+        },
+        {
+          "id": "h104f2d",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "row",
+            "flex_justify_content": "space-between",
+            "flex_align_items": "center",
+            "gap": "30px"
+          },
+          "elements": [
+            {
+              "id": "h105f2e",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Home",
+                "title_color": "#1e293b",
+                "typography_font_size": {
+                  "size": 16,
+                  "unit": "px"
+                }
+              }
+            },
+            {
+              "id": "h106f2f",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Courses",
+                "title_color": "#64748b",
+                "typography_font_size": {
+                  "size": 16,
+                  "unit": "px"
+                }
+              }
+            },
+            {
+              "id": "h107f2g",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Mentors",
+                "title_color": "#64748b",
+                "typography_font_size": {
+                  "size": 16,
+                  "unit": "px"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "h108f2h",
+          "elType": "widget",
+          "widgetType": "button",
+          "settings": {
+            "text": "Get Started",
+            "button_type": "success",
+            "background_color": "#ffb04c",
+            "text_color": "#ffffff",
+            "border_radius": {
+              "top": "8",
+              "right": "8",
+              "bottom": "8",
+              "left": "8",
+              "unit": "px"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "c201f2a",
+      "elType": "container",
+      "settings": {
+        "display": "flex",
+        "flex_direction": "row",
+        "flex_justify_content": "space-between",
+        "flex_align_items": "center",
+        "background_background": "gradient",
+        "background_color": "#e2f4ec",
+        "background_color_b": "#ffffff",
+        "padding": {
+          "top": "80",
+          "bottom": "80",
+          "left": "50",
+          "right": "50",
+          "unit": "px"
+        }
+      },
+      "elements": [
+        {
+          "id": "c202f2b",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "column",
+            "width": "50%",
+            "gap": "24px"
+          },
+          "elements": [
+            {
+              "id": "c203f2c",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Knowledge is an investment that will never lose",
+                "title_color": "#1e293b",
+                "typography_font_family": "Inter",
+                "typography_font_size": {
+                  "size": 56,
+                  "unit": "px"
+                },
+                "typography_font_weight": "800",
+                "typography_line_height": {
+                  "size": 1.15,
+                  "unit": "em"
+                }
+              }
+            },
+            {
+              "id": "c204f2d",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "Improve your skill and knowledge for better career and future.",
+                "text_color": "#64748b",
+                "typography_font_size": {
+                  "size": 18,
+                  "unit": "px"
+                }
+              }
+            },
+            {
+              "id": "c205f2e",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "row",
+                "background_color": "#ffffff",
+                "padding": {
+                  "top": "8",
+                  "bottom": "8",
+                  "left": "16",
+                  "right": "8",
+                  "unit": "px"
+                },
+                "border_radius": {
+                  "top": "12",
+                  "right": "12",
+                  "bottom": "12",
+                  "left": "12",
+                  "unit": "px"
+                },
+                "flex_justify_content": "space-between",
+                "flex_align_items": "center",
+                "width": "80%"
+              },
+              "elements": [
+                {
+                  "id": "c206f2f",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "Search here",
+                    "text_color": "#94a3b8"
+                  }
+                },
+                {
+                  "id": "c207f2g",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "settings": {
+                    "text": "Search",
+                    "background_color": "#ffb04c",
+                    "text_color": "#ffffff",
+                    "icon": "fa fa-search",
+                    "border_radius": {
+                      "top": "8",
+                      "right": "8",
+                      "bottom": "8",
+                      "left": "8",
+                      "unit": "px"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "c208f2h",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "column",
+            "width": "50%",
+            "flex_justify_content": "center",
+            "flex_align_items": "center"
+          },
+          "elements": [
+            {
+              "id": "c209f2i",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "background_color": "#ffb04c",
+                "border_radius": {
+                  "top": "500",
+                  "right": "500",
+                  "bottom": "500",
+                  "left": "500",
+                  "unit": "px"
+                },
+                "width": "400px",
+                "height": "400px",
+                "flex_justify_content": "center",
+                "flex_align_items": "flex-end"
+              },
+              "elements": [
+                {
+                  "id": "c210f2j",
+                  "elType": "widget",
+                  "widgetType": "image",
+                  "settings": {
+                    "image": {
+                      "url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c301f2a",
+      "elType": "container",
+      "settings": {
+        "display": "flex",
+        "flex_direction": "row",
+        "flex_justify_content": "space-between",
+        "flex_align_items": "center",
+        "background_color": "#ffffff",
+        "padding": {
+          "top": "60",
+          "bottom": "60",
+          "left": "50",
+          "right": "50",
+          "unit": "px"
+        }
+      },
+      "elements": [
+        {
+          "id": "c302f2b",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "column",
+            "width": "20%"
+          },
+          "elements": [
+            {
+              "id": "c303f2c",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Our Programs",
+                "title_color": "#1e293b",
+                "typography_font_family": "Inter",
+                "typography_font_size": {
+                  "size": 32,
+                  "unit": "px"
+                },
+                "typography_font_weight": "800"
+              }
+            }
+          ]
+        },
+        {
+          "id": "c304f2d",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "row",
+            "width": "80%",
+            "flex_justify_content": "space-between",
+            "gap": "20px"
+          },
+          "elements": [
+            {
+              "id": "c305f2e",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "column",
+                "flex_align_items": "center",
+                "background_color": "#f1fbf7",
+                "padding": {
+                  "top": "24",
+                  "bottom": "24",
+                  "left": "24",
+                  "right": "24",
+                  "unit": "px"
+                },
+                "border_radius": {
+                  "top": "16",
+                  "right": "16",
+                  "bottom": "16",
+                  "left": "16",
+                  "unit": "px"
+                },
+                "width": "23%"
+              },
+              "elements": [
+                {
+                  "id": "c306f2f",
+                  "elType": "widget",
+                  "widgetType": "icon",
+                  "settings": {
+                    "icon": "fa fa-code",
+                    "primary_color": "#ffb04c"
+                  }
+                },
+                {
+                  "id": "c307f2g",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Development",
+                    "title_color": "#1e293b",
+                    "typography_font_size": {
+                      "size": 16,
+                      "unit": "px"
+                    },
+                    "typography_font_weight": "600"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "c308f2h",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "column",
+                "flex_align_items": "center",
+                "background_color": "#ffffff",
+                "padding": {
+                  "top": "24",
+                  "bottom": "24",
+                  "left": "24",
+                  "right": "24",
+                  "unit": "px"
+                },
+                "border_radius": {
+                  "top": "16",
+                  "right": "16",
+                  "bottom": "16",
+                  "left": "16",
+                  "unit": "px"
+                },
+                "width": "23%"
+              },
+              "elements": [
+                {
+                  "id": "c309f2i",
+                  "elType": "widget",
+                  "widgetType": "icon",
+                  "settings": {
+                    "icon": "fa fa-laptop",
+                    "primary_color": "#64748b"
+                  }
+                },
+                {
+                  "id": "c310f2j",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "IT & Software",
+                    "title_color": "#64748b",
+                    "typography_font_size": {
+                      "size": 16,
+                      "unit": "px"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "c311f2k",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "column",
+                "flex_align_items": "center",
+                "background_color": "#ffffff",
+                "padding": {
+                  "top": "24",
+                  "bottom": "24",
+                  "left": "24",
+                  "right": "24",
+                  "unit": "px"
+                },
+                "border_radius": {
+                  "top": "16",
+                  "right": "16",
+                  "bottom": "16",
+                  "left": "16",
+                  "unit": "px"
+                },
+                "width": "23%"
+              },
+              "elements": [
+                {
+                  "id": "c312f2l",
+                  "elType": "widget",
+                  "widgetType": "icon",
+                  "settings": {
+                    "icon": "fa fa-paint-brush",
+                    "primary_color": "#64748b"
+                  }
+                },
+                {
+                  "id": "c313f2m",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Design",
+                    "title_color": "#64748b",
+                    "typography_font_size": {
+                      "size": 16,
+                      "unit": "px"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "c314f2n",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "column",
+                "flex_align_items": "center",
+                "background_color": "#ffffff",
+                "padding": {
+                  "top": "24",
+                  "bottom": "24",
+                  "left": "24",
+                  "right": "24",
+                  "unit": "px"
+                },
+                "border_radius": {
+                  "top": "16",
+                  "right": "16",
+                  "bottom": "16",
+                  "left": "16",
+                  "unit": "px"
+                },
+                "width": "23%"
+              },
+              "elements": [
+                {
+                  "id": "c315f2o",
+                  "elType": "widget",
+                  "widgetType": "icon",
+                  "settings": {
+                    "icon": "fa fa-comments",
+                    "primary_color": "#64748b"
+                  }
+                },
+                {
+                  "id": "c316f2p",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Speaking",
+                    "title_color": "#64748b",
+                    "typography_font_size": {
+                      "size": 16,
+                      "unit": "px"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "f401f2a",
+      "elType": "container",
+      "settings": {
+        "display": "flex",
+        "flex_direction": "column",
+        "background_color": "#1e293b",
+        "padding": {
+          "top": "60",
+          "bottom": "30",
+          "left": "50",
+          "right": "50",
+          "unit": "px"
+        }
+      },
+      "elements": [
+        {
+          "id": "f402f2b",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "row",
+            "flex_justify_content": "space-between",
+            "gap": "40px"
+          },
+          "elements": [
+            {
+              "id": "f403f2c",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "column",
+                "width": "30%",
+                "gap": "16px"
+              },
+              "elements": [
+                {
+                  "id": "f404f2d",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "EduSphere",
+                    "title_color": "#ffffff",
+                    "typography_font_size": {
+                      "size": 24,
+                      "unit": "px"
+                    }
+                  }
+                },
+                {
+                  "id": "f405f2e",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "Empowering learners worldwide with top-tier courses and expert mentorship.",
+                    "text_color": "#94a3b8"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "f406f2f",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "column",
+                "width": "20%",
+                "gap": "12px"
+              },
+              "elements": [
+                {
+                  "id": "f407f2g",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Quick Links",
+                    "title_color": "#ffffff",
+                    "typography_font_size": {
+                      "size": 18,
+                      "unit": "px"
+                    }
+                  }
+                },
+                {
+                  "id": "f408f2h",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "About Us<br>Courses<br>Mentors<br>Contact",
+                    "text_color": "#94a3b8"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "f409f2i",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "column",
+                "width": "40%",
+                "gap": "16px"
+              },
+              "elements": [
+                {
+                  "id": "f410f2j",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Subscribe to Newsletter",
+                    "title_color": "#ffffff",
+                    "typography_font_size": {
+                      "size": 18,
+                      "unit": "px"
+                    }
+                  }
+                },
+                {
+                  "id": "f411f2k",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "display": "flex",
+                    "flex_direction": "row",
+                    "background_color": "#334155",
+                    "padding": {
+                      "top": "6",
+                      "bottom": "6",
+                      "left": "12",
+                      "right": "6",
+                      "unit": "px"
+                    },
+                    "border_radius": {
+                      "top": "8",
+                      "right": "8",
+                      "bottom": "8",
+                      "left": "8",
+                      "unit": "px"
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "f412f2l",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "Your email address",
+                        "text_color": "#94a3b8"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "f413f2m",
+          "elType": "widget",
+          "widgetType": "divider",
+          "settings": {
+            "color": "#334155",
+            "gap": {
+              "size": 40,
+              "unit": "px"
+            }
+          }
+        },
+        {
+          "id": "f414f2n",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+            "editor": "© 2024 EduSphere. All rights reserved.",
+            "text_color": "#64748b",
+            "align": "center"
+          }
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "colors": [
+      "#1e293b",
+      "#ffb04c",
+      "#e2f4ec",
+      "#64748b",
+      "#ffffff"
+    ],
+    "fonts": [
+      "Inter",
+      "System-UI"
+    ],
+    "section_count": 2
+  },
+  "global_classes": {
+    "primary_btn": {
+      "background_color": "#ffb04c",
+      "text_color": "#ffffff",
+      "border_radius": "8px",
+      "font_family": "Inter"
+    },
+    "section_title": {
+      "title_color": "#1e293b",
+      "font_family": "Inter",
+      "font_weight": "800"
+    }
+  }
+}

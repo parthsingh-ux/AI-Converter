@@ -1,0 +1,1356 @@
+{
+  "version": "0.4",
+  "title": "Apex Plumbing Co. - High-Converting Hero & Services Layout",
+  "type": "page",
+  "page_settings": {},
+  "content": [
+    {
+      "id": "hdr_top_bar",
+      "elType": "container",
+      "settings": {
+        "display": "flex",
+        "flex_direction": "row",
+        "flex_justify_content": "space-between",
+        "flex_align_items": "center",
+        "background_background": "classic",
+        "background_color": "#0F172A",
+        "padding": {
+          "top": "10",
+          "bottom": "10",
+          "left": "40",
+          "right": "40",
+          "unit": "px"
+        }
+      },
+      "elements": [
+        {
+          "id": "hdr_top_left",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "row",
+            "flex_align_items": "center",
+            "gap": "20"
+          },
+          "elements": [
+            {
+              "id": "hdr_notice_txt",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<span style='color: #FF6B00; font-weight: bold;'>🚨 24/7 Emergency Dispatch:</span> <span style='color: #FFFFFF;'>Licensed Technicians On Call Today</span>",
+                "typography_font_family": "Inter",
+                "typography_font_size": {
+                  "size": 13,
+                  "unit": "px"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "hdr_top_right",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "row",
+            "flex_align_items": "center",
+            "gap": "15"
+          },
+          "elements": [
+            {
+              "id": "hdr_phone_link",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "📞 (800) 555-APEX",
+                "header_size": "p",
+                "title_color": "#FFFFFF",
+                "typography_font_family": "Plus Jakarta Sans",
+                "typography_font_size": {
+                  "size": 14,
+                  "unit": "px"
+                },
+                "typography_font_weight": "700"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hdr_main_nav",
+      "elType": "container",
+      "settings": {
+        "display": "flex",
+        "flex_direction": "row",
+        "flex_justify_content": "space-between",
+        "flex_align_items": "center",
+        "background_background": "classic",
+        "background_color": "#FFFFFF",
+        "padding": {
+          "top": "16",
+          "bottom": "16",
+          "left": "40",
+          "right": "40",
+          "unit": "px"
+        },
+        "box_shadow": "0px 4px 20px rgba(0, 0, 0, 0.05)"
+      },
+      "elements": [
+        {
+          "id": "hdr_logo_col",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "row",
+            "flex_align_items": "center"
+          },
+          "elements": [
+            {
+              "id": "hdr_logo_heading",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Apex Plumbing<span style='color:#0284C7;'>.</span>",
+                "header_size": "h2",
+                "title_color": "#0F172A",
+                "typography_font_family": "Plus Jakarta Sans",
+                "typography_font_size": {
+                  "size": 26,
+                  "unit": "px"
+                },
+                "typography_font_weight": "800"
+              }
+            }
+          ]
+        },
+        {
+          "id": "hdr_links_col",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "row",
+            "flex_align_items": "center",
+            "gap": "30"
+          },
+          "elements": [
+            {
+              "id": "hdr_nav_items",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<div style='display: flex; gap: 24px; font-family: Inter; font-weight: 600; font-size: 15px;'><a href='#services' style='color: #0F172A; text-decoration: none;'>Services</a><a href='#emergency' style='color: #0F172A; text-decoration: none;'>Emergency Services</a><a href='#about' style='color: #0F172A; text-decoration: none;'>About Us</a><a href='#reviews' style='color: #0F172A; text-decoration: none;'>Reviews</a></div>"
+              }
+            }
+          ]
+        },
+        {
+          "id": "hdr_cta_col",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "row",
+            "flex_align_items": "center",
+            "gap": "15"
+          },
+          "elements": [
+            {
+              "id": "hdr_btn_book",
+              "elType": "widget",
+              "widgetType": "button",
+              "settings": {
+                "text": "Book Online",
+                "button_type": "default",
+                "background_color": "#0284C7",
+                "text_color": "#FFFFFF",
+                "typography_font_family": "Plus Jakarta Sans",
+                "typography_font_weight": "700",
+                "border_radius": {
+                  "unit": "px",
+                  "top": "6",
+                  "right": "6",
+                  "bottom": "6",
+                  "left": "6"
+                },
+                "padding": {
+                  "top": "12",
+                  "bottom": "12",
+                  "left": "24",
+                  "right": "24",
+                  "unit": "px"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec_hero",
+      "elType": "container",
+      "settings": {
+        "display": "flex",
+        "flex_direction": "row",
+        "flex_justify_content": "space-between",
+        "flex_align_items": "center",
+        "background_background": "classic",
+        "background_color": "#F8FAFC",
+        "padding": {
+          "top": "80",
+          "bottom": "80",
+          "left": "40",
+          "right": "40",
+          "unit": "px"
+        },
+        "gap": "40"
+      },
+      "elements": [
+        {
+          "id": "hero_text_container",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "column",
+            "flex_justify_content": "center",
+            "width": {
+              "size": 52,
+              "unit": "%"
+            },
+            "gap": "20"
+          },
+          "elements": [
+            {
+              "id": "hero_badge",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "● Top-Rated Local Plumbing Experts",
+                "header_size": "span",
+                "title_color": "#0284C7",
+                "background_color": "#E0F2FE",
+                "typography_font_family": "Inter",
+                "typography_font_size": {
+                  "size": 13,
+                  "unit": "px"
+                },
+                "typography_font_weight": "700",
+                "padding": {
+                  "top": "6",
+                  "bottom": "6",
+                  "left": "14",
+                  "right": "14",
+                  "unit": "px"
+                },
+                "border_radius": {
+                  "unit": "px",
+                  "top": "20",
+                  "right": "20",
+                  "bottom": "20",
+                  "left": "20"
+                }
+              }
+            },
+            {
+              "id": "hero_headline",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Fast, Reliable Plumbing Services Available 24/7",
+                "header_size": "h1",
+                "title_color": "#0F172A",
+                "typography_font_family": "Plus Jakarta Sans",
+                "typography_font_size": {
+                  "size": 48,
+                  "unit": "px"
+                },
+                "typography_font_weight": "800",
+                "typography_line_height": {
+                  "size": 1.15,
+                  "unit": "em"
+                }
+              }
+            },
+            {
+              "id": "hero_subheadline",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "Licensed professionals, transparent upfront pricing, and quick response times for residential and commercial plumbing emergencies.",
+                "text_color": "#475569",
+                "typography_font_family": "Inter",
+                "typography_font_size": {
+                  "size": 18,
+                  "unit": "px"
+                },
+                "typography_line_height": {
+                  "size": 1.6,
+                  "unit": "em"
+                }
+              }
+            },
+            {
+              "id": "hero_cta_group",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "row",
+                "flex_align_items": "center",
+                "gap": "16",
+                "margin": {
+                  "top": "10",
+                  "bottom": "10",
+                  "left": "0",
+                  "right": "0",
+                  "unit": "px"
+                }
+              },
+              "elements": [
+                {
+                  "id": "btn_primary_estimate",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "settings": {
+                    "text": "Get a Free Estimate",
+                    "background_color": "#FF6B00",
+                    "text_color": "#FFFFFF",
+                    "typography_font_family": "Plus Jakarta Sans",
+                    "typography_font_size": {
+                      "size": 16,
+                      "unit": "px"
+                    },
+                    "typography_font_weight": "700",
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "8",
+                      "right": "8",
+                      "bottom": "8",
+                      "left": "8"
+                    },
+                    "padding": {
+                      "top": "16",
+                      "bottom": "16",
+                      "left": "30",
+                      "right": "30",
+                      "unit": "px"
+                    }
+                  }
+                },
+                {
+                  "id": "btn_secondary_emergency",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "settings": {
+                    "text": "📞 Call for Emergency Service",
+                    "background_color": "#FFFFFF",
+                    "text_color": "#0F172A",
+                    "border_border": "solid",
+                    "border_color": "#CBD5E1",
+                    "border_width": {
+                      "top": "1",
+                      "right": "1",
+                      "bottom": "1",
+                      "left": "1",
+                      "unit": "px"
+                    },
+                    "typography_font_family": "Plus Jakarta Sans",
+                    "typography_font_size": {
+                      "size": 16,
+                      "unit": "px"
+                    },
+                    "typography_font_weight": "700",
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "8",
+                      "right": "8",
+                      "bottom": "8",
+                      "left": "8"
+                    },
+                    "padding": {
+                      "top": "16",
+                      "bottom": "16",
+                      "left": "24",
+                      "right": "24",
+                      "unit": "px"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "hero_trust_row",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "row",
+                "flex_align_items": "center",
+                "gap": "20",
+                "margin": {
+                  "top": "20",
+                  "bottom": "0",
+                  "left": "0",
+                  "right": "0",
+                  "unit": "px"
+                }
+              },
+              "elements": [
+                {
+                  "id": "trust_badge_1",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<div style='display:flex; align-items:center; gap:8px; font-family:Inter; font-size:13px; font-weight:600; color:#334155;'><span style='color:#EAB308;'>★★★★★</span> 5-Star Rated on Google</div>"
+                  }
+                },
+                {
+                  "id": "trust_badge_2",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<div style='display:flex; align-items:center; gap:8px; font-family:Inter; font-size:13px; font-weight:600; color:#334155;'><span style='color:#0284C7;'>⚡</span> 24/7 Rapid Response</div>"
+                  }
+                },
+                {
+                  "id": "trust_badge_3",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<div style='display:flex; align-items:center; gap:8px; font-family:Inter; font-size:13px; font-weight:600; color:#334155;'><span style='color:#16A34A;'>✓</span> Licensed & Insured</div>"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hero_image_container",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "column",
+            "flex_justify_content": "center",
+            "width": {
+              "size": 45,
+              "unit": "%"
+            }
+          },
+          "elements": [
+            {
+              "id": "hero_img_widget",
+              "elType": "widget",
+              "widgetType": "image",
+              "settings": {
+                "image": {
+                  "url": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80",
+                  "id": "img_plumber_hero"
+                },
+                "border_radius": {
+                  "unit": "px",
+                  "top": "16",
+                  "right": "16",
+                  "bottom": "16",
+                  "left": "16"
+                },
+                "box_shadow": "0px 20px 40px rgba(15, 23, 42, 0.12)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec_services",
+      "elType": "container",
+      "settings": {
+        "display": "flex",
+        "flex_direction": "column",
+        "flex_align_items": "center",
+        "background_background": "classic",
+        "background_color": "#FFFFFF",
+        "padding": {
+          "top": "80",
+          "bottom": "80",
+          "left": "40",
+          "right": "40",
+          "unit": "px"
+        },
+        "gap": "40"
+      },
+      "elements": [
+        {
+          "id": "services_header",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "column",
+            "flex_align_items": "center",
+            "gap": "10"
+          },
+          "elements": [
+            {
+              "id": "services_title",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Comprehensive Plumbing Solutions",
+                "header_size": "h2",
+                "title_color": "#0F172A",
+                "typography_font_family": "Plus Jakarta Sans",
+                "typography_font_size": {
+                  "size": 36,
+                  "unit": "px"
+                },
+                "typography_font_weight": "800"
+              }
+            },
+            {
+              "id": "services_subtitle",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "From urgent emergency leak repairs to complete system installations, our certified team handles it all.",
+                "text_color": "#64748B",
+                "typography_font_family": "Inter",
+                "typography_font_size": {
+                  "size": 16,
+                  "unit": "px"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "services_grid",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "row",
+            "flex_justify_content": "space-between",
+            "gap": "20",
+            "width": {
+              "size": 100,
+              "unit": "%"
+            }
+          },
+          "elements": [
+            {
+              "id": "srv_card_1",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "column",
+                "padding": {
+                  "top": "30",
+                  "bottom": "30",
+                  "left": "24",
+                  "right": "24",
+                  "unit": "px"
+                },
+                "background_color": "#F8FAFC",
+                "border_radius": {
+                  "unit": "px",
+                  "top": "12",
+                  "right": "12",
+                  "bottom": "12",
+                  "left": "12"
+                },
+                "width": {
+                  "size": 23,
+                  "unit": "%"
+                },
+                "gap": "12"
+              },
+              "elements": [
+                {
+                  "id": "card_1_icon",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "🚨",
+                    "header_size": "div",
+                    "typography_font_size": {
+                      "size": 32,
+                      "unit": "px"
+                    }
+                  }
+                },
+                {
+                  "id": "card_1_title",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Emergency Repairs",
+                    "header_size": "h3",
+                    "title_color": "#0F172A",
+                    "typography_font_family": "Plus Jakarta Sans",
+                    "typography_font_size": {
+                      "size": 20,
+                      "unit": "px"
+                    },
+                    "typography_font_weight": "700"
+                  }
+                },
+                {
+                  "id": "card_1_desc",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "24/7 immediate dispatch for burst pipes, major leaks, and severe sewer backups.",
+                    "text_color": "#64748B",
+                    "typography_font_family": "Inter",
+                    "typography_font_size": {
+                      "size": 14,
+                      "unit": "px"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "srv_card_2",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "column",
+                "padding": {
+                  "top": "30",
+                  "bottom": "30",
+                  "left": "24",
+                  "right": "24",
+                  "unit": "px"
+                },
+                "background_color": "#F8FAFC",
+                "border_radius": {
+                  "unit": "px",
+                  "top": "12",
+                  "right": "12",
+                  "bottom": "12",
+                  "left": "12"
+                },
+                "width": {
+                  "size": 23,
+                  "unit": "%"
+                },
+                "gap": "12"
+              },
+              "elements": [
+                {
+                  "id": "card_2_icon",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "🚰",
+                    "header_size": "div",
+                    "typography_font_size": {
+                      "size": 32,
+                      "unit": "px"
+                    }
+                  }
+                },
+                {
+                  "id": "card_2_title",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Drain & Sewer Cleaning",
+                    "header_size": "h3",
+                    "title_color": "#0F172A",
+                    "typography_font_family": "Plus Jakarta Sans",
+                    "typography_font_size": {
+                      "size": 20,
+                      "unit": "px"
+                    },
+                    "typography_font_weight": "700"
+                  }
+                },
+                {
+                  "id": "card_2_desc",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "Hydro-jetting and camera inspections to clear stubborn clogs completely.",
+                    "text_color": "#64748B",
+                    "typography_font_family": "Inter",
+                    "typography_font_size": {
+                      "size": 14,
+                      "unit": "px"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "srv_card_3",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "column",
+                "padding": {
+                  "top": "30",
+                  "bottom": "30",
+                  "left": "24",
+                  "right": "24",
+                  "unit": "px"
+                },
+                "background_color": "#F8FAFC",
+                "border_radius": {
+                  "unit": "px",
+                  "top": "12",
+                  "right": "12",
+                  "bottom": "12",
+                  "left": "12"
+                },
+                "width": {
+                  "size": 23,
+                  "unit": "%"
+                },
+                "gap": "12"
+              },
+              "elements": [
+                {
+                  "id": "card_3_icon",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "🔥",
+                    "header_size": "div",
+                    "typography_font_size": {
+                      "size": 32,
+                      "unit": "px"
+                    }
+                  }
+                },
+                {
+                  "id": "card_3_title",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Water Heaters",
+                    "header_size": "h3",
+                    "title_color": "#0F172A",
+                    "typography_font_family": "Plus Jakarta Sans",
+                    "typography_font_size": {
+                      "size": 20,
+                      "unit": "px"
+                    },
+                    "typography_font_weight": "700"
+                  }
+                },
+                {
+                  "id": "card_3_desc",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "Tankless and traditional water heater repair, replacement, and annual maintenance.",
+                    "text_color": "#64748B",
+                    "typography_font_family": "Inter",
+                    "typography_font_size": {
+                      "size": 14,
+                      "unit": "px"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "srv_card_4",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "column",
+                "padding": {
+                  "top": "30",
+                  "bottom": "30",
+                  "left": "24",
+                  "right": "24",
+                  "unit": "px"
+                },
+                "background_color": "#F8FAFC",
+                "border_radius": {
+                  "unit": "px",
+                  "top": "12",
+                  "right": "12",
+                  "bottom": "12",
+                  "left": "12"
+                },
+                "width": {
+                  "size": 23,
+                  "unit": "%"
+                },
+                "gap": "12"
+              },
+              "elements": [
+                {
+                  "id": "card_4_icon",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "🏢",
+                    "header_size": "div",
+                    "typography_font_size": {
+                      "size": 32,
+                      "unit": "px"
+                    }
+                  }
+                },
+                {
+                  "id": "card_4_title",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Commercial Plumbing",
+                    "header_size": "h3",
+                    "title_color": "#0F172A",
+                    "typography_font_family": "Plus Jakarta Sans",
+                    "typography_font_size": {
+                      "size": 20,
+                      "unit": "px"
+                    },
+                    "typography_font_weight": "700"
+                  }
+                },
+                {
+                  "id": "card_4_desc",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "Tailored maintenance and code-compliant plumbing services for commercial properties.",
+                    "text_color": "#64748B",
+                    "typography_font_family": "Inter",
+                    "typography_font_size": {
+                      "size": 14,
+                      "unit": "px"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec_stats",
+      "elType": "container",
+      "settings": {
+        "display": "flex",
+        "flex_direction": "row",
+        "flex_justify_content": "space-around",
+        "flex_align_items": "center",
+        "background_background": "classic",
+        "background_color": "#0F172A",
+        "padding": {
+          "top": "60",
+          "bottom": "60",
+          "left": "40",
+          "right": "40",
+          "unit": "px"
+        }
+      },
+      "elements": [
+        {
+          "id": "stat_item_1",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "column",
+            "flex_align_items": "center"
+          },
+          "elements": [
+            {
+              "id": "stat_num_1",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "15+",
+                "header_size": "h3",
+                "title_color": "#FF6B00",
+                "typography_font_family": "Plus Jakarta Sans",
+                "typography_font_size": {
+                  "size": 42,
+                  "unit": "px"
+                },
+                "typography_font_weight": "800"
+              }
+            },
+            {
+              "id": "stat_lbl_1",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Years Experience",
+                "header_size": "span",
+                "title_color": "#FFFFFF",
+                "typography_font_family": "Inter",
+                "typography_font_size": {
+                  "size": 14,
+                  "unit": "px"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "stat_item_2",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "column",
+            "flex_align_items": "center"
+          },
+          "elements": [
+            {
+              "id": "stat_num_2",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "25,000+",
+                "header_size": "h3",
+                "title_color": "#FF6B00",
+                "typography_font_family": "Plus Jakarta Sans",
+                "typography_font_size": {
+                  "size": 42,
+                  "unit": "px"
+                },
+                "typography_font_weight": "800"
+              }
+            },
+            {
+              "id": "stat_lbl_2",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Jobs Completed",
+                "header_size": "span",
+                "title_color": "#FFFFFF",
+                "typography_font_family": "Inter",
+                "typography_font_size": {
+                  "size": 14,
+                  "unit": "px"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "stat_item_3",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "column",
+            "flex_align_items": "center"
+          },
+          "elements": [
+            {
+              "id": "stat_num_3",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "15 Min",
+                "header_size": "h3",
+                "title_color": "#FF6B00",
+                "typography_font_family": "Plus Jakarta Sans",
+                "typography_font_size": {
+                  "size": 42,
+                  "unit": "px"
+                },
+                "typography_font_weight": "800"
+              }
+            },
+            {
+              "id": "stat_lbl_3",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Avg Emergency Response",
+                "header_size": "span",
+                "title_color": "#FFFFFF",
+                "typography_font_family": "Inter",
+                "typography_font_size": {
+                  "size": 14,
+                  "unit": "px"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "stat_item_4",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "column",
+            "flex_align_items": "center"
+          },
+          "elements": [
+            {
+              "id": "stat_num_4",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "100%",
+                "header_size": "h3",
+                "title_color": "#FF6B00",
+                "typography_font_family": "Plus Jakarta Sans",
+                "typography_font_size": {
+                  "size": 42,
+                  "unit": "px"
+                },
+                "typography_font_weight": "800"
+              }
+            },
+            {
+              "id": "stat_lbl_4",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Satisfaction Guarantee",
+                "header_size": "span",
+                "title_color": "#FFFFFF",
+                "typography_font_family": "Inter",
+                "typography_font_size": {
+                  "size": 14,
+                  "unit": "px"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec_cta_banner",
+      "elType": "container",
+      "settings": {
+        "display": "flex",
+        "flex_direction": "column",
+        "flex_align_items": "center",
+        "background_background": "classic",
+        "background_color": "#0284C7",
+        "padding": {
+          "top": "60",
+          "bottom": "60",
+          "left": "40",
+          "right": "40",
+          "unit": "px"
+        },
+        "gap": "20"
+      },
+      "elements": [
+        {
+          "id": "cta_banner_title",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "Facing a Plumbing Emergency Right Now?",
+            "header_size": "h2",
+            "title_color": "#FFFFFF",
+            "typography_font_family": "Plus Jakarta Sans",
+            "typography_font_size": {
+              "size": 32,
+              "unit": "px"
+            },
+            "typography_font_weight": "800"
+          }
+        },
+        {
+          "id": "cta_banner_text",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+            "editor": "Don't wait for water damage to escalate. Our licensed technicians are on standby with fully stocked trucks.",
+            "text_color": "#E0F2FE",
+            "typography_font_family": "Inter",
+            "typography_font_size": {
+              "size": 16,
+              "unit": "px"
+            }
+          }
+        },
+        {
+          "id": "cta_banner_btn",
+          "elType": "widget",
+          "widgetType": "button",
+          "settings": {
+            "text": "Call Emergency Hotline: (800) 555-APEX",
+            "background_color": "#FF6B00",
+            "text_color": "#FFFFFF",
+            "typography_font_family": "Plus Jakarta Sans",
+            "typography_font_size": {
+              "size": 18,
+              "unit": "px"
+            },
+            "typography_font_weight": "800",
+            "border_radius": {
+              "unit": "px",
+              "top": "8",
+              "right": "8",
+              "bottom": "8",
+              "left": "8"
+            },
+            "padding": {
+              "top": "18",
+              "bottom": "18",
+              "left": "36",
+              "right": "36",
+              "unit": "px"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ftr_main",
+      "elType": "container",
+      "settings": {
+        "display": "flex",
+        "flex_direction": "row",
+        "flex_justify_content": "space-between",
+        "background_background": "classic",
+        "background_color": "#0F172A",
+        "padding": {
+          "top": "60",
+          "bottom": "40",
+          "left": "40",
+          "right": "40",
+          "unit": "px"
+        },
+        "gap": "30"
+      },
+      "elements": [
+        {
+          "id": "ftr_col_brand",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "column",
+            "width": {
+              "size": 30,
+              "unit": "%"
+            },
+            "gap": "16"
+          },
+          "elements": [
+            {
+              "id": "ftr_logo",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Apex Plumbing<span style='color:#0284C7;'>.</span>",
+                "header_size": "h3",
+                "title_color": "#FFFFFF",
+                "typography_font_family": "Plus Jakarta Sans",
+                "typography_font_size": {
+                  "size": 24,
+                  "unit": "px"
+                },
+                "typography_font_weight": "800"
+              }
+            },
+            {
+              "id": "ftr_about_text",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "Your trusted local plumbing experts. Reliable, fast, and transparent residential & commercial solutions 24 hours a day, 7 days a week.",
+                "text_color": "#94A3B8",
+                "typography_font_family": "Inter",
+                "typography_font_size": {
+                  "size": 14,
+                  "unit": "px"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "ftr_col_links",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "column",
+            "width": {
+              "size": 20,
+              "unit": "%"
+            },
+            "gap": "12"
+          },
+          "elements": [
+            {
+              "id": "ftr_links_title",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Quick Links",
+                "header_size": "h4",
+                "title_color": "#FFFFFF",
+                "typography_font_family": "Plus Jakarta Sans",
+                "typography_font_size": {
+                  "size": 16,
+                  "unit": "px"
+                },
+                "typography_font_weight": "700"
+              }
+            },
+            {
+              "id": "ftr_links_body",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<div style='display: flex; flex-direction: column; gap: 8px; font-family: Inter; font-size: 14px;'><a href='#services' style='color: #94A3B8; text-decoration: none;'>Services</a><a href='#about' style='color: #94A3B8; text-decoration: none;'>About Us</a><a href='#emergency' style='color: #94A3B8; text-decoration: none;'>Emergency Service</a><a href='#reviews' style='color: #94A3B8; text-decoration: none;'>Customer Reviews</a></div>"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ftr_col_contact",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "column",
+            "width": {
+              "size": 35,
+              "unit": "%"
+            },
+            "gap": "12"
+          },
+          "elements": [
+            {
+              "id": "ftr_contact_title",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Emergency Contact",
+                "header_size": "h4",
+                "title_color": "#FFFFFF",
+                "typography_font_family": "Plus Jakarta Sans",
+                "typography_font_size": {
+                  "size": 16,
+                  "unit": "px"
+                },
+                "typography_font_weight": "700"
+              }
+            },
+            {
+              "id": "ftr_contact_body",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p style='color: #94A3B8; font-family: Inter; font-size: 14px; margin-bottom: 6px;'>📞 Dispatch Line: <strong style='color: #FFFFFF;'>(800) 555-APEX</strong></p><p style='color: #94A3B8; font-family: Inter; font-size: 14px; margin-bottom: 6px;'>📍 Service Area: Greater Metro & Surrounding Counties</p><p style='color: #94A3B8; font-family: Inter; font-size: 14px;'>⏰ Operating Hours: 24/7/365</p>"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ftr_bottom_bar",
+      "elType": "container",
+      "settings": {
+        "display": "flex",
+        "flex_direction": "row",
+        "flex_justify_content": "space-between",
+        "background_background": "classic",
+        "background_color": "#0B1321",
+        "padding": {
+          "top": "20",
+          "bottom": "20",
+          "left": "40",
+          "right": "40",
+          "unit": "px"
+        }
+      },
+      "elements": [
+        {
+          "id": "ftr_copyright",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+            "editor": "© 2024 Apex Plumbing Co. All rights reserved. Licensed & Insured.",
+            "text_color": "#64748B",
+            "typography_font_family": "Inter",
+            "typography_font_size": {
+              "size": 13,
+              "unit": "px"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "colors": [
+      "#0F172A",
+      "#0284C7",
+      "#FF6B00",
+      "#F8FAFC",
+      "#FFFFFF"
+    ],
+    "fonts": [
+      "Plus Jakarta Sans",
+      "Inter"
+    ],
+    "section_count": 5
+  },
+  "global_classes": {
+    "primary_btn": {
+      "background_color": "#FF6B00",
+      "color": "#FFFFFF",
+      "font_family": "Plus Jakarta Sans",
+      "font_weight": "700",
+      "border_radius": "6px",
+      "padding": "16px 32px"
+    },
+    "secondary_btn": {
+      "background_color": "transparent",
+      "color": "#0F172A",
+      "border_color": "#0284C7",
+      "border_width": "2px",
+      "font_family": "Plus Jakarta Sans",
+      "font_weight": "700",
+      "border_radius": "6px",
+      "padding": "16px 32px"
+    },
+    "card_shadow": {
+      "box_shadow": "0px 10px 30px rgba(15, 23, 42, 0.08)",
+      "border_radius": "12px",
+      "background_color": "#FFFFFF"
+    },
+    "accent_badge": {
+      "background_color": "#E0F2FE",
+      "color": "#0284C7",
+      "font_family": "Inter",
+      "font_weight": "600",
+      "padding": "6px 14px",
+      "border_radius": "20px"
+    },
+    "section_title": {
+      "font_family": "Plus Jakarta Sans",
+      "font_weight": "800",
+      "color": "#0F172A",
+      "font_size": "36px"
+    }
+  }
+}

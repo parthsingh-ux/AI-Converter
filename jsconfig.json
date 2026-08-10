@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"],
+      "@/context/*": ["./Design System/ui/src/context/*"],
+      "@/components/*": ["./Design System/ui/src/components/*"],
+      "@/hooks/*": ["./Design System/ui/src/hooks/*"],
+      "@/forms/*": ["./Design System/ui/src/forms/*"],
+      "@/apiServices/*": ["./Design System/ui/src/apiServices/*"]
+    }
+  }
+}

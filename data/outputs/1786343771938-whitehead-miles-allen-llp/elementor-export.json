@@ -1,0 +1,1862 @@
+{
+  "version": "0.4",
+  "title": "Whitehead Miles & Allen LLP",
+  "type": "page",
+  "page_settings": {},
+  "content": [
+    {
+      "id": "topband-outer",
+      "elType": "container",
+      "settings": {
+        "display": "flex",
+        "content_width": "full",
+        "background_background": "classic",
+        "background_color": "#EDE7DD",
+        "padding": {
+          "top": "10",
+          "right": "20",
+          "bottom": "10",
+          "left": "20",
+          "unit": "px"
+        },
+        "flex_direction": "column",
+        "flex_justify_content": "flex-start",
+        "flex_align_items": "stretch"
+      },
+      "elements": [
+        {
+          "id": "topband-inner",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "content_width": "boxed",
+            "boxed_width": {
+              "size": 1200,
+              "unit": "px"
+            },
+            "flex_direction": "row",
+            "flex_justify_content": "space-between",
+            "flex_align_items": "center",
+            "padding": {
+              "unit": "px",
+              "top": "16",
+              "right": "20",
+              "bottom": "16",
+              "left": "20"
+            }
+          },
+          "elements": [
+            {
+              "id": "tb-msg",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p><strong>Free first consultation</strong> — evening & weekend appointments available.</p>",
+                "text_color": "#2B2723",
+                "typography_typography": "custom",
+                "typography_font_family": "Source Sans 3",
+                "typography_font_size": {
+                  "size": 14,
+                  "unit": "px"
+                }
+              }
+            },
+            {
+              "id": "tb-meta",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p>Full-service counsel · Fredericton · Est. 1978</p>",
+                "text_color": "#6E665C",
+                "typography_typography": "custom",
+                "typography_font_family": "Source Sans 3",
+                "typography_font_size": {
+                  "size": 14,
+                  "unit": "px"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "header-outer",
+      "elType": "container",
+      "settings": {
+        "display": "flex",
+        "content_width": "full",
+        "background_background": "classic",
+        "background_color": "#FAF6F0",
+        "padding": {
+          "top": "20",
+          "right": "20",
+          "bottom": "20",
+          "left": "20",
+          "unit": "px"
+        },
+        "border_border": "solid",
+        "border_width": {
+          "top": "0",
+          "right": "0",
+          "bottom": "1",
+          "left": "0",
+          "unit": "px"
+        },
+        "border_color": "#DBD3C6",
+        "flex_direction": "column",
+        "flex_justify_content": "flex-start",
+        "flex_align_items": "stretch"
+      },
+      "elements": [
+        {
+          "id": "header-inner",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "content_width": "boxed",
+            "boxed_width": {
+              "size": 1200,
+              "unit": "px"
+            },
+            "flex_direction": "row",
+            "flex_justify_content": "space-between",
+            "flex_align_items": "center",
+            "padding": {
+              "unit": "px",
+              "top": "16",
+              "right": "20",
+              "bottom": "16",
+              "left": "20"
+            }
+          },
+          "elements": [
+            {
+              "id": "brand-lockup",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "column",
+                "flex_gap": {
+                  "size": 2,
+                  "unit": "px"
+                },
+                "content_width": "boxed",
+                "boxed_width": {
+                  "size": 1200,
+                  "unit": "px"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "16",
+                  "right": "20",
+                  "bottom": "16",
+                  "left": "20"
+                },
+                "flex_justify_content": "flex-start",
+                "flex_align_items": "stretch"
+              },
+              "elements": [
+                {
+                  "id": "brand-title",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Whitehead Miles & Allen",
+                    "title_color": "#2B2723",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Cormorant Garamond",
+                    "typography_font_size": {
+                      "size": 24,
+                      "unit": "px"
+                    },
+                    "typography_font_weight": "700",
+                    "header_size": "h2"
+                  }
+                },
+                {
+                  "id": "brand-subtitle",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "BARRISTERS · SOLICITORS",
+                    "title_color": "#A62A2A",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Source Sans 3",
+                    "typography_font_size": {
+                      "size": 11,
+                      "unit": "px"
+                    },
+                    "typography_font_weight": "600",
+                    "typography_letter_spacing": {
+                      "size": 1.5,
+                      "unit": "px"
+                    },
+                    "header_size": "h2"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "main-nav",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "row",
+                "flex_gap": {
+                  "size": 24,
+                  "unit": "px"
+                },
+                "flex_align_items": "center",
+                "content_width": "boxed",
+                "boxed_width": {
+                  "size": 1200,
+                  "unit": "px"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "16",
+                  "right": "20",
+                  "bottom": "16",
+                  "left": "20"
+                },
+                "flex_justify_content": "flex-start"
+              },
+              "elements": [
+                {
+                  "id": "nav-practice",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Practice Areas",
+                    "title_color": "#2B2723",
+                    "link": {
+                      "url": "#practice"
+                    },
+                    "typography_typography": "custom",
+                    "typography_font_family": "Source Sans 3",
+                    "typography_font_size": {
+                      "size": 16,
+                      "unit": "px"
+                    },
+                    "typography_font_weight": "600",
+                    "header_size": "h2"
+                  }
+                },
+                {
+                  "id": "nav-firm",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "The Firm",
+                    "title_color": "#2B2723",
+                    "link": {
+                      "url": "#firm"
+                    },
+                    "typography_typography": "custom",
+                    "typography_font_family": "Source Sans 3",
+                    "typography_font_size": {
+                      "size": 16,
+                      "unit": "px"
+                    },
+                    "typography_font_weight": "600",
+                    "header_size": "h2"
+                  }
+                },
+                {
+                  "id": "nav-team",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Advisors",
+                    "title_color": "#2B2723",
+                    "link": {
+                      "url": "#team"
+                    },
+                    "typography_typography": "custom",
+                    "typography_font_family": "Source Sans 3",
+                    "typography_font_size": {
+                      "size": 16,
+                      "unit": "px"
+                    },
+                    "typography_font_weight": "600",
+                    "header_size": "h2"
+                  }
+                },
+                {
+                  "id": "nav-pricing",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Fees",
+                    "title_color": "#2B2723",
+                    "link": {
+                      "url": "#pricing"
+                    },
+                    "typography_typography": "custom",
+                    "typography_font_family": "Source Sans 3",
+                    "typography_font_size": {
+                      "size": 16,
+                      "unit": "px"
+                    },
+                    "typography_font_weight": "600",
+                    "header_size": "h2"
+                  }
+                },
+                {
+                  "id": "nav-book",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Contact",
+                    "title_color": "#2B2723",
+                    "link": {
+                      "url": "#book"
+                    },
+                    "typography_typography": "custom",
+                    "typography_font_family": "Source Sans 3",
+                    "typography_font_size": {
+                      "size": 16,
+                      "unit": "px"
+                    },
+                    "typography_font_weight": "600",
+                    "header_size": "h2"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "header-cta-container",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "row",
+                "flex_gap": {
+                  "size": 16,
+                  "unit": "px"
+                },
+                "flex_align_items": "center",
+                "content_width": "boxed",
+                "boxed_width": {
+                  "size": 1200,
+                  "unit": "px"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "16",
+                  "right": "20",
+                  "bottom": "16",
+                  "left": "20"
+                },
+                "flex_justify_content": "flex-start"
+              },
+              "elements": [
+                {
+                  "id": "header-tel",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "settings": {
+                    "text": "(506) 458-9077",
+                    "link": {
+                      "url": "tel:+15064589077"
+                    },
+                    "button_text_color": "#ffffff",
+                    "background_color": "#A62A2A",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Source Sans 3",
+                    "typography_font_size": {
+                      "size": 15,
+                      "unit": "px"
+                    },
+                    "typography_font_weight": "600",
+                    "padding": {
+                      "top": "10",
+                      "right": "20",
+                      "bottom": "10",
+                      "left": "20",
+                      "unit": "px"
+                    },
+                    "border_radius": {
+                      "top": "4",
+                      "right": "4",
+                      "bottom": "4",
+                      "left": "4",
+                      "unit": "px"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hero-outer",
+      "elType": "container",
+      "settings": {
+        "display": "flex",
+        "content_width": "full",
+        "background_background": "classic",
+        "background_color": "#FAF6F0",
+        "padding": {
+          "top": "100",
+          "right": "0",
+          "bottom": "100",
+          "left": "0",
+          "unit": "px"
+        },
+        "flex_direction": "column",
+        "flex_justify_content": "flex-start",
+        "flex_align_items": "stretch"
+      },
+      "elements": [
+        {
+          "id": "hero-inner",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "content_width": "boxed",
+            "boxed_width": {
+              "size": 1200,
+              "unit": "px"
+            },
+            "flex_direction": "column",
+            "flex_align_items": "center",
+            "flex_gap": {
+              "size": 24,
+              "unit": "px"
+            },
+            "padding": {
+              "unit": "px",
+              "top": "16",
+              "right": "20",
+              "bottom": "16",
+              "left": "20"
+            },
+            "flex_justify_content": "flex-start"
+          },
+          "elements": [
+            {
+              "id": "hero-eyebrow",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Fredericton, NB · Full-Service Law Since 1978",
+                "title_color": "#A62A2A",
+                "typography_typography": "custom",
+                "typography_font_family": "Source Sans 3",
+                "typography_font_size": {
+                  "size": 14,
+                  "unit": "px"
+                },
+                "typography_font_weight": "700",
+                "typography_letter_spacing": {
+                  "size": 1.5,
+                  "unit": "px"
+                },
+                "header_size": "h2"
+              }
+            },
+            {
+              "id": "hero-headline",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Working together to serve you.",
+                "title_color": "#2B2723",
+                "typography_typography": "custom",
+                "typography_font_family": "Cormorant Garamond",
+                "typography_font_size": {
+                  "size": 56,
+                  "unit": "px"
+                },
+                "typography_font_weight": "700",
+                "align": "center",
+                "header_size": "h2"
+              }
+            },
+            {
+              "id": "hero-lead",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p>A full-service firm serving Greater Fredericton since 1978 — working together to serve you.</p>",
+                "text_color": "#6E665C",
+                "typography_typography": "custom",
+                "typography_font_family": "Source Sans 3",
+                "typography_font_size": {
+                  "size": 20,
+                  "unit": "px"
+                },
+                "align": "center"
+              }
+            },
+            {
+              "id": "hero-ctas",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "row",
+                "flex_gap": {
+                  "size": 16,
+                  "unit": "px"
+                },
+                "flex_justify_content": "center",
+                "margin": {
+                  "top": "15",
+                  "bottom": "15",
+                  "unit": "px"
+                },
+                "content_width": "boxed",
+                "boxed_width": {
+                  "size": 1200,
+                  "unit": "px"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "16",
+                  "right": "20",
+                  "bottom": "16",
+                  "left": "20"
+                },
+                "flex_align_items": "stretch"
+              },
+              "elements": [
+                {
+                  "id": "hero-cta-primary",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "settings": {
+                    "text": "Book a consultation",
+                    "link": {
+                      "url": "#book"
+                    },
+                    "button_text_color": "#ffffff",
+                    "background_color": "#2B2723",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Source Sans 3",
+                    "typography_font_size": {
+                      "size": 16,
+                      "unit": "px"
+                    },
+                    "typography_font_weight": "600",
+                    "padding": {
+                      "top": "14",
+                      "right": "28",
+                      "bottom": "14",
+                      "left": "28",
+                      "unit": "px"
+                    },
+                    "border_radius": {
+                      "top": "4",
+                      "right": "4",
+                      "bottom": "4",
+                      "left": "4",
+                      "unit": "px"
+                    }
+                  }
+                },
+                {
+                  "id": "hero-cta-secondary",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "settings": {
+                    "text": "Our practice areas",
+                    "link": {
+                      "url": "#practice"
+                    },
+                    "button_text_color": "#2B2723",
+                    "background_color": "transparent",
+                    "border_border": "solid",
+                    "border_width": {
+                      "top": "1",
+                      "right": "1",
+                      "bottom": "1",
+                      "left": "1",
+                      "unit": "px"
+                    },
+                    "border_color": "#2B2723",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Source Sans 3",
+                    "typography_font_size": {
+                      "size": 16,
+                      "unit": "px"
+                    },
+                    "typography_font_weight": "600",
+                    "padding": {
+                      "top": "14",
+                      "right": "28",
+                      "bottom": "14",
+                      "left": "28",
+                      "unit": "px"
+                    },
+                    "border_radius": {
+                      "top": "4",
+                      "right": "4",
+                      "bottom": "4",
+                      "left": "4",
+                      "unit": "px"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "hero-chips",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "row",
+                "flex_gap": {
+                  "size": 32,
+                  "unit": "px"
+                },
+                "flex_justify_content": "center",
+                "margin": {
+                  "top": "30",
+                  "unit": "px"
+                },
+                "content_width": "boxed",
+                "boxed_width": {
+                  "size": 1200,
+                  "unit": "px"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "16",
+                  "right": "20",
+                  "bottom": "16",
+                  "left": "20"
+                },
+                "flex_align_items": "stretch"
+              },
+              "elements": [
+                {
+                  "id": "chip-1",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Established 1978",
+                    "title_color": "#6E665C",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Source Sans 3",
+                    "typography_font_size": {
+                      "size": 14,
+                      "unit": "px"
+                    },
+                    "typography_font_weight": "600",
+                    "header_size": "h2"
+                  }
+                },
+                {
+                  "id": "chip-2",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Full-service firm",
+                    "title_color": "#6E665C",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Source Sans 3",
+                    "typography_font_size": {
+                      "size": 14,
+                      "unit": "px"
+                    },
+                    "typography_font_weight": "600",
+                    "header_size": "h2"
+                  }
+                },
+                {
+                  "id": "chip-3",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Local to Fredericton",
+                    "title_color": "#6E665C",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Source Sans 3",
+                    "typography_font_size": {
+                      "size": 14,
+                      "unit": "px"
+                    },
+                    "typography_font_weight": "600",
+                    "header_size": "h2"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "firm-outer",
+      "elType": "container",
+      "settings": {
+        "display": "flex",
+        "content_width": "full",
+        "background_background": "classic",
+        "background_color": "#EDE7DD",
+        "padding": {
+          "top": "100",
+          "right": "0",
+          "bottom": "100",
+          "left": "0",
+          "unit": "px"
+        },
+        "flex_direction": "column",
+        "flex_justify_content": "flex-start",
+        "flex_align_items": "stretch"
+      },
+      "elements": [
+        {
+          "id": "firm-inner",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "content_width": "boxed",
+            "boxed_width": {
+              "size": 1200,
+              "unit": "px"
+            },
+            "flex_direction": "row",
+            "flex_gap": {
+              "size": 60,
+              "unit": "px"
+            },
+            "padding": {
+              "unit": "px",
+              "top": "16",
+              "right": "20",
+              "bottom": "16",
+              "left": "20"
+            },
+            "flex_justify_content": "flex-start",
+            "flex_align_items": "stretch"
+          },
+          "elements": [
+            {
+              "id": "firm-left",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "column",
+                "flex_grow": 1,
+                "flex_shrink": 1,
+                "_flex_size": "50%",
+                "content_width": "boxed",
+                "boxed_width": {
+                  "size": 1200,
+                  "unit": "px"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "16",
+                  "right": "20",
+                  "bottom": "16",
+                  "left": "20"
+                },
+                "flex_justify_content": "flex-start",
+                "flex_align_items": "stretch"
+              },
+              "elements": [
+                {
+                  "id": "firm-image-placeholder",
+                  "elType": "widget",
+                  "widgetType": "image",
+                  "settings": {
+                    "image": {
+                      "url": "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201200%20800%22%20role%3D%22img%22%20aria-label%3D%22Image%20placeholder%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23d9d1c7%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23b8afa4%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%3Crect%20width%3D%221200%22%20height%3D%22800%22%20fill%3D%22url(%23g)%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M160%20160L1040%20640%22%20stroke%3D%22%238f857a%22%20stroke-width%3D%2218%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M160%20640L1040%20160%22%20stroke%3D%22%238f857a%22%20stroke-width%3D%2218%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%3Crect%20x%3D%22260%22%20y%3D%22250%22%20width%3D%22680%22%20height%3D%22300%22%20rx%3D%2226%22%20fill%3D%22rgba(255%2C255%2C255%2C0.22)%22%20stroke%3D%22%238f857a%22%20stroke-width%3D%228%22%2F%3E%0A%20%20%3Ctext%20x%3D%22600%22%20y%3D%22432%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2CHelvetica%2Csans-serif%22%20font-size%3D%2262%22%20fill%3D%22%236d6458%22%3EImage%20placeholder%3C%2Ftext%3E%0A%3C%2Fsvg%3E"
+                    },
+                    "image_size": "full"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "firm-right",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "column",
+                "flex_gap": {
+                  "size": 20,
+                  "unit": "px"
+                },
+                "flex_grow": 1,
+                "flex_shrink": 1,
+                "_flex_size": "50%",
+                "content_width": "boxed",
+                "boxed_width": {
+                  "size": 1200,
+                  "unit": "px"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "16",
+                  "right": "20",
+                  "bottom": "16",
+                  "left": "20"
+                },
+                "flex_justify_content": "flex-start",
+                "flex_align_items": "stretch"
+              },
+              "elements": [
+                {
+                  "id": "firm-eyebrow",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "The firm · Fredericton",
+                    "title_color": "#A62A2A",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Source Sans 3",
+                    "typography_font_size": {
+                      "size": 14,
+                      "unit": "px"
+                    },
+                    "typography_font_weight": "700",
+                    "typography_letter_spacing": {
+                      "size": 1.5,
+                      "unit": "px"
+                    },
+                    "header_size": "h2"
+                  }
+                },
+                {
+                  "id": "firm-headline",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Your trusted lawyers in Fredericton.",
+                    "title_color": "#2B2723",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Cormorant Garamond",
+                    "typography_font_size": {
+                      "size": 40,
+                      "unit": "px"
+                    },
+                    "typography_font_weight": "700",
+                    "header_size": "h2"
+                  }
+                },
+                {
+                  "id": "firm-desc-1",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>We take a team approach to practising law, so every client benefits from our combined legal expertise. Our clients range from small companies to large corporations, as well as families and private individuals.</p>",
+                    "text_color": "#1A1612",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Source Sans 3",
+                    "typography_font_size": {
+                      "size": 16,
+                      "unit": "px"
+                    }
+                  }
+                },
+                {
+                  "id": "firm-desc-2",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>Calabrese Whitehead was established in 1978 with two lawyers. Now Whitehead Miles & Allen LLP, it has grown into a multi-practice, full-service firm serving the Greater Fredericton Area.</p>",
+                    "text_color": "#1A1612",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Source Sans 3",
+                    "typography_font_size": {
+                      "size": 16,
+                      "unit": "px"
+                    }
+                  }
+                },
+                {
+                  "id": "firm-sign",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "WMA",
+                    "title_color": "#2B2723",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Cormorant Garamond",
+                    "typography_font_size": {
+                      "size": 32,
+                      "unit": "px"
+                    },
+                    "typography_font_weight": "700",
+                    "header_size": "h2"
+                  }
+                },
+                {
+                  "id": "firm-sign-sub",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Whitehead Miles & Allen LLP · Fredericton",
+                    "title_color": "#6E665C",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Source Sans 3",
+                    "typography_font_size": {
+                      "size": 12,
+                      "unit": "px"
+                    },
+                    "typography_font_weight": "600",
+                    "header_size": "h2"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "practice-outer",
+      "elType": "container",
+      "settings": {
+        "display": "flex",
+        "content_width": "full",
+        "background_background": "classic",
+        "background_color": "#FAF6F0",
+        "padding": {
+          "top": "100",
+          "right": "0",
+          "bottom": "100",
+          "left": "0",
+          "unit": "px"
+        },
+        "flex_direction": "column",
+        "flex_justify_content": "flex-start",
+        "flex_align_items": "stretch"
+      },
+      "elements": [
+        {
+          "id": "practice-inner",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "content_width": "boxed",
+            "boxed_width": {
+              "size": 1200,
+              "unit": "px"
+            },
+            "flex_direction": "column",
+            "flex_gap": {
+              "size": 48,
+              "unit": "px"
+            },
+            "padding": {
+              "unit": "px",
+              "top": "16",
+              "right": "20",
+              "bottom": "16",
+              "left": "20"
+            },
+            "flex_justify_content": "flex-start",
+            "flex_align_items": "stretch"
+          },
+          "elements": [
+            {
+              "id": "practice-header",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "column",
+                "flex_gap": {
+                  "size": 12,
+                  "unit": "px"
+                },
+                "content_width": "boxed",
+                "boxed_width": {
+                  "size": 1200,
+                  "unit": "px"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "16",
+                  "right": "20",
+                  "bottom": "16",
+                  "left": "20"
+                },
+                "flex_justify_content": "flex-start",
+                "flex_align_items": "stretch"
+              },
+              "elements": [
+                {
+                  "id": "practice-eyebrow",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Practice Areas",
+                    "title_color": "#A62A2A",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Source Sans 3",
+                    "typography_font_size": {
+                      "size": 14,
+                      "unit": "px"
+                    },
+                    "typography_font_weight": "700",
+                    "typography_letter_spacing": {
+                      "size": 1.5,
+                      "unit": "px"
+                    },
+                    "header_size": "h2"
+                  }
+                },
+                {
+                  "id": "practice-headline",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "A full-service firm for the matters that shape a life.",
+                    "title_color": "#2B2723",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Cormorant Garamond",
+                    "typography_font_size": {
+                      "size": 40,
+                      "unit": "px"
+                    },
+                    "typography_font_weight": "700",
+                    "header_size": "h2"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "practice-grid",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "row",
+                "flex_wrap": "wrap",
+                "flex_gap": {
+                  "size": 30,
+                  "unit": "px"
+                },
+                "content_width": "boxed",
+                "boxed_width": {
+                  "size": 1200,
+                  "unit": "px"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "16",
+                  "right": "20",
+                  "bottom": "16",
+                  "left": "20"
+                },
+                "flex_justify_content": "flex-start",
+                "flex_align_items": "stretch"
+              },
+              "elements": [
+                {
+                  "id": "svc-card-1",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "display": "flex",
+                    "flex_direction": "column",
+                    "flex_gap": {
+                      "size": 16,
+                      "unit": "px"
+                    },
+                    "background_background": "classic",
+                    "background_color": "#ffffff",
+                    "padding": {
+                      "top": "30",
+                      "right": "30",
+                      "bottom": "30",
+                      "left": "30",
+                      "unit": "px"
+                    },
+                    "border_radius": {
+                      "top": "8",
+                      "right": "8",
+                      "bottom": "8",
+                      "left": "8",
+                      "unit": "px"
+                    },
+                    "flex_grow": 1,
+                    "flex_shrink": 1,
+                    "_flex_size": "30%",
+                    "content_width": "boxed",
+                    "boxed_width": {
+                      "size": 1200,
+                      "unit": "px"
+                    },
+                    "flex_justify_content": "flex-start",
+                    "flex_align_items": "stretch"
+                  },
+                  "elements": [
+                    {
+                      "id": "svc-title-1",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Wills & Estate",
+                        "title_color": "#2B2723",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Cormorant Garamond",
+                        "typography_font_size": {
+                          "size": 24,
+                          "unit": "px"
+                        },
+                        "typography_font_weight": "700",
+                        "header_size": "h2"
+                      }
+                    },
+                    {
+                      "id": "svc-desc-1",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p>Personalized will and estate planning so you can plan for the future with confidence.</p>",
+                        "text_color": "#6E665C",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Source Sans 3",
+                        "typography_font_size": {
+                          "size": 15,
+                          "unit": "px"
+                        }
+                      }
+                    },
+                    {
+                      "id": "svc-link-1",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Learn more →",
+                        "title_color": "#A62A2A",
+                        "link": {
+                          "url": "#contact"
+                        },
+                        "typography_typography": "custom",
+                        "typography_font_family": "Source Sans 3",
+                        "typography_font_size": {
+                          "size": 14,
+                          "unit": "px"
+                        },
+                        "typography_font_weight": "700",
+                        "header_size": "h2"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "svc-card-2",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "display": "flex",
+                    "flex_direction": "column",
+                    "flex_gap": {
+                      "size": 16,
+                      "unit": "px"
+                    },
+                    "background_background": "classic",
+                    "background_color": "#ffffff",
+                    "padding": {
+                      "top": "30",
+                      "right": "30",
+                      "bottom": "30",
+                      "left": "30",
+                      "unit": "px"
+                    },
+                    "border_radius": {
+                      "top": "8",
+                      "right": "8",
+                      "bottom": "8",
+                      "left": "8",
+                      "unit": "px"
+                    },
+                    "flex_grow": 1,
+                    "flex_shrink": 1,
+                    "_flex_size": "30%",
+                    "content_width": "boxed",
+                    "boxed_width": {
+                      "size": 1200,
+                      "unit": "px"
+                    },
+                    "flex_justify_content": "flex-start",
+                    "flex_align_items": "stretch"
+                  },
+                  "elements": [
+                    {
+                      "id": "svc-title-2",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Corporate",
+                        "title_color": "#2B2723",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Cormorant Garamond",
+                        "typography_font_size": {
+                          "size": 24,
+                          "unit": "px"
+                        },
+                        "typography_font_weight": "700",
+                        "header_size": "h2"
+                      }
+                    },
+                    {
+                      "id": "svc-desc-2",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p>Incorporations, agreements and day-to-day counsel that keep your business on solid ground.</p>",
+                        "text_color": "#6E665C",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Source Sans 3",
+                        "typography_font_size": {
+                          "size": 15,
+                          "unit": "px"
+                        }
+                      }
+                    },
+                    {
+                      "id": "svc-link-2",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Learn more →",
+                        "title_color": "#A62A2A",
+                        "link": {
+                          "url": "#contact"
+                        },
+                        "typography_typography": "custom",
+                        "typography_font_family": "Source Sans 3",
+                        "typography_font_size": {
+                          "size": 14,
+                          "unit": "px"
+                        },
+                        "typography_font_weight": "700",
+                        "header_size": "h2"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "svc-card-3",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "display": "flex",
+                    "flex_direction": "column",
+                    "flex_gap": {
+                      "size": 16,
+                      "unit": "px"
+                    },
+                    "background_background": "classic",
+                    "background_color": "#ffffff",
+                    "padding": {
+                      "top": "30",
+                      "right": "30",
+                      "bottom": "30",
+                      "left": "30",
+                      "unit": "px"
+                    },
+                    "border_radius": {
+                      "top": "8",
+                      "right": "8",
+                      "bottom": "8",
+                      "left": "8",
+                      "unit": "px"
+                    },
+                    "flex_grow": 1,
+                    "flex_shrink": 1,
+                    "_flex_size": "30%",
+                    "content_width": "boxed",
+                    "boxed_width": {
+                      "size": 1200,
+                      "unit": "px"
+                    },
+                    "flex_justify_content": "flex-start",
+                    "flex_align_items": "stretch"
+                  },
+                  "elements": [
+                    {
+                      "id": "svc-title-3",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Real Estate",
+                        "title_color": "#2B2723",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Cormorant Garamond",
+                        "typography_font_size": {
+                          "size": 24,
+                          "unit": "px"
+                        },
+                        "typography_font_weight": "700",
+                        "header_size": "h2"
+                      }
+                    },
+                    {
+                      "id": "svc-desc-3",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p>Transactions, title transfers and disputes — handled from first offer to final closing.</p>",
+                        "text_color": "#6E665C",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Source Sans 3",
+                        "typography_font_size": {
+                          "size": 15,
+                          "unit": "px"
+                        }
+                      }
+                    },
+                    {
+                      "id": "svc-link-3",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Learn more →",
+                        "title_color": "#A62A2A",
+                        "link": {
+                          "url": "#contact"
+                        },
+                        "typography_typography": "custom",
+                        "typography_font_family": "Source Sans 3",
+                        "typography_font_size": {
+                          "size": 14,
+                          "unit": "px"
+                        },
+                        "typography_font_weight": "700",
+                        "header_size": "h2"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "svc-card-4",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "display": "flex",
+                    "flex_direction": "column",
+                    "flex_gap": {
+                      "size": 16,
+                      "unit": "px"
+                    },
+                    "background_background": "classic",
+                    "background_color": "#ffffff",
+                    "padding": {
+                      "top": "30",
+                      "right": "30",
+                      "bottom": "30",
+                      "left": "30",
+                      "unit": "px"
+                    },
+                    "border_radius": {
+                      "top": "8",
+                      "right": "8",
+                      "bottom": "8",
+                      "left": "8",
+                      "unit": "px"
+                    },
+                    "flex_grow": 1,
+                    "flex_shrink": 1,
+                    "_flex_size": "30%",
+                    "content_width": "boxed",
+                    "boxed_width": {
+                      "size": 1200,
+                      "unit": "px"
+                    },
+                    "flex_justify_content": "flex-start",
+                    "flex_align_items": "stretch"
+                  },
+                  "elements": [
+                    {
+                      "id": "svc-title-4",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Litigation",
+                        "title_color": "#2B2723",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Cormorant Garamond",
+                        "typography_font_size": {
+                          "size": 24,
+                          "unit": "px"
+                        },
+                        "typography_font_weight": "700",
+                        "header_size": "h2"
+                      }
+                    },
+                    {
+                      "id": "svc-desc-4",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p>Experienced litigation counsel dedicated to a suitable, well-argued outcome for your case.</p>",
+                        "text_color": "#6E665C",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Source Sans 3",
+                        "typography_font_size": {
+                          "size": 15,
+                          "unit": "px"
+                        }
+                      }
+                    },
+                    {
+                      "id": "svc-link-4",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Learn more →",
+                        "title_color": "#A62A2A",
+                        "link": {
+                          "url": "#contact"
+                        },
+                        "typography_typography": "custom",
+                        "typography_font_family": "Source Sans 3",
+                        "typography_font_size": {
+                          "size": 14,
+                          "unit": "px"
+                        },
+                        "typography_font_weight": "700",
+                        "header_size": "h2"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "svc-card-5",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "display": "flex",
+                    "flex_direction": "column",
+                    "flex_gap": {
+                      "size": 16,
+                      "unit": "px"
+                    },
+                    "background_background": "classic",
+                    "background_color": "#ffffff",
+                    "padding": {
+                      "top": "30",
+                      "right": "30",
+                      "bottom": "30",
+                      "left": "30",
+                      "unit": "px"
+                    },
+                    "border_radius": {
+                      "top": "8",
+                      "right": "8",
+                      "bottom": "8",
+                      "left": "8",
+                      "unit": "px"
+                    },
+                    "flex_grow": 1,
+                    "flex_shrink": 1,
+                    "_flex_size": "30%",
+                    "content_width": "boxed",
+                    "boxed_width": {
+                      "size": 1200,
+                      "unit": "px"
+                    },
+                    "flex_justify_content": "flex-start",
+                    "flex_align_items": "stretch"
+                  },
+                  "elements": [
+                    {
+                      "id": "svc-title-5",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Family",
+                        "title_color": "#2B2723",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Cormorant Garamond",
+                        "typography_font_size": {
+                          "size": 24,
+                          "unit": "px"
+                        },
+                        "typography_font_weight": "700",
+                        "header_size": "h2"
+                      }
+                    },
+                    {
+                      "id": "svc-desc-5",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p>Divorce, guardianship and change of name — handled with compassion and confidentiality.</p>",
+                        "text_color": "#6E665C",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Source Sans 3",
+                        "typography_font_size": {
+                          "size": 15,
+                          "unit": "px"
+                        }
+                      }
+                    },
+                    {
+                      "id": "svc-link-5",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Learn more →",
+                        "title_color": "#A62A2A",
+                        "link": {
+                          "url": "#contact"
+                        },
+                        "typography_typography": "custom",
+                        "typography_font_family": "Source Sans 3",
+                        "typography_font_size": {
+                          "size": 14,
+                          "unit": "px"
+                        },
+                        "typography_font_weight": "700",
+                        "header_size": "h2"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "svc-card-6",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "display": "flex",
+                    "flex_direction": "column",
+                    "flex_gap": {
+                      "size": 16,
+                      "unit": "px"
+                    },
+                    "background_background": "classic",
+                    "background_color": "#ffffff",
+                    "padding": {
+                      "top": "30",
+                      "right": "30",
+                      "bottom": "30",
+                      "left": "30",
+                      "unit": "px"
+                    },
+                    "border_radius": {
+                      "top": "8",
+                      "right": "8",
+                      "bottom": "8",
+                      "left": "8",
+                      "unit": "px"
+                    },
+                    "flex_grow": 1,
+                    "flex_shrink": 1,
+                    "_flex_size": "30%",
+                    "content_width": "boxed",
+                    "boxed_width": {
+                      "size": 1200,
+                      "unit": "px"
+                    },
+                    "flex_justify_content": "flex-start",
+                    "flex_align_items": "stretch"
+                  },
+                  "elements": [
+                    {
+                      "id": "svc-title-6",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Personal Injury",
+                        "title_color": "#2B2723",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Cormorant Garamond",
+                        "typography_font_size": {
+                          "size": 24,
+                          "unit": "px"
+                        },
+                        "typography_font_weight": "700",
+                        "header_size": "h2"
+                      }
+                    },
+                    {
+                      "id": "svc-desc-6",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p>Injured in an accident? We evaluate your options and pursue the compensation you deserve.</p>",
+                        "text_color": "#6E665C",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Source Sans 3",
+                        "typography_font_size": {
+                          "size": 15,
+                          "unit": "px"
+                        }
+                      }
+                    },
+                    {
+                      "id": "svc-link-6",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Learn more →",
+                        "title_color": "#A62A2A",
+                        "link": {
+                          "url": "#contact"
+                        },
+                        "typography_typography": "custom",
+                        "typography_font_family": "Source Sans 3",
+                        "typography_font_size": {
+                          "size": 14,
+                          "unit": "px"
+                        },
+                        "typography_font_weight": "700",
+                        "header_size": "h2"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "why-outer",
+      "elType": "container",
+      "settings": {
+        "display": "flex",
+        "content_width": "full",
+        "background_background": "classic",
+        "background_color": "#DBD3C6",
+        "padding": {
+          "top": "100",
+          "right": "0",
+          "bottom": "100",
+          "left": "0",
+          "unit": "px"
+        },
+        "flex_direction": "column",
+        "flex_justify_content": "flex-start",
+        "flex_align_items": "stretch"
+      },
+      "elements": [
+        {
+          "id": "why-inner",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "content_width": "boxed",
+            "boxed_width": {
+              "size": 1200,
+              "unit": "px"
+            },
+            "flex_direction": "column",
+            "flex_gap": {
+              "size": 48,
+              "unit": "px"
+            },
+            "padding": {
+              "unit": "px",
+              "top": "16",
+              "right": "20",
+              "bottom": "16",
+              "left": "20"
+            },
+            "flex_justify_content": "flex-start",
+            "flex_align_items": "stretch"
+          },
+          "elements": [
+            {
+              "id": "why-header",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "column",
+                "flex_gap": {
+                  "size": 12,
+                  "unit": "px"
+                },
+                "content_width": "boxed",
+                "boxed_width": {
+                  "size": 1200,
+                  "unit": "px"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "16",
+                  "right": "20",
+                  "bottom": "16",
+                  "left": "20"
+                },
+                "flex_justify_content": "flex-start",
+                "flex_align_items": "stretch"
+              },
+              "elements": [
+                {
+                  "id": "why-eyebrow",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Why clients choose us",
+                    "title_color": "#A62A2A",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Source Sans 3",
+                    "typography_font_size": {
+                      "size": 14,
+                      "unit": "px"
+                    },
+                    "typography_font_weight": "700",
+                    "typography_letter_spacing": {
+                      "size": 1.5,
+                      "unit": "px"
+                    },
+                    "header_size": "h2"
+                  }
+                },
+                {
+                  "id": "why-headline",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "A team approach, for results you can rely on.",
+                    "title_color": "#2B2723",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Cormorant Garamond",
+                    "typography_font_size": {
+                      "size": 40,
+                      "unit": "px"
+                    },
+                    "typography_font_weight": "700",
+                    "header_size": "h2"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "why-grid",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "row",
+                "flex_wrap": "wrap",
+                "flex_gap": {
+                  "size": 30,
+                  "unit": "px"
+                },
+                "content_width": "boxed",
+                "boxed_width": {
+                  "size": 1200,
+                  "unit": "px"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "16",
+                  "right": "20",
+                  "bottom": "16",
+                  "left": "20"
+                },
+                "flex_justify_content": "flex-start",
+                "flex_align_items": "stretch"
+              },
+              "elements": [
+                {
+                  "id": "reason-1",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "display": "flex",
+                    "flex_direction": "column",
+                    "flex_gap": {
+                      "size": 12,
+                      "unit": "px"
+                    },
+                    "flex_grow": 1,
+                    "flex_shrink": 1,
+                    "_flex_size": "22%",
+                    "content_width": "boxed",
+                    "boxed_width": {
+                      "size": 1200,
+                      "unit": "px"
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "16",
+                      "right": "20",
+                      "bottom": "16",
+                      "left": "20"
+                    },
+                    "flex_justify_content": "flex-start",
+                    "flex_align_items": "stretch"
+                  },
+                  "elements": [
+                    {
+                      "id": "reason-title-1",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "A team approach, every file",
+                        "title_color": "#2B2723",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Cormorant Garamond",
+                        "typography_font_size": {
+                          "size": 20,
+                          "unit": "px"
+                        },
+                        "typography_font_weight": "700",
+                        "header_size": "h2"
+                      }
+                    },
+                    {
+                      "id": "reason-desc-1",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p>We work together so every client benefits from our combined legal expertise.</p>",
+                        "text_color": "#1A1612",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Source",
+                        "typography_font_size": {
+                          "size": 16,
+                          "unit": "px"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "colors": [
+      "#2B2723",
+      "#6E665C",
+      "#A62A2A",
+      "#EDE7DD",
+      "#DBD3C6",
+      "#1A1612",
+      "#FAF6F0",
+      "#ffffff"
+    ],
+    "fonts": [
+      "Cormorant Garamond",
+      "Source Sans 3",
+      "Source"
+    ],
+    "section_count": 15
+  },
+  "global_classes": {}
+}

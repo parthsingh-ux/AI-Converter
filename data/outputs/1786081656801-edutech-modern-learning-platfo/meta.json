@@ -1,0 +1,31 @@
+{
+  "id": "1786081656801-edutech-modern-learning-platfo",
+  "timestamp": 1786081656801,
+  "title": "EduTech Modern Learning Platform Hero",
+  "inputType": "image",
+  "summary": {
+    "colors": [
+      "#1e293b",
+      "#ffb04c",
+      "#e2f4ec",
+      "#64748b",
+      "#ffffff"
+    ],
+    "fonts": [
+      "Inter",
+      "System-UI"
+    ],
+    "section_count": 2
+  },
+  "tokenUsage": {
+    "promptTokens": 1998,
+    "outputTokens": 5998,
+    "totalTokens": 8947,
+    "tokenLimitPerMinute": 250000,
+    "tokensRemainingPerMinute": 248002,
+    "usedModelName": "gemini-3.5-flash"
+  },
+  "downloadUrl": "/api/download/1786081656801-edutech-modern-learning-platfo?type=zip",
+  "jsonDownloadUrl": "/api/download/1786081656801-edutech-modern-learning-platfo?type=json",
+  "createdAt": "2026-08-07T05:47:36.801Z"
+}

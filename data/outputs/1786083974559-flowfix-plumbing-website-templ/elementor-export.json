@@ -1,0 +1,1358 @@
+{
+  "version": "0.4",
+  "title": "FlowFix Plumbing Website Template",
+  "type": "page",
+  "page_settings": {},
+  "content": [
+    {
+      "id": "hdr1001",
+      "elType": "container",
+      "settings": {
+        "display": "flex",
+        "flex_direction": "row",
+        "flex_justify_content": "space-between",
+        "flex_align_items": "center",
+        "padding": {
+          "top": "20",
+          "right": "40",
+          "bottom": "20",
+          "left": "40",
+          "unit": "px"
+        },
+        "html_tag": "header",
+        "css_classes": "ag-header"
+      },
+      "elements": [
+        {
+          "id": "hdr1002",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "row",
+            "flex_align_items": "center",
+            "flex_gap": {
+              "size": 12,
+              "unit": "px"
+            },
+            "css_classes": "ag-logo-wrapper"
+          },
+          "elements": [
+            {
+              "id": "hdr1003",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "FF",
+                "header_size": "div",
+                "css_classes": "ag-logo-badge"
+              }
+            },
+            {
+              "id": "hdr1004",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "FlowFix Plumbing",
+                "header_size": "div",
+                "css_classes": "ag-logo-text"
+              }
+            }
+          ]
+        },
+        {
+          "id": "hdr1005",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "row",
+            "flex_align_items": "center",
+            "flex_gap": {
+              "size": 24,
+              "unit": "px"
+            },
+            "html_tag": "nav",
+            "css_classes": "ag-nav-container"
+          },
+          "elements": [
+            {
+              "id": "hdr1006",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p><a href=\"#services\">Services</a> <a href=\"#about\">About</a> <a href=\"#reviews\">Reviews</a></p>",
+                "css_classes": "ag-nav-links"
+              }
+            },
+            {
+              "id": "hdr1007",
+              "elType": "widget",
+              "widgetType": "button",
+              "settings": {
+                "text": "Book Now",
+                "link": {
+                  "url": "#book",
+                  "is_external": false
+                },
+                "css_classes": "ag-btn-primary"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec1001",
+      "elType": "container",
+      "settings": {
+        "display": "flex",
+        "flex_direction": "row",
+        "flex_justify_content": "space-between",
+        "flex_align_items": "center",
+        "flex_gap": {
+          "size": 40,
+          "unit": "px"
+        },
+        "padding": {
+          "top": "60",
+          "right": "40",
+          "bottom": "60",
+          "left": "40",
+          "unit": "px"
+        },
+        "html_tag": "section",
+        "css_classes": "ag-hero-section"
+      },
+      "elements": [
+        {
+          "id": "sec1002",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "column",
+            "flex_gap": {
+              "size": 20,
+              "unit": "px"
+            },
+            "css_classes": "ag-hero-left"
+          },
+          "elements": [
+            {
+              "id": "sec1003",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Fast • Reliable • Affordable",
+                "header_size": "div",
+                "css_classes": "ag-pill-badge"
+              }
+            },
+            {
+              "id": "sec1004",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Trusted plumbing solutions for homes and businesses.",
+                "header_size": "h1",
+                "css_classes": "ag-hero-title"
+              }
+            },
+            {
+              "id": "sec1005",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p>From emergency leaks to full bathroom upgrades, FlowFix Plumbing delivers dependable service with clear pricing and quick response times.</p>",
+                "css_classes": "ag-body-desc"
+              }
+            },
+            {
+              "id": "sec1006",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "row",
+                "flex_gap": {
+                  "size": 16,
+                  "unit": "px"
+                },
+                "css_classes": "ag-btn-group"
+              },
+              "elements": [
+                {
+                  "id": "sec1007",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "settings": {
+                    "text": "Request Service",
+                    "link": {
+                      "url": "#request",
+                      "is_external": false
+                    },
+                    "css_classes": "ag-btn-primary"
+                  }
+                },
+                {
+                  "id": "sec1008",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "settings": {
+                    "text": "Our Services",
+                    "link": {
+                      "url": "#services",
+                      "is_external": false
+                    },
+                    "css_classes": "ag-btn-secondary"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "sec1009",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "row",
+                "flex_gap": {
+                  "size": 16,
+                  "unit": "px"
+                },
+                "css_classes": "ag-stats-row"
+              },
+              "elements": [
+                {
+                  "id": "sec1010",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "display": "flex",
+                    "flex_direction": "column",
+                    "css_classes": "ag-stat-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "sec1011",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "24/7",
+                        "header_size": "h3",
+                        "css_classes": "ag-stat-num"
+                      }
+                    },
+                    {
+                      "id": "sec1012",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p>Emergency support</p>",
+                        "css_classes": "ag-stat-lbl"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "sec1013",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "display": "flex",
+                    "flex_direction": "column",
+                    "css_classes": "ag-stat-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "sec1014",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "500+",
+                        "header_size": "h3",
+                        "css_classes": "ag-stat-num"
+                      }
+                    },
+                    {
+                      "id": "sec1015",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p>Jobs completed</p>",
+                        "css_classes": "ag-stat-lbl"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "sec1016",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "display": "flex",
+                    "flex_direction": "column",
+                    "css_classes": "ag-stat-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "sec1017",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "4.9/5",
+                        "header_size": "h3",
+                        "css_classes": "ag-stat-num"
+                      }
+                    },
+                    {
+                      "id": "sec1018",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p>Customer rating</p>",
+                        "css_classes": "ag-stat-lbl"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sec1019",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "column",
+            "css_classes": "ag-hero-card"
+          },
+          "elements": [
+            {
+              "id": "sec1020",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Today's Special",
+                "header_size": "div",
+                "css_classes": "ag-card-sub"
+              }
+            },
+            {
+              "id": "sec1021",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Free inspection with repair",
+                "header_size": "h3",
+                "css_classes": "ag-card-head"
+              }
+            },
+            {
+              "id": "sec1022",
+              "elType": "widget",
+              "widgetType": "image",
+              "settings": {
+                "image": {
+                  "url": "https://via.placeholder.com/400x250/FFEAD5/F25C05?text=Illustration",
+                  "id": ""
+                },
+                "css_classes": "ag-card-img"
+              }
+            },
+            {
+              "id": "sec1023",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p>We handle leaks, clogs, fixtures, water heaters, and drain cleaning.</p>",
+                "css_classes": "ag-card-desc"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec2001",
+      "elType": "container",
+      "settings": {
+        "display": "flex",
+        "flex_direction": "column",
+        "flex_gap": {
+          "size": 24,
+          "unit": "px"
+        },
+        "padding": {
+          "top": "60",
+          "right": "40",
+          "bottom": "60",
+          "left": "40",
+          "unit": "px"
+        },
+        "html_tag": "section",
+        "css_classes": "ag-services-section"
+      },
+      "elements": [
+        {
+          "id": "sec2002",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "Our Services",
+            "header_size": "div",
+            "css_classes": "ag-pill-badge"
+          }
+        },
+        {
+          "id": "sec2003",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "Everything you need to keep water flowing.",
+            "header_size": "h2",
+            "css_classes": "ag-sec-title"
+          }
+        },
+        {
+          "id": "sec2004",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "row",
+            "flex_gap": {
+              "size": 24,
+              "unit": "px"
+            },
+            "css_classes": "ag-grid-3col"
+          },
+          "elements": [
+            {
+              "id": "sec2005",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "column",
+                "flex_gap": {
+                  "size": 12,
+                  "unit": "px"
+                },
+                "css_classes": "ag-feature-card"
+              },
+              "elements": [
+                {
+                  "id": "sec2006",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "1",
+                    "header_size": "div",
+                    "css_classes": "ag-num-badge"
+                  }
+                },
+                {
+                  "id": "sec2007",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Leak Repairs",
+                    "header_size": "h3",
+                    "css_classes": "ag-card-title"
+                  }
+                },
+                {
+                  "id": "sec2008",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>Quick diagnosis and lasting repairs for pipes, faucets, toilets, and fixtures.</p>",
+                    "css_classes": "ag-card-body"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "sec2009",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "column",
+                "flex_gap": {
+                  "size": 12,
+                  "unit": "px"
+                },
+                "css_classes": "ag-feature-card"
+              },
+              "elements": [
+                {
+                  "id": "sec2010",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "2",
+                    "header_size": "div",
+                    "css_classes": "ag-num-badge"
+                  }
+                },
+                {
+                  "id": "sec2011",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Drain Cleaning",
+                    "header_size": "h3",
+                    "css_classes": "ag-card-title"
+                  }
+                },
+                {
+                  "id": "sec2012",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>Clear slow drains and stubborn clogs with safe, effective cleaning methods.</p>",
+                    "css_classes": "ag-card-body"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "sec2013",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "column",
+                "flex_gap": {
+                  "size": 12,
+                  "unit": "px"
+                },
+                "css_classes": "ag-feature-card"
+              },
+              "elements": [
+                {
+                  "id": "sec2014",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "3",
+                    "header_size": "div",
+                    "css_classes": "ag-num-badge"
+                  }
+                },
+                {
+                  "id": "sec2015",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Installations",
+                    "header_size": "h3",
+                    "css_classes": "ag-card-title"
+                  }
+                },
+                {
+                  "id": "sec2016",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>Upgrade sinks, showers, water heaters, garbage disposals, and more.</p>",
+                    "css_classes": "ag-card-body"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec3001",
+      "elType": "container",
+      "settings": {
+        "display": "flex",
+        "flex_direction": "row",
+        "flex_justify_content": "space-between",
+        "flex_gap": {
+          "size": 40,
+          "unit": "px"
+        },
+        "padding": {
+          "top": "60",
+          "right": "40",
+          "bottom": "60",
+          "left": "40",
+          "unit": "px"
+        },
+        "html_tag": "section",
+        "css_classes": "ag-why-section"
+      },
+      "elements": [
+        {
+          "id": "sec3002",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "column",
+            "flex_gap": {
+              "size": 20,
+              "unit": "px"
+            },
+            "css_classes": "ag-why-left"
+          },
+          "elements": [
+            {
+              "id": "sec3003",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Why Choose Us",
+                "header_size": "div",
+                "css_classes": "ag-pill-badge"
+              }
+            },
+            {
+              "id": "sec3004",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Friendly service with professional results.",
+                "header_size": "h2",
+                "css_classes": "ag-sec-title"
+              }
+            },
+            {
+              "id": "sec3005",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p>We combine skilled workmanship with honest communication, so you always know what to expect before the job begins.</p>",
+                "css_classes": "ag-body-desc"
+              }
+            },
+            {
+              "id": "sec3006",
+              "elType": "widget",
+              "widgetType": "icon-list",
+              "settings": {
+                "css_classes": "ag-check-list"
+              }
+            }
+          ]
+        },
+        {
+          "id": "sec3007",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "column",
+            "flex_gap": {
+              "size": 16,
+              "unit": "px"
+            },
+            "css_classes": "ag-why-right"
+          },
+          "elements": [
+            {
+              "id": "sec3008",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "column",
+                "css_classes": "ag-info-box"
+              },
+              "elements": [
+                {
+                  "id": "sec3009",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "15+",
+                    "header_size": "h3",
+                    "css_classes": "ag-info-title"
+                  }
+                },
+                {
+                  "id": "sec3010",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>Years of experience</p>",
+                    "css_classes": "ag-info-sub"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "sec3011",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "column",
+                "css_classes": "ag-info-box"
+              },
+              "elements": [
+                {
+                  "id": "sec3012",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Same Day",
+                    "header_size": "h3",
+                    "css_classes": "ag-info-title"
+                  }
+                },
+                {
+                  "id": "sec3013",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>Service available</p>",
+                    "css_classes": "ag-info-sub"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "sec3014",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "column",
+                "css_classes": "ag-info-box"
+              },
+              "elements": [
+                {
+                  "id": "sec3015",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Warranty",
+                    "header_size": "h3",
+                    "css_classes": "ag-info-title"
+                  }
+                },
+                {
+                  "id": "sec3016",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>On select work</p>",
+                    "css_classes": "ag-info-sub"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec4001",
+      "elType": "container",
+      "settings": {
+        "display": "flex",
+        "flex_direction": "column",
+        "flex_gap": {
+          "size": 24,
+          "unit": "px"
+        },
+        "padding": {
+          "top": "60",
+          "right": "40",
+          "bottom": "60",
+          "left": "40",
+          "unit": "px"
+        },
+        "html_tag": "section",
+        "css_classes": "ag-reviews-section"
+      },
+      "elements": [
+        {
+          "id": "sec4002",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "Reviews",
+            "header_size": "div",
+            "css_classes": "ag-pill-badge"
+          }
+        },
+        {
+          "id": "sec4003",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "What customers say.",
+            "header_size": "h2",
+            "css_classes": "ag-sec-title"
+          }
+        },
+        {
+          "id": "sec4004",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "row",
+            "flex_gap": {
+              "size": 24,
+              "unit": "px"
+            },
+            "css_classes": "ag-grid-3col"
+          },
+          "elements": [
+            {
+              "id": "sec4005",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "column",
+                "flex_justify_content": "space-between",
+                "css_classes": "ag-review-card"
+              },
+              "elements": [
+                {
+                  "id": "sec4006",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>“They fixed a leak fast and left everything spotless. Excellent experience.”</p>",
+                    "css_classes": "ag-review-quote"
+                  }
+                },
+                {
+                  "id": "sec4007",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "— Sarah M.",
+                    "header_size": "div",
+                    "css_classes": "ag-review-author"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "sec4008",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "column",
+                "flex_justify_content": "space-between",
+                "css_classes": "ag-review-card"
+              },
+              "elements": [
+                {
+                  "id": "sec4009",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>“Very professional, fair pricing, and great communication from start to finish.”</p>",
+                    "css_classes": "ag-review-quote"
+                  }
+                },
+                {
+                  "id": "sec4010",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "— Daniel R.",
+                    "header_size": "div",
+                    "css_classes": "ag-review-author"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "sec4011",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "column",
+                "flex_justify_content": "space-between",
+                "css_classes": "ag-review-card"
+              },
+              "elements": [
+                {
+                  "id": "sec4012",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>“I needed same-day help and they delivered. Highly recommended.”</p>",
+                    "css_classes": "ag-review-quote"
+                  }
+                },
+                {
+                  "id": "sec4013",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "— Priya K.",
+                    "header_size": "div",
+                    "css_classes": "ag-review-author"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec5001",
+      "elType": "container",
+      "settings": {
+        "display": "flex",
+        "flex_direction": "column",
+        "padding": {
+          "top": "40",
+          "right": "40",
+          "bottom": "40",
+          "left": "40",
+          "unit": "px"
+        },
+        "html_tag": "section",
+        "css_classes": "ag-cta-wrapper"
+      },
+      "elements": [
+        {
+          "id": "sec5002",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "row",
+            "flex_justify_content": "space-between",
+            "flex_align_items": "center",
+            "padding": {
+              "top": "48",
+              "right": "48",
+              "bottom": "48",
+              "left": "48",
+              "unit": "px"
+            },
+            "css_classes": "ag-cta-banner"
+          },
+          "elements": [
+            {
+              "id": "sec5003",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "column",
+                "flex_gap": {
+                  "size": 12,
+                  "unit": "px"
+                },
+                "css_classes": "ag-cta-left"
+              },
+              "elements": [
+                {
+                  "id": "sec5004",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Book Service",
+                    "header_size": "div",
+                    "css_classes": "ag-cta-badge"
+                  }
+                },
+                {
+                  "id": "sec5005",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Need a plumber today?",
+                    "header_size": "h2",
+                    "css_classes": "ag-cta-title"
+                  }
+                },
+                {
+                  "id": "sec5006",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>Call us or send a message and we'll get back to you right away.</p>",
+                    "css_classes": "ag-cta-desc"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "sec5007",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "row",
+                "flex_gap": {
+                  "size": 16,
+                  "unit": "px"
+                },
+                "css_classes": "ag-cta-buttons"
+              },
+              "elements": [
+                {
+                  "id": "sec5008",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "settings": {
+                    "text": "(555) 123-4567",
+                    "link": {
+                      "url": "tel:5551234567",
+                      "is_external": false
+                    },
+                    "css_classes": "ag-btn-white-filled"
+                  }
+                },
+                {
+                  "id": "sec5009",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "settings": {
+                    "text": "hello@flowfixplumbing.com",
+                    "link": {
+                      "url": "mailto:hello@flowfixplumbing.com",
+                      "is_external": false
+                    },
+                    "css_classes": "ag-btn-white-border"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ftr1001",
+      "elType": "container",
+      "settings": {
+        "display": "flex",
+        "flex_direction": "row",
+        "flex_justify_content": "space-between",
+        "flex_align_items": "center",
+        "padding": {
+          "top": "24",
+          "right": "40",
+          "bottom": "24",
+          "left": "40",
+          "unit": "px"
+        },
+        "html_tag": "footer",
+        "css_classes": "ag-footer"
+      },
+      "elements": [
+        {
+          "id": "ftr1002",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+            "editor": "<p>© 2026 FlowFix Plumbing</p>",
+            "css_classes": "ag-footer-text"
+          }
+        },
+        {
+          "id": "ftr1003",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+            "editor": "<p>Licensed • Insured • Available 24/7</p>",
+            "css_classes": "ag-footer-text"
+          }
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "colors": [
+      "#FAF6F0",
+      "#F25C05",
+      "#1E293B",
+      "#64748B",
+      "#FFEAD5",
+      "#FFFFFF"
+    ],
+    "fonts": [
+      "Inter",
+      "System UI"
+    ],
+    "section_count": 5
+  },
+  "global_classes": {
+    "ag-header": {
+      "background-color": "#FAF6F0"
+    },
+    "ag-logo-wrapper": {
+      "cursor": "pointer"
+    },
+    "ag-logo-badge": {
+      "background-color": "#F25C05",
+      "color": "#FFFFFF",
+      "font-weight": "700",
+      "border-radius": "6px",
+      "padding": "4px 8px",
+      "font-size": "14px"
+    },
+    "ag-logo-text": {
+      "color": "#1E293B",
+      "font-weight": "700",
+      "font-size": "18px"
+    },
+    "ag-nav-container": {
+      "align-items": "center"
+    },
+    "ag-nav-links": {
+      "color": "#1E293B",
+      "font-weight": "500",
+      "font-size": "15px"
+    },
+    "ag-btn-primary": {
+      "background-color": "#F25C05",
+      "color": "#FFFFFF",
+      "border-radius": "24px",
+      "padding": "10px 22px",
+      "font-weight": "600",
+      "font-size": "14px"
+    },
+    "ag-btn-secondary": {
+      "background-color": "#FFFFFF",
+      "color": "#1E293B",
+      "border-radius": "24px",
+      "border": "1px solid #E2E8F0",
+      "padding": "10px 22px",
+      "font-weight": "600",
+      "font-size": "14px"
+    },
+    "ag-hero-section": {
+      "background-color": "#FAF6F0"
+    },
+    "ag-hero-left": {
+      "flex": "1"
+    },
+    "ag-pill-badge": {
+      "background-color": "#FFEAD5",
+      "color": "#F25C05",
+      "border-radius": "16px",
+      "padding": "4px 12px",
+      "font-size": "12px",
+      "font-weight": "600",
+      "width": "fit-content"
+    },
+    "ag-hero-title": {
+      "color": "#1E293B",
+      "font-size": "48px",
+      "font-weight": "800",
+      "line-height": "1.1"
+    },
+    "ag-body-desc": {
+      "color": "#64748B",
+      "font-size": "16px",
+      "line-height": "1.5"
+    },
+    "ag-btn-group": {
+      "margin-top": "8px"
+    },
+    "ag-stats-row": {
+      "margin-top": "16px"
+    },
+    "ag-stat-card": {
+      "background-color": "#FFFFFF",
+      "border-radius": "12px",
+      "padding": "16px 20px",
+      "flex": "1"
+    },
+    "ag-stat-num": {
+      "color": "#1E293B",
+      "font-size": "20px",
+      "font-weight": "700"
+    },
+    "ag-stat-lbl": {
+      "color": "#64748B",
+      "font-size": "13px"
+    },
+    "ag-hero-card": {
+      "background-color": "#FFFFFF",
+      "border-radius": "16px",
+      "padding": "24px",
+      "flex": "1",
+      "max-width": "420px"
+    },
+    "ag-card-sub": {
+      "color": "#64748B",
+      "font-size": "13px"
+    },
+    "ag-card-head": {
+      "color": "#1E293B",
+      "font-size": "18px",
+      "font-weight": "700",
+      "margin-bottom": "12px"
+    },
+    "ag-card-img": {
+      "border-radius": "12px",
+      "margin-bottom": "12px"
+    },
+    "ag-card-desc": {
+      "color": "#64748B",
+      "font-size": "14px"
+    },
+    "ag-services-section": {
+      "background-color": "#FAF6F0"
+    },
+    "ag-sec-title": {
+      "color": "#1E293B",
+      "font-size": "32px",
+      "font-weight": "700"
+    },
+    "ag-grid-3col": {
+      "width": "100%"
+    },
+    "ag-feature-card": {
+      "background-color": "#FFFFFF",
+      "border-radius": "16px",
+      "padding": "24px",
+      "flex": "1"
+    },
+    "ag-num-badge": {
+      "background-color": "#FFEAD5",
+      "color": "#F25C05",
+      "border-radius": "8px",
+      "width": "28px",
+      "height": "28px",
+      "display": "flex",
+      "align-items": "center",
+      "justify-content": "center",
+      "font-weight": "700",
+      "font-size": "14px"
+    },
+    "ag-card-title": {
+      "color": "#1E293B",
+      "font-size": "18px",
+      "font-weight": "700"
+    },
+    "ag-card-body": {
+      "color": "#64748B",
+      "font-size": "14px",
+      "line-height": "1.4"
+    },
+    "ag-why-section": {
+      "background-color": "#FAF6F0"
+    },
+    "ag-why-left": {
+      "flex": "1"
+    },
+    "ag-check-list": {
+      "color": "#1E293B",
+      "font-size": "15px",
+      "font-weight": "500"
+    },
+    "ag-why-right": {
+      "flex": "1"
+    },
+    "ag-info-box": {
+      "background-color": "#FFFFFF",
+      "border-radius": "12px",
+      "padding": "20px 24px"
+    },
+    "ag-info-title": {
+      "color": "#1E293B",
+      "font-size": "20px",
+      "font-weight": "700"
+    },
+    "ag-info-sub": {
+      "color": "#64748B",
+      "font-size": "14px"
+    },
+    "ag-reviews-section": {
+      "background-color": "#FAF6F0"
+    },
+    "ag-review-card": {
+      "background-color": "#FFFFFF",
+      "border-radius": "16px",
+      "padding": "24px",
+      "flex": "1",
+      "min-height": "160px"
+    },
+    "ag-review-quote": {
+      "color": "#1E293B",
+      "font-size": "15px",
+      "line-height": "1.5"
+    },
+    "ag-review-author": {
+      "color": "#F25C05",
+      "font-size": "14px",
+      "font-weight": "700",
+      "margin-top": "16px"
+    },
+    "ag-cta-wrapper": {
+      "background-color": "#FAF6F0"
+    },
+    "ag-cta-banner": {
+      "background-color": "#F25C05",
+      "border-radius": "20px",
+      "width": "100%"
+    },
+    "ag-cta-left": {
+      "flex": "1"
+    },
+    "ag-cta-badge": {
+      "background-color": "rgba(255, 255, 255, 0.2)",
+      "color": "#FFFFFF",
+      "border-radius": "16px",
+      "padding": "4px 12px",
+      "font-size": "12px",
+      "font-weight": "600",
+      "width": "fit-content"
+    },
+    "ag-cta-title": {
+      "color": "#FFFFFF",
+      "font-size": "32px",
+      "font-weight": "700"
+    },
+    "ag-cta-desc": {
+      "color": "rgba(255, 255, 255, 0.9)",
+      "font-size": "15px"
+    },
+    "ag-cta-buttons": {
+      "align-items": "center"
+    },
+    "ag-btn-white-filled": {
+      "background-color": "rgba(255, 255, 255, 0.2)",
+      "color": "#FFFFFF",
+      "border-radius": "24px",
+      "padding": "12px 24px",
+      "font-weight": "700",
+      "font-size": "14px"
+    },
+    "ag-btn-white-border": {
+      "background-color": "rgba(255, 255, 255, 0.2)",
+      "color": "#FFFFFF",
+      "border-radius": "24px",
+      "padding": "12px 24px",
+      "font-weight": "700",
+      "font-size": "14px"
+    },
+    "ag-footer": {
+      "background-color": "#FAF6F0",
+      "border-top": "1px solid #E2E8F0"
+    },
+    "ag-footer-text": {
+      "color": "#64748B",
+      "font-size": "14px"
+    }
+  }
+}

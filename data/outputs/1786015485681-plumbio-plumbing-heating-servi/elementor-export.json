@@ -1,0 +1,684 @@
+{
+  "title": "Plumbio - Plumbing & Heating Services Header & Hero",
+  "summary": {
+    "colors": [
+      "#16508C",
+      "#389BFF",
+      "#FF5A36",
+      "#0C3B66",
+      "#FFFFFF",
+      "#666666"
+    ],
+    "fonts": [
+      "Poppins",
+      "Inter"
+    ],
+    "section_count": 1
+  },
+  "header_template": [
+    {
+      "id": "1a01b01",
+      "elType": "container",
+      "settings": {
+        "display": "flex",
+        "flex_direction": "row",
+        "flex_justify_content": "space-between",
+        "flex_align_items": "center",
+        "background_background": "classic",
+        "background_color": "#16508C",
+        "padding": {
+          "unit": "px",
+          "top": "8",
+          "right": "30",
+          "bottom": "8",
+          "left": "30",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "1a01b02",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "row",
+            "flex_align_items": "center",
+            "gap": {
+              "unit": "px",
+              "size": "25"
+            }
+          },
+          "elements": [
+            {
+              "id": "1a01b04",
+              "elType": "widget",
+              "widgetType": "icon-box",
+              "settings": {
+                "selected_icon": {
+                  "value": "fas fa-map-marker-alt",
+                  "library": "fa-solid"
+                },
+                "title_text": "",
+                "description_text": "8494 Signal Hill Road Manassas, VA, 20110",
+                "position": "left",
+                "primary_color": "#389BFF",
+                "text_color": "#FFFFFF",
+                "typography_typography": "custom",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": "12"
+                }
+              }
+            },
+            {
+              "id": "1a01b05",
+              "elType": "widget",
+              "widgetType": "icon-box",
+              "settings": {
+                "selected_icon": {
+                  "value": "fas fa-envelope",
+                  "library": "fa-solid"
+                },
+                "title_text": "",
+                "description_text": "E-mail us: needhelp@company.com",
+                "position": "left",
+                "primary_color": "#389BFF",
+                "text_color": "#FFFFFF",
+                "typography_typography": "custom",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": "12"
+                }
+              }
+            },
+            {
+              "id": "1a01b06",
+              "elType": "widget",
+              "widgetType": "icon-box",
+              "settings": {
+                "selected_icon": {
+                  "value": "fas fa-clock",
+                  "library": "fa-solid"
+                },
+                "title_text": "",
+                "description_text": "24 Hour Service - 7 Days a Week",
+                "position": "left",
+                "primary_color": "#389BFF",
+                "text_color": "#FFFFFF",
+                "typography_typography": "custom",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": "12"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "1a01b03",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "row",
+            "flex_align_items": "center",
+            "gap": {
+              "unit": "px",
+              "size": "15"
+            }
+          },
+          "elements": [
+            {
+              "id": "1a01b07",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Follow us:",
+                "header_size": "span",
+                "title_color": "#FFFFFF",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": "12"
+                }
+              }
+            },
+            {
+              "id": "1a01b08",
+              "elType": "widget",
+              "widgetType": "social-icons",
+              "settings": {
+                "social_icon_list": [
+                  {
+                    "social_icon": {
+                      "value": "fab fa-twitter",
+                      "library": "fa-brands"
+                    }
+                  },
+                  {
+                    "social_icon": {
+                      "value": "fab fa-facebook-f",
+                      "library": "fa-brands"
+                    }
+                  },
+                  {
+                    "social_icon": {
+                      "value": "fab fa-linkedin-in",
+                      "library": "fa-brands"
+                    }
+                  },
+                  {
+                    "social_icon": {
+                      "value": "fab fa-instagram",
+                      "library": "fa-brands"
+                    }
+                  }
+                ],
+                "icon_size": {
+                  "unit": "px",
+                  "size": "12"
+                },
+                "icon_padding": {
+                  "unit": "px",
+                  "size": "4"
+                },
+                "icon_color": "custom",
+                "custom_primary_color": "rgba(0,0,0,0)",
+                "custom_secondary_color": "#FFFFFF"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2b02c01",
+      "elType": "container",
+      "settings": {
+        "display": "flex",
+        "flex_direction": "row",
+        "flex_justify_content": "space-between",
+        "flex_align_items": "center",
+        "background_background": "classic",
+        "background_color": "#FFFFFF",
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "2b02c02",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "row",
+            "flex_align_items": "center",
+            "background_background": "classic",
+            "background_color": "#16508C",
+            "padding": {
+              "unit": "px",
+              "top": "20",
+              "right": "40",
+              "bottom": "20",
+              "left": "40",
+              "isLinked": false
+            }
+          },
+          "elements": [
+            {
+              "id": "2b02c03",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Plumbio",
+                "title_color": "#FFFFFF",
+                "typography_font_family": "Poppins",
+                "typography_font_weight": "700",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": "28"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "2b02c04",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "row",
+            "flex_align_items": "center"
+          },
+          "elements": [
+            {
+              "id": "2b02c05",
+              "elType": "widget",
+              "widgetType": "nav-menu",
+              "settings": {
+                "layout": "horizontal",
+                "color_text": "#16508C",
+                "color_hover": "#389BFF",
+                "typography_font_family": "Poppins",
+                "typography_font_weight": "600",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": "15"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "2b02c06",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "row",
+            "flex_align_items": "center",
+            "gap": {
+              "unit": "px",
+              "size": "20"
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": false
+            }
+          },
+          "elements": [
+            {
+              "id": "2b02c07",
+              "elType": "widget",
+              "widgetType": "icon-box",
+              "settings": {
+                "selected_icon": {
+                  "value": "fas fa-phone-alt",
+                  "library": "fa-solid"
+                },
+                "title_text": "Need Help Now? Call Us!",
+                "description_text": "123-456-789",
+                "position": "left",
+                "primary_color": "#FF5A36",
+                "title_color": "#666666",
+                "description_color": "#FF5A36",
+                "typography_title_font_size": {
+                  "unit": "px",
+                  "size": "11"
+                },
+                "typography_description_font_size": {
+                  "unit": "px",
+                  "size": "18"
+                },
+                "typography_description_font_weight": "700"
+              }
+            },
+            {
+              "id": "2b02c08",
+              "elType": "widget",
+              "widgetType": "button",
+              "settings": {
+                "text": "Schedule Online",
+                "button_type": "default",
+                "background_color": "rgba(0,0,0,0)",
+                "text_color": "#16508C",
+                "border_border": "solid",
+                "border_width": {
+                  "unit": "px",
+                  "top": "2",
+                  "right": "2",
+                  "bottom": "2",
+                  "left": "2"
+                },
+                "border_color": "#16508C",
+                "border_radius": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0"
+                }
+              }
+            },
+            {
+              "id": "2b02c09",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_justify_content": "center",
+                "flex_align_items": "center",
+                "background_background": "classic",
+                "background_color": "#389BFF",
+                "padding": {
+                  "unit": "px",
+                  "top": "25",
+                  "right": "25",
+                  "bottom": "25",
+                  "left": "25",
+                  "isLinked": true
+                }
+              },
+              "elements": [
+                {
+                  "id": "2b02c10",
+                  "elType": "widget",
+                  "widgetType": "icon",
+                  "settings": {
+                    "selected_icon": {
+                      "value": "fas fa-bars",
+                      "library": "fa-solid"
+                    },
+                    "primary_color": "#FFFFFF",
+                    "size": {
+                      "unit": "px",
+                      "size": "20"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "footer_template": [
+    {
+      "id": "4d04e01",
+      "elType": "container",
+      "settings": {
+        "display": "flex",
+        "flex_direction": "row",
+        "flex_justify_content": "space-between",
+        "background_background": "classic",
+        "background_color": "#0C3B66",
+        "padding": {
+          "unit": "px",
+          "top": "60",
+          "right": "40",
+          "bottom": "60",
+          "left": "40",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "4d04e02",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "column",
+            "width": {
+              "unit": "%",
+              "size": "25"
+            }
+          },
+          "elements": [
+            {
+              "id": "4d04e03",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Plumbio",
+                "title_color": "#FFFFFF",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": "24"
+                }
+              }
+            },
+            {
+              "id": "4d04e04",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p style=\"color: #A0B2C6;\">Reliable plumbing and heating solutions for residential and commercial customers.</p>"
+              }
+            }
+          ]
+        },
+        {
+          "id": "4d04e05",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "column",
+            "width": {
+              "unit": "%",
+              "size": "25"
+            }
+          },
+          "elements": [
+            {
+              "id": "4d04e06",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Quick Links",
+                "title_color": "#FFFFFF",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": "18"
+                }
+              }
+            },
+            {
+              "id": "4d04e07",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<ul style=\"color: #A0B2C6; list-style: none; padding: 0;\"><li>About Us</li><li>Services</li><li>Pricing</li><li>Contact</li></ul>"
+              }
+            }
+          ]
+        },
+        {
+          "id": "4d04e08",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "column",
+            "width": {
+              "unit": "%",
+              "size": "25"
+            }
+          },
+          "elements": [
+            {
+              "id": "4d04e09",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Contact Us",
+                "title_color": "#FFFFFF",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": "18"
+                }
+              }
+            },
+            {
+              "id": "4d04e10",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p style=\"color: #A0B2C6;\">8494 Signal Hill Road Manassas, VA<br/>Email: needhelp@company.com<br/>Phone: 123-456-789</p>"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "content_template": [
+    {
+      "id": "3c03d01",
+      "elType": "container",
+      "settings": {
+        "display": "flex",
+        "flex_direction": "row",
+        "flex_justify_content": "flex-start",
+        "flex_align_items": "center",
+        "min_height": {
+          "unit": "px",
+          "size": "600"
+        },
+        "background_background": "classic",
+        "background_color": "#16508C",
+        "padding": {
+          "unit": "px",
+          "top": "60",
+          "right": "60",
+          "bottom": "60",
+          "left": "60",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "3c03d02",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "column",
+            "flex_justify_content": "center",
+            "flex_align_items": "center",
+            "width": {
+              "unit": "%",
+              "size": "65"
+            },
+            "padding": {
+              "unit": "px",
+              "top": "40",
+              "right": "40",
+              "bottom": "40",
+              "left": "40",
+              "isLinked": true
+            }
+          },
+          "elements": [
+            {
+              "id": "3c03d03",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Exceptional, Punctual & Professional",
+                "align": "center",
+                "title_color": "#FFFFFF",
+                "typography_font_family": "Poppins",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": "48"
+                },
+                "typography_font_weight": "700",
+                "typography_line_height": {
+                  "unit": "em",
+                  "size": "1.2"
+                }
+              }
+            },
+            {
+              "id": "3c03d04",
+              "elType": "widget",
+              "widgetType": "divider",
+              "settings": {
+                "width": {
+                  "unit": "px",
+                  "size": "50"
+                },
+                "color": "#389BFF",
+                "weight": {
+                  "unit": "px",
+                  "size": "3"
+                },
+                "align": "center",
+                "gap": {
+                  "unit": "px",
+                  "size": "20"
+                }
+              }
+            },
+            {
+              "id": "3c03d05",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p style=\"text-align: center; color: #FFFFFF; font-family: Inter; font-size: 16px;\">You deserve to have a handy team of plumbers who can install or repair any plumbing system you need.</p>"
+              }
+            }
+          ]
+        },
+        {
+          "id": "3c03d06",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "row",
+            "flex_justify_content": "flex-end",
+            "flex_align_items": "flex-end",
+            "width": {
+              "unit": "%",
+              "size": "35"
+            },
+            "gap": {
+              "unit": "px",
+              "size": "15"
+            }
+          },
+          "elements": [
+            {
+              "id": "3c03d07",
+              "elType": "widget",
+              "widgetType": "button",
+              "settings": {
+                "text": "←",
+                "button_type": "default",
+                "background_color": "rgba(0,0,0,0)",
+                "text_color": "#16508C"
+              }
+            },
+            {
+              "id": "3c03d08",
+              "elType": "widget",
+              "widgetType": "button",
+              "settings": {
+                "text": "→",
+                "button_type": "default",
+                "background_color": "rgba(0,0,0,0)",
+                "text_color": "#16508C"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "global_classes": {
+    "primary_button": {
+      "background_color": "#FF5A36",
+      "text_color": "#FFFFFF",
+      "font_family": "Poppins"
+    },
+    "heading_bold": {
+      "font_family": "Poppins",
+      "font_weight": "700"
+    }
+  }
+}

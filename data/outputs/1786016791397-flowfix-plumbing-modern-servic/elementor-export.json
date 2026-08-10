@@ -1,0 +1,1406 @@
+{
+  "version": "0.4",
+  "title": "FlowFix Plumbing - Modern Service Design",
+  "type": "page",
+  "page_settings": {},
+  "content": [
+    {
+      "id": "hdr0001",
+      "elType": "container",
+      "settings": {
+        "display": "flex",
+        "flex_direction": "row",
+        "flex_justify_content": "space-between",
+        "flex_align_items": "center",
+        "padding": {
+          "top": "20",
+          "bottom": "20",
+          "left": "40",
+          "right": "40",
+          "unit": "px"
+        },
+        "background_background": "classic",
+        "background_color": "#fff8f3"
+      },
+      "elements": [
+        {
+          "id": "hdr0002",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "row",
+            "flex_align_items": "center",
+            "gap": {
+              "size": 10,
+              "unit": "px"
+            }
+          },
+          "elements": [
+            {
+              "id": "hdr0003",
+              "elType": "widget",
+              "widgetType": "button",
+              "settings": {
+                "text": "FF",
+                "button_type": "warning",
+                "size": "xs",
+                "background_color": "#f46a1a",
+                "text_color": "#ffffff",
+                "border_radius": {
+                  "top": "8",
+                  "right": "8",
+                  "bottom": "8",
+                  "left": "8",
+                  "unit": "px"
+                }
+              }
+            },
+            {
+              "id": "hdr0004",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "FlowFix Plumbing",
+                "header_size": "h4",
+                "title_color": "#111827"
+              }
+            }
+          ]
+        },
+        {
+          "id": "hdr0005",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "row",
+            "flex_align_items": "center",
+            "gap": {
+              "size": 30,
+              "unit": "px"
+            }
+          },
+          "elements": [
+            {
+              "id": "hdr0006",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Services",
+                "header_size": "p",
+                "title_color": "#4b5563"
+              }
+            },
+            {
+              "id": "hdr0007",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "About",
+                "header_size": "p",
+                "title_color": "#4b5563"
+              }
+            },
+            {
+              "id": "hdr0008",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Reviews",
+                "header_size": "p",
+                "title_color": "#4b5563"
+              }
+            },
+            {
+              "id": "hdr0009",
+              "elType": "widget",
+              "widgetType": "button",
+              "settings": {
+                "text": "Book Now",
+                "background_color": "#f46a1a",
+                "text_color": "#ffffff",
+                "border_radius": {
+                  "top": "12",
+                  "right": "12",
+                  "bottom": "12",
+                  "left": "12",
+                  "unit": "px"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cnt0001",
+      "elType": "container",
+      "settings": {
+        "display": "flex",
+        "flex_direction": "row",
+        "flex_justify_content": "space-between",
+        "padding": {
+          "top": "60",
+          "bottom": "60",
+          "left": "40",
+          "right": "40",
+          "unit": "px"
+        },
+        "background_background": "classic",
+        "background_color": "#fff8f3"
+      },
+      "elements": [
+        {
+          "id": "cnt0002",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "column",
+            "width": {
+              "size": 55,
+              "unit": "%"
+            },
+            "gap": {
+              "size": 20,
+              "unit": "px"
+            }
+          },
+          "elements": [
+            {
+              "id": "cnt0003",
+              "elType": "widget",
+              "widgetType": "button",
+              "settings": {
+                "text": "Fast • Reliable • Affordable",
+                "background_color": "#fef3c7",
+                "text_color": "#d97706",
+                "border_radius": {
+                  "top": "20",
+                  "right": "20",
+                  "bottom": "20",
+                  "left": "20",
+                  "unit": "px"
+                }
+              }
+            },
+            {
+              "id": "cnt0004",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Trusted plumbing solutions for homes and businesses.",
+                "header_size": "h1",
+                "title_color": "#111827"
+              }
+            },
+            {
+              "id": "cnt0005",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p>From emergency leaks to full bathroom upgrades, FlowFix Plumbing delivers dependable service with clear pricing and quick response times.</p>",
+                "text_color": "#4b5563"
+              }
+            },
+            {
+              "id": "cnt0006",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "row",
+                "gap": {
+                  "size": 15,
+                  "unit": "px"
+                }
+              },
+              "elements": [
+                {
+                  "id": "cnt0007",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "settings": {
+                    "text": "Request Service",
+                    "background_color": "#f46a1a",
+                    "text_color": "#ffffff",
+                    "border_radius": {
+                      "top": "10",
+                      "right": "10",
+                      "bottom": "10",
+                      "left": "10",
+                      "unit": "px"
+                    }
+                  }
+                },
+                {
+                  "id": "cnt0008",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "settings": {
+                    "text": "Our Services",
+                    "background_color": "#ffffff",
+                    "text_color": "#f46a1a",
+                    "border_radius": {
+                      "top": "10",
+                      "right": "10",
+                      "bottom": "10",
+                      "left": "10",
+                      "unit": "px"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "cnt0009",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "row",
+                "flex_justify_content": "space-between",
+                "margin": {
+                  "top": "20",
+                  "unit": "px"
+                }
+              },
+              "elements": [
+                {
+                  "id": "cnt0010",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "display": "flex",
+                    "flex_direction": "column",
+                    "padding": {
+                      "top": "15",
+                      "bottom": "15",
+                      "left": "20",
+                      "right": "20",
+                      "unit": "px"
+                    },
+                    "background_background": "classic",
+                    "background_color": "#ffffff",
+                    "border_radius": {
+                      "top": "12",
+                      "right": "12",
+                      "bottom": "12",
+                      "left": "12",
+                      "unit": "px"
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "cnt0011",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "24/7",
+                        "header_size": "h3",
+                        "title_color": "#111827"
+                      }
+                    },
+                    {
+                      "id": "cnt0012",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p>Emergency support</p>",
+                        "text_color": "#6b7280"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "cnt0013",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "display": "flex",
+                    "flex_direction": "column",
+                    "padding": {
+                      "top": "15",
+                      "bottom": "15",
+                      "left": "20",
+                      "right": "20",
+                      "unit": "px"
+                    },
+                    "background_background": "classic",
+                    "background_color": "#ffffff",
+                    "border_radius": {
+                      "top": "12",
+                      "right": "12",
+                      "bottom": "12",
+                      "left": "12",
+                      "unit": "px"
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "cnt0014",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "500+",
+                        "header_size": "h3",
+                        "title_color": "#111827"
+                      }
+                    },
+                    {
+                      "id": "cnt0015",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p>Jobs completed</p>",
+                        "text_color": "#6b7280"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "cnt0016",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "display": "flex",
+                    "flex_direction": "column",
+                    "padding": {
+                      "top": "15",
+                      "bottom": "15",
+                      "left": "20",
+                      "right": "20",
+                      "unit": "px"
+                    },
+                    "background_background": "classic",
+                    "background_color": "#ffffff",
+                    "border_radius": {
+                      "top": "12",
+                      "right": "12",
+                      "bottom": "12",
+                      "left": "12",
+                      "unit": "px"
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "cnt0017",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "4.9/5",
+                        "header_size": "h3",
+                        "title_color": "#111827"
+                      }
+                    },
+                    {
+                      "id": "cnt0018",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p>Customer rating</p>",
+                        "text_color": "#6b7280"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cnt0019",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "column",
+            "width": {
+              "size": 40,
+              "unit": "%"
+            },
+            "padding": {
+              "top": "25",
+              "bottom": "25",
+              "left": "25",
+              "right": "25",
+              "unit": "px"
+            },
+            "background_background": "classic",
+            "background_color": "#ffffff",
+            "border_radius": {
+              "top": "20",
+              "right": "20",
+              "bottom": "20",
+              "left": "20",
+              "unit": "px"
+            }
+          },
+          "elements": [
+            {
+              "id": "cnt0020",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p>Today's Special</p>",
+                "text_color": "#9ca3af"
+              }
+            },
+            {
+              "id": "cnt0021",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Free inspection with repair",
+                "header_size": "h3",
+                "title_color": "#111827"
+              }
+            },
+            {
+              "id": "cnt0022",
+              "elType": "widget",
+              "widgetType": "image",
+              "settings": {
+                "image": {
+                  "url": "placeholder-graphic.png"
+                },
+                "align": "center"
+              }
+            },
+            {
+              "id": "cnt0023",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p>We handle leaks, clogs, fixtures, water heaters, and drain cleaning.</p>",
+                "text_color": "#4b5563"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cnt0024",
+      "elType": "container",
+      "settings": {
+        "display": "flex",
+        "flex_direction": "column",
+        "padding": {
+          "top": "60",
+          "bottom": "60",
+          "left": "40",
+          "right": "40",
+          "unit": "px"
+        },
+        "background_background": "classic",
+        "background_color": "#ffffff"
+      },
+      "elements": [
+        {
+          "id": "cnt0025",
+          "elType": "widget",
+          "widgetType": "button",
+          "settings": {
+            "text": "Our Services",
+            "background_color": "#fef3c7",
+            "text_color": "#d97706",
+            "border_radius": {
+              "top": "20",
+              "right": "20",
+              "bottom": "20",
+              "left": "20",
+              "unit": "px"
+            }
+          }
+        },
+        {
+          "id": "cnt0026",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "Everything you need to keep water flowing.",
+            "header_size": "h2",
+            "title_color": "#111827"
+          }
+        },
+        {
+          "id": "cnt0027",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "row",
+            "flex_justify_content": "space-between",
+            "margin": {
+              "top": "30",
+              "unit": "px"
+            },
+            "gap": {
+              "size": 20,
+              "unit": "px"
+            }
+          },
+          "elements": [
+            {
+              "id": "cnt0028",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "column",
+                "width": {
+                  "size": 32,
+                  "unit": "%"
+                },
+                "padding": {
+                  "top": "25",
+                  "bottom": "25",
+                  "left": "25",
+                  "right": "25",
+                  "unit": "px"
+                },
+                "background_background": "classic",
+                "background_color": "#fff8f3",
+                "border_radius": {
+                  "top": "16",
+                  "right": "16",
+                  "bottom": "16",
+                  "left": "16",
+                  "unit": "px"
+                }
+              },
+              "elements": [
+                {
+                  "id": "cnt0029",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "settings": {
+                    "text": "1",
+                    "background_color": "#fef3c7",
+                    "text_color": "#d97706",
+                    "border_radius": {
+                      "top": "8",
+                      "right": "8",
+                      "bottom": "8",
+                      "left": "8",
+                      "unit": "px"
+                    }
+                  }
+                },
+                {
+                  "id": "cnt0030",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Leak Repairs",
+                    "header_size": "h4",
+                    "title_color": "#111827"
+                  }
+                },
+                {
+                  "id": "cnt0031",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>Quick diagnosis and lasting repairs for pipes, faucets, toilets, and fixtures.</p>",
+                    "text_color": "#4b5563"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "cnt0032",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "column",
+                "width": {
+                  "size": 32,
+                  "unit": "%"
+                },
+                "padding": {
+                  "top": "25",
+                  "bottom": "25",
+                  "left": "25",
+                  "right": "25",
+                  "unit": "px"
+                },
+                "background_background": "classic",
+                "background_color": "#fff8f3",
+                "border_radius": {
+                  "top": "16",
+                  "right": "16",
+                  "bottom": "16",
+                  "left": "16",
+                  "unit": "px"
+                }
+              },
+              "elements": [
+                {
+                  "id": "cnt0033",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "settings": {
+                    "text": "2",
+                    "background_color": "#fef3c7",
+                    "text_color": "#d97706",
+                    "border_radius": {
+                      "top": "8",
+                      "right": "8",
+                      "bottom": "8",
+                      "left": "8",
+                      "unit": "px"
+                    }
+                  }
+                },
+                {
+                  "id": "cnt0034",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Drain Cleaning",
+                    "header_size": "h4",
+                    "title_color": "#111827"
+                  }
+                },
+                {
+                  "id": "cnt0035",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>Clear slow drains and stubborn clogs with safe, effective cleaning methods.</p>",
+                    "text_color": "#4b5563"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "cnt0036",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "column",
+                "width": {
+                  "size": 32,
+                  "unit": "%"
+                },
+                "padding": {
+                  "top": "25",
+                  "bottom": "25",
+                  "left": "25",
+                  "right": "25",
+                  "unit": "px"
+                },
+                "background_background": "classic",
+                "background_color": "#fff8f3",
+                "border_radius": {
+                  "top": "16",
+                  "right": "16",
+                  "bottom": "16",
+                  "left": "16",
+                  "unit": "px"
+                }
+              },
+              "elements": [
+                {
+                  "id": "cnt0037",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "settings": {
+                    "text": "3",
+                    "background_color": "#fef3c7",
+                    "text_color": "#d97706",
+                    "border_radius": {
+                      "top": "8",
+                      "right": "8",
+                      "bottom": "8",
+                      "left": "8",
+                      "unit": "px"
+                    }
+                  }
+                },
+                {
+                  "id": "cnt0038",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Installations",
+                    "header_size": "h4",
+                    "title_color": "#111827"
+                  }
+                },
+                {
+                  "id": "cnt0039",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>Upgrade sinks, showers, water heaters, garbage disposals, and more.</p>",
+                    "text_color": "#4b5563"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cnt0040",
+      "elType": "container",
+      "settings": {
+        "display": "flex",
+        "flex_direction": "row",
+        "flex_justify_content": "space-between",
+        "padding": {
+          "top": "60",
+          "bottom": "60",
+          "left": "40",
+          "right": "40",
+          "unit": "px"
+        },
+        "background_background": "classic",
+        "background_color": "#fff8f3"
+      },
+      "elements": [
+        {
+          "id": "cnt0041",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "column",
+            "width": {
+              "size": 48,
+              "unit": "%"
+            },
+            "gap": {
+              "size": 15,
+              "unit": "px"
+            }
+          },
+          "elements": [
+            {
+              "id": "cnt0042",
+              "elType": "widget",
+              "widgetType": "button",
+              "settings": {
+                "text": "Why Choose Us",
+                "background_color": "#fef3c7",
+                "text_color": "#d97706",
+                "border_radius": {
+                  "top": "20",
+                  "right": "20",
+                  "bottom": "20",
+                  "left": "20",
+                  "unit": "px"
+                }
+              }
+            },
+            {
+              "id": "cnt0043",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Friendly service with professional results.",
+                "header_size": "h2",
+                "title_color": "#111827"
+              }
+            },
+            {
+              "id": "cnt0044",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p>We combine skilled workmanship with honest communication, so you always know what to expect before the job begins.</p>",
+                "text_color": "#4b5563"
+              }
+            },
+            {
+              "id": "cnt0045",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p>✓ Licensed and insured technicians<br>✓ Upfront estimates with no surprises<br>✓ Clean, respectful service every time</p>",
+                "text_color": "#d97706"
+              }
+            }
+          ]
+        },
+        {
+          "id": "cnt0046",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "column",
+            "width": {
+              "size": 48,
+              "unit": "%"
+            },
+            "gap": {
+              "size": 15,
+              "unit": "px"
+            }
+          },
+          "elements": [
+            {
+              "id": "cnt0047",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "column",
+                "padding": {
+                  "top": "20",
+                  "bottom": "20",
+                  "left": "20",
+                  "right": "20",
+                  "unit": "px"
+                },
+                "background_background": "classic",
+                "background_color": "#fef3c7",
+                "border_radius": {
+                  "top": "12",
+                  "right": "12",
+                  "bottom": "12",
+                  "left": "12",
+                  "unit": "px"
+                }
+              },
+              "elements": [
+                {
+                  "id": "cnt0048",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "15+",
+                    "header_size": "h3",
+                    "title_color": "#111827"
+                  }
+                },
+                {
+                  "id": "cnt0049",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>Years of experience</p>",
+                    "text_color": "#6b7280"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "cnt0050",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "column",
+                "padding": {
+                  "top": "20",
+                  "bottom": "20",
+                  "left": "20",
+                  "right": "20",
+                  "unit": "px"
+                },
+                "background_background": "classic",
+                "background_color": "#fef3c7",
+                "border_radius": {
+                  "top": "12",
+                  "right": "12",
+                  "bottom": "12",
+                  "left": "12",
+                  "unit": "px"
+                }
+              },
+              "elements": [
+                {
+                  "id": "cnt0051",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Same Day",
+                    "header_size": "h3",
+                    "title_color": "#111827"
+                  }
+                },
+                {
+                  "id": "cnt0052",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>Service available</p>",
+                    "text_color": "#6b7280"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "cnt0053",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "column",
+                "padding": {
+                  "top": "20",
+                  "bottom": "20",
+                  "left": "20",
+                  "right": "20",
+                  "unit": "px"
+                },
+                "background_background": "classic",
+                "background_color": "#fef3c7",
+                "border_radius": {
+                  "top": "12",
+                  "right": "12",
+                  "bottom": "12",
+                  "left": "12",
+                  "unit": "px"
+                }
+              },
+              "elements": [
+                {
+                  "id": "cnt0054",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Warranty",
+                    "header_size": "h3",
+                    "title_color": "#111827"
+                  }
+                },
+                {
+                  "id": "cnt0055",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>On select work</p>",
+                    "text_color": "#6b7280"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cnt0056",
+      "elType": "container",
+      "settings": {
+        "display": "flex",
+        "flex_direction": "column",
+        "padding": {
+          "top": "60",
+          "bottom": "60",
+          "left": "40",
+          "right": "40",
+          "unit": "px"
+        },
+        "background_background": "classic",
+        "background_color": "#ffffff"
+      },
+      "elements": [
+        {
+          "id": "cnt0057",
+          "elType": "widget",
+          "widgetType": "button",
+          "settings": {
+            "text": "Reviews",
+            "background_color": "#fef3c7",
+            "text_color": "#d97706",
+            "border_radius": {
+              "top": "20",
+              "right": "20",
+              "bottom": "20",
+              "left": "20",
+              "unit": "px"
+            }
+          }
+        },
+        {
+          "id": "cnt0058",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "What customers say.",
+            "header_size": "h2",
+            "title_color": "#111827"
+          }
+        },
+        {
+          "id": "cnt0059",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "row",
+            "flex_justify_content": "space-between",
+            "margin": {
+              "top": "30",
+              "unit": "px"
+            },
+            "gap": {
+              "size": 20,
+              "unit": "px"
+            }
+          },
+          "elements": [
+            {
+              "id": "cnt0060",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "column",
+                "width": {
+                  "size": 32,
+                  "unit": "%"
+                },
+                "padding": {
+                  "top": "25",
+                  "bottom": "25",
+                  "left": "25",
+                  "right": "25",
+                  "unit": "px"
+                },
+                "background_background": "classic",
+                "background_color": "#fff8f3",
+                "border_radius": {
+                  "top": "16",
+                  "right": "16",
+                  "bottom": "16",
+                  "left": "16",
+                  "unit": "px"
+                }
+              },
+              "elements": [
+                {
+                  "id": "cnt0061",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>\"They fixed a leak fast and left everything spotless. Excellent experience.\"</p>",
+                    "text_color": "#4b5563"
+                  }
+                },
+                {
+                  "id": "cnt0062",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "— Sarah M.",
+                    "header_size": "h5",
+                    "title_color": "#f46a1a"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "cnt0063",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "column",
+                "width": {
+                  "size": 32,
+                  "unit": "%"
+                },
+                "padding": {
+                  "top": "25",
+                  "bottom": "25",
+                  "left": "25",
+                  "right": "25",
+                  "unit": "px"
+                },
+                "background_background": "classic",
+                "background_color": "#fff8f3",
+                "border_radius": {
+                  "top": "16",
+                  "right": "16",
+                  "bottom": "16",
+                  "left": "16",
+                  "unit": "px"
+                }
+              },
+              "elements": [
+                {
+                  "id": "cnt0064",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>\"Very professional, fair pricing, and great communication from start to finish.\"</p>",
+                    "text_color": "#4b5563"
+                  }
+                },
+                {
+                  "id": "cnt0065",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "— Daniel R.",
+                    "header_size": "h5",
+                    "title_color": "#f46a1a"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "cnt0066",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "column",
+                "width": {
+                  "size": 32,
+                  "unit": "%"
+                },
+                "padding": {
+                  "top": "25",
+                  "bottom": "25",
+                  "left": "25",
+                  "right": "25",
+                  "unit": "px"
+                },
+                "background_background": "classic",
+                "background_color": "#fff8f3",
+                "border_radius": {
+                  "top": "16",
+                  "right": "16",
+                  "bottom": "16",
+                  "left": "16",
+                  "unit": "px"
+                }
+              },
+              "elements": [
+                {
+                  "id": "cnt0067",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>\"I needed same-day help and they delivered. Highly recommended.\"</p>",
+                    "text_color": "#4b5563"
+                  }
+                },
+                {
+                  "id": "cnt0068",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "— Priya K.",
+                    "header_size": "h5",
+                    "title_color": "#f46a1a"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cnt0069",
+      "elType": "container",
+      "settings": {
+        "display": "flex",
+        "flex_direction": "row",
+        "flex_justify_content": "space-between",
+        "flex_align_items": "center",
+        "padding": {
+          "top": "40",
+          "bottom": "40",
+          "left": "40",
+          "right": "40",
+          "unit": "px"
+        },
+        "margin": {
+          "top": "20",
+          "bottom": "60",
+          "left": "40",
+          "right": "40",
+          "unit": "px"
+        },
+        "background_background": "classic",
+        "background_color": "#f46a1a",
+        "border_radius": {
+          "top": "20",
+          "right": "20",
+          "bottom": "20",
+          "left": "20",
+          "unit": "px"
+        }
+      },
+      "elements": [
+        {
+          "id": "cnt0070",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "column",
+            "gap": {
+              "size": 10,
+              "unit": "px"
+            }
+          },
+          "elements": [
+            {
+              "id": "cnt0071",
+              "elType": "widget",
+              "widgetType": "button",
+              "settings": {
+                "text": "Book Service",
+                "background_color": "rgba(255,255,255,0.2)",
+                "text_color": "#ffffff",
+                "border_radius": {
+                  "top": "12",
+                  "right": "12",
+                  "bottom": "12",
+                  "left": "12",
+                  "unit": "px"
+                }
+              }
+            },
+            {
+              "id": "cnt0072",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Need a plumber today?",
+                "header_size": "h2",
+                "title_color": "#ffffff"
+              }
+            },
+            {
+              "id": "cnt0073",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p>Call us or send a message and we'll get back to you right away.</p>",
+                "text_color": "#ffffff"
+              }
+            }
+          ]
+        },
+        {
+          "id": "cnt0074",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "row",
+            "gap": {
+              "size": 15,
+              "unit": "px"
+            }
+          },
+          "elements": [
+            {
+              "id": "cnt0075",
+              "elType": "widget",
+              "widgetType": "button",
+              "settings": {
+                "text": "(555) 123-4567",
+                "background_color": "rgba(255,255,255,0.2)",
+                "text_color": "#ffffff",
+                "border_radius": {
+                  "top": "10",
+                  "right": "10",
+                  "bottom": "10",
+                  "left": "10",
+                  "unit": "px"
+                }
+              }
+            },
+            {
+              "id": "cnt0076",
+              "elType": "widget",
+              "widgetType": "button",
+              "settings": {
+                "text": "hello@flowfixplumbing.com",
+                "background_color": "rgba(255,255,255,0.2)",
+                "text_color": "#ffffff",
+                "border_radius": {
+                  "top": "10",
+                  "right": "10",
+                  "bottom": "10",
+                  "left": "10",
+                  "unit": "px"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ftr0001",
+      "elType": "container",
+      "settings": {
+        "display": "flex",
+        "flex_direction": "row",
+        "flex_justify_content": "space-between",
+        "flex_align_items": "center",
+        "padding": {
+          "top": "30",
+          "bottom": "30",
+          "left": "40",
+          "right": "40",
+          "unit": "px"
+        },
+        "background_background": "classic",
+        "background_color": "#fff8f3",
+        "border_color": "#e5e7eb"
+      },
+      "elements": [
+        {
+          "id": "ftr0002",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+            "editor": "<p>© 2026 FlowFix Plumbing</p>",
+            "text_color": "#6b7280"
+          }
+        },
+        {
+          "id": "ftr0003",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+            "editor": "<p>Licensed • Insured • Available 24/7</p>",
+            "text_color": "#6b7280"
+          }
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "colors": [
+      "#f46a1a",
+      "#111827",
+      "#6b7280",
+      "#fff8f3",
+      "#ffffff",
+      "#fed7aa"
+    ],
+    "fonts": [
+      "Inter",
+      "sans-serif"
+    ],
+    "section_count": 5
+  },
+  "global_classes": {
+    "primary_color": "#f46a1a",
+    "text_dark": "#111827",
+    "text_muted": "#6b7280",
+    "bg_light": "#fff8f3",
+    "font_family": "Inter"
+  }
+}

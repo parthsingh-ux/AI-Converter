@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-layout-background: #010B14;
+  --color-layout-foreground: #F2F4F9;
+  --color-layout-divider: #4B545D;
+  --color-layout-focus: #0A69C9;
+  --color-content-content1: #021528;
+  --color-content-content2: #191C1F;
+  --color-content-content3: #97A3AF;
+  --color-content-content4: #64707C;
+  --color-primary: #0A69C9;
+  --color-secondary: #148ECD;
+  --color-success: #12A150;
+  --color-warning: #DB8700;
+  --color-danger: #DB1439;
+}
+
+body {
+  background-color: #010B14 !important;
+  color: #F2F4F9 !important;
+  font-family: 'Figtree', ui-sans-serif, system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Design System Panels & Cards */
+.ds-panel {
+  background: #021528;
+  border: 1px solid #4B545D;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.ds-panel-subtle {
+  background: #191C1F;
+  border: 1px solid #4B545D;
+  border-radius: 0.75rem;
+}
+
+/* Custom Scrollbar in Design System Dark Palette */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #010B14;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4B545D;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64707C;
+}

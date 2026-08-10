@@ -1,0 +1,32 @@
+{
+  "id": "1786083974559-flowfix-plumbing-website-templ",
+  "timestamp": 1786083974559,
+  "title": "FlowFix Plumbing Website Template",
+  "inputType": "image",
+  "summary": {
+    "colors": [
+      "#FAF6F0",
+      "#F25C05",
+      "#1E293B",
+      "#64748B",
+      "#FFEAD5",
+      "#FFFFFF"
+    ],
+    "fonts": [
+      "Inter",
+      "System UI"
+    ],
+    "section_count": 5
+  },
+  "tokenUsage": {
+    "promptTokens": 3492,
+    "outputTokens": 11153,
+    "totalTokens": 15696,
+    "tokenLimitPerMinute": 250000,
+    "tokensRemainingPerMinute": 246508,
+    "usedModelName": "gemini-3.6-flash"
+  },
+  "downloadUrl": "/api/download/1786083974559-flowfix-plumbing-website-templ?type=zip",
+  "jsonDownloadUrl": "/api/download/1786083974559-flowfix-plumbing-website-templ?type=json",
+  "createdAt": "2026-08-07T06:26:14.559Z"
+}

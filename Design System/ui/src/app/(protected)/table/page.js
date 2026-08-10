@@ -1,0 +1,948 @@
+"use client";
+
+import React, { useState, useMemo } from "react";
+import DataTable from "@/components/Table";
+import { Icon } from "@iconify/react";
+import Avatar, { AvatarGroup } from "@/components/Avatar";
+import Progress from "@/components/CircularProgress";
+
+const allRows = [
+  {
+    // --- USER DATA (Primary) ---
+    name: "Alex Johnson",
+    handle: "@alexj",
+    avatar: "https://i.pravatar.cc/80?img=1",
+    status: "Active",
+    role: "Lead Designer",
+    email: "alex.j@company.com",
+    teams: ["Design", "Product"],
+
+    // --- COMPANY DATA ---
+    company: "AlphaTech Solutions",
+    about: "Cloud Software Provider",
+    description: "Leading innovator in cloud-based enterprise solutions.",
+    license_use: 8, // (8 out of 10)
+
+    // --- SUBSCRIPTION DATA ---
+    invoice_id: "INV-2025-001",
+    date: "2025-10-01",
+    subscription_type: "Annual Pro",
+
+    // --- DOCUMENT DATA ---
+    document_name: "DesignSystem_V3.pdf",
+    document_size: "3.2 MB",
+    upload_date: "2025-11-20",
+    last_updated_date: "2025-11-24",
+    uploaded_by: "Eva Martin",
+  },
+  {
+    name: "Ben Carter",
+    handle: "@benc",
+    avatar: "https://i.pravatar.cc/80?img=2",
+    status: "Inactive",
+    role: "Software Engineer",
+    email: "ben.c@company.com",
+    teams: ["Product", "IT"],
+
+    company: "Beta Innovators",
+    about: "Financial Services Tech",
+    description:
+      "Specializing in secure, high-speed financial trading platforms.",
+    license_use: 9,
+
+    invoice_id: "INV-2025-002",
+    date: "2025-09-15",
+    subscription_type: "Monthly Basic",
+
+    document_name: "Backend_Schema_v2.sql",
+    document_size: "0.5 MB",
+    upload_date: "2025-10-01",
+    last_updated_date: "2025-10-01",
+    uploaded_by: "Liam Scott",
+  },
+  {
+    name: "Chloe Davis",
+    handle: "@chloed",
+    avatar: "https://i.pravatar.cc/80?img=3",
+    status: "Active",
+    role: "Content Creator",
+    email: "chloe.d@company.com",
+    teams: ["Marketing"],
+
+    company: "Gamma Marketing Co.",
+    about: "Digital Agency & Content",
+    description: "Full-service digital marketing and content creation agency.",
+    license_use: 4,
+
+    invoice_id: "INV-2025-003",
+    date: "2025-10-20",
+    subscription_type: "Annual Premium",
+
+    document_name: "Content_Strategy_2026.pdf",
+    document_size: "5.8 MB",
+    upload_date: "2025-11-01",
+    last_updated_date: "2025-11-01",
+    uploaded_by: "Chloe Davis",
+  },
+  {
+    name: "David Lee",
+    handle: "@davidl",
+    avatar: "https://i.pravatar.cc/80?img=4",
+    status: "Active",
+    role: "Product Manager",
+    email: "david.l@company.com",
+    teams: ["Product", "Operations"],
+
+    company: "Delta Logistics",
+    about: "Supply Chain Technology",
+    description:
+      "Optimizing global supply chains with predictive AI and logistics tech.",
+    license_use: 7,
+
+    invoice_id: "INV-2025-004",
+    date: "2025-11-05",
+    subscription_type: "Trial",
+
+    document_name: "Product_Roadmap_Q1.pptx",
+    document_size: "1.1 MB",
+    upload_date: "2025-09-28",
+    last_updated_date: "2025-10-05",
+    uploaded_by: "David Lee",
+  },
+  {
+    name: "Eva Martin",
+    handle: "@evam",
+    avatar: "https://i.pravatar.cc/80?img=5",
+    status: "Active",
+    role: "UX Researcher",
+    email: "eva.m@company.com",
+    teams: ["Design", "Product"],
+
+    company: "Epsilon Energy",
+    about: "Renewable Energy Solutions",
+    description:
+      "Developing sustainable energy infrastructure for urban markets.",
+    license_use: 6,
+
+    invoice_id: "INV-2025-005",
+    date: "2025-08-01",
+    subscription_type: "Annual Basic",
+
+    document_name: "UX_Research_Findings.pdf",
+    document_size: "3.5 MB",
+    upload_date: "2025-11-23",
+    last_updated_date: "2025-11-23",
+    uploaded_by: "Eva Martin",
+  },
+  {
+    name: "Frank Green",
+    handle: "@frankg",
+    avatar: "https://i.pravatar.cc/80?img=6",
+    status: "Active",
+    role: "SEO Specialist",
+    email: "frank.g@company.com",
+    teams: ["Marketing"],
+
+    company: "Zeta Retail Group",
+    about: "E-commerce & Retail",
+    description: "A large multi-brand e-commerce and retail network.",
+    license_use: 3,
+
+    invoice_id: "INV-2025-006",
+    date: "2025-11-20",
+    subscription_type: "Monthly Pro",
+
+    document_name: "SEO_Audit_Results.xlsx",
+    document_size: "2.1 MB",
+    upload_date: "2025-10-01",
+    last_updated_date: "2025-10-01",
+    uploaded_by: "Frank Green",
+  },
+  {
+    name: "Grace Hall",
+    handle: "@graceh",
+    avatar: "https://i.pravatar.cc/80?img=7",
+    status: "Inactive",
+    role: "Database Admin",
+    email: "grace.h@company.com",
+    teams: ["IT"],
+
+    company: "Theta Health Inc.",
+    about: "Healthcare Platform",
+    description: "Secure and compliant platform for patient data management.",
+    license_use: 9,
+
+    invoice_id: "INV-2025-007",
+    date: "2025-07-10",
+    subscription_type: "Annual Basic",
+
+    document_name: "Server_Migration_Plan.doc",
+    document_size: "1.5 MB",
+    upload_date: "2025-06-01",
+    last_updated_date: "2025-06-01",
+    uploaded_by: "Grace Hall",
+  },
+  {
+    name: "Henry King",
+    handle: "@henryk",
+    avatar: "https://i.pravatar.cc/80?img=8",
+    status: "Active",
+    role: "Financial Analyst",
+    email: "henry.k@company.com",
+    teams: ["Finance"],
+
+    company: "Iota Consulting",
+    about: "Management Consulting",
+    description:
+      "Providing strategic advisory services to Fortune 500 companies.",
+    license_use: 5,
+
+    invoice_id: "INV-2025-008",
+    date: "2025-10-25",
+    subscription_type: "Annual Pro",
+
+    document_name: "Q3_Financial_Report.pdf",
+    document_size: "3.2 MB",
+    upload_date: "2025-10-15",
+    last_updated_date: "2025-11-20",
+    uploaded_by: "Henry King",
+  },
+  {
+    name: "Ivy Chen",
+    handle: "@ivyc",
+    avatar: "https://i.pravatar.cc/80?img=9",
+    status: "Active",
+    role: "QA Tester",
+    email: "ivy.c@company.com",
+    teams: ["Product", "QA"],
+
+    company: "Kappa Robotics",
+    about: "Advanced Manufacturing",
+    description: "Focusing on automation and industrial robotics development.",
+    license_use: 8,
+
+    invoice_id: "INV-2025-009",
+    date: "2025-09-01",
+    subscription_type: "Monthly Premium",
+
+    document_name: "QA_Test_Cases_Suite.xlsx",
+    document_size: "0.7 MB",
+    upload_date: "2025-11-22",
+    last_updated_date: "2025-11-22",
+    uploaded_by: "Ivy Chen",
+  },
+  {
+    name: "Jack Baker",
+    handle: "@jackb",
+    avatar: "https://i.pravatar.cc/80?img=10",
+    status: "Active",
+    role: "Graphic Artist",
+    email: "jack.b@company.com",
+    teams: ["Design"],
+
+    company: "Lambda Education",
+    about: "EdTech Platform",
+    description:
+      "An online learning platform serving millions of students globally.",
+    license_use: 7,
+
+    invoice_id: "INV-2025-010",
+    date: "2025-08-15",
+    subscription_type: "Annual Premium",
+
+    document_name: "Brand_Style_Guide.pdf",
+    document_size: "6.0 MB",
+    upload_date: "2025-10-08",
+    last_updated_date: "2025-11-15",
+    uploaded_by: "Jack Baker",
+  },
+  {
+    name: "Karen Rodriguez",
+    handle: "@karenr",
+    avatar: "https://i.pravatar.cc/80?img=11",
+    status: "Active",
+    role: "Social Media Mgr",
+    email: "karen.r@company.com",
+    teams: ["Marketing", "Sales"],
+
+    company: "Mu Media Group",
+    about: "Publishing and Content",
+    description:
+      "A large international publisher of magazines and digital content.",
+    license_use: 4,
+
+    invoice_id: "INV-2025-011",
+    date: "2025-11-10",
+    subscription_type: "Monthly Basic",
+
+    document_name: "Social_Media_Metrics_Oct.csv",
+    document_size: "0.4 MB",
+    upload_date: "2025-11-03",
+    last_updated_date: "2025-11-03",
+    uploaded_by: "Karen Rodriguez",
+  },
+  {
+    name: "Liam Scott",
+    handle: "@liams",
+    avatar: "https://i.pravatar.cc/80?img=12",
+    status: "Inactive",
+    role: "Senior Developer",
+    email: "liam.s@company.com",
+    teams: ["Product"],
+
+    company: "Nu Food & Beverage",
+    about: "Restaurant Chain Management",
+    description:
+      "Managing operations for a national chain of casual dining restaurants.",
+    license_use: 8,
+
+    invoice_id: "INV-2025-012",
+    date: "2025-06-01",
+    subscription_type: "Annual Pro",
+
+    document_name: "Backend_API_Docs.pdf",
+    document_size: "2.7 MB",
+    upload_date: "2025-05-10",
+    last_updated_date: "2025-10-12",
+    uploaded_by: "Liam Scott",
+  },
+  {
+    name: "Mia Torres",
+    handle: "@miat",
+    avatar: "https://i.pravatar.cc/80?img=13",
+    status: "Active",
+    role: "Copywriter",
+    email: "mia.t@company.com",
+    teams: ["Marketing", "Design"],
+
+    company: "Xi Construction",
+    about: "Infrastructure Projects",
+    description:
+      "A general contractor specializing in large municipal infrastructure.",
+    license_use: 6,
+
+    invoice_id: "INV-2025-013",
+    date: "2025-10-05",
+    subscription_type: "Annual Premium",
+
+    document_name: "Competitive_Analysis.pdf",
+    document_size: "5.0 MB",
+    upload_date: "2025-10-28",
+    last_updated_date: "2025-10-28",
+    uploaded_by: "Mia Torres",
+  },
+  {
+    name: "Nathan Patel",
+    handle: "@nathanp",
+    avatar: "https://i.pravatar.cc/80?img=14",
+    status: "Active",
+    role: "Data Scientist",
+    email: "nathan.p@company.com",
+    teams: ["Product", "Finance"],
+
+    company: "Omicron Security",
+    about: "Cybersecurity Firm",
+    description:
+      "Providing advanced threat detection and digital security services.",
+    license_use: 9,
+
+    invoice_id: "INV-2025-014",
+    date: "2025-09-22",
+    subscription_type: "Monthly Pro",
+
+    document_name: "White_Paper_AI.pdf",
+    document_size: "7.2 MB",
+    upload_date: "2025-09-01",
+    last_updated_date: "2025-11-18",
+    uploaded_by: "Nathan Patel",
+  },
+  {
+    name: "Olivia White",
+    handle: "@oliviaw",
+    avatar: "https://i.pravatar.cc/80?img=15",
+    status: "Active",
+    role: "Design Intern",
+    email: "olivia.w@company.com",
+    teams: ["Design"],
+
+    company: "Pi Research Labs",
+    about: "Biotechnology Research",
+    description: "Conducting clinical trials and drug discovery research.",
+    license_use: 7,
+
+    invoice_id: "INV-2025-015",
+    date: "2025-08-28",
+    subscription_type: "Monthly Basic",
+
+    document_name: "Design_Intern_Project.fig",
+    document_size: "1.2 MB",
+    upload_date: "2025-11-20",
+    last_updated_date: "2025-11-24",
+    uploaded_by: "Olivia White",
+  },
+  {
+    name: "Peter Brown",
+    handle: "@peterb",
+    avatar: "https://i.pravatar.cc/80?img=16",
+    status: "Active",
+    role: "Sales Rep",
+    email: "peter.b@company.com",
+    teams: ["Sales", "Marketing"],
+
+    company: "Rho Automotive",
+    about: "Vehicle Production",
+    description: "A major manufacturer of electric vehicles and components.",
+    license_use: 5,
+
+    invoice_id: "INV-2025-016",
+    date: "2025-07-05",
+    subscription_type: "Annual Pro",
+
+    document_name: "Sales_Q4_Forecast.xlsx",
+    document_size: "1.9 MB",
+    upload_date: "2025-10-20",
+    last_updated_date: "2025-10-20",
+    uploaded_by: "Peter Brown",
+  },
+  {
+    name: "Quinn Adams",
+    handle: "@quinna",
+    avatar: "https://i.pravatar.cc/80?img=17",
+    status: "Active",
+    role: "Legal Counsel",
+    email: "quinn.a@company.com",
+    teams: ["Legal"],
+
+    company: "Sigma Pharma",
+    about: "Drug Development",
+    description: "Focused on developing new treatments for chronic diseases.",
+    license_use: 9,
+
+    invoice_id: "INV-2025-017",
+    date: "2025-11-15",
+    subscription_type: "Annual Basic",
+
+    document_name: "Legal_Contract_A.pdf",
+    document_size: "0.9 MB",
+    upload_date: "2025-07-15",
+    last_updated_date: "2025-09-10",
+    uploaded_by: "Quinn Adams",
+  },
+  {
+    name: "Riley Evans",
+    handle: "@rileye",
+    avatar: "https://i.pravatar.cc/80?img=18",
+    status: "Inactive",
+    role: "Network Engineer",
+    email: "riley.e@company.com",
+    teams: ["IT"],
+
+    company: "Tau Telecom",
+    about: "Telecommunications",
+    description: "Providing high-speed fiber internet and mobile services.",
+    license_use: 8,
+
+    invoice_id: "INV-2025-018",
+    date: "2025-10-18",
+    subscription_type: "Monthly Premium",
+
+    document_name: "Server_Logs_Nov.log",
+    document_size: "4.8 MB",
+    upload_date: "2025-11-01",
+    last_updated_date: "2025-11-01",
+    uploaded_by: "Riley Evans",
+  },
+  {
+    name: "Sarah Wilson",
+    handle: "@sarahw",
+    avatar: "https://i.pravatar.cc/80?img=19",
+    status: "Active",
+    role: "Project Manager",
+    email: "sarah.w@company.com",
+    teams: ["Operations", "Product"],
+
+    company: "Upsilon Graphics",
+    about: "Design Services Studio",
+    description:
+      "Creative studio specializing in 3D rendering and motion graphics.",
+    license_use: 6,
+
+    invoice_id: "INV-2025-019",
+    date: "2025-09-10",
+    subscription_type: "Annual Pro",
+
+    document_name: "Employee_Handbook.pdf",
+    document_size: "4.5 MB",
+    upload_date: "2025-08-20",
+    last_updated_date: "2025-08-20",
+    uploaded_by: "Sarah Wilson",
+  },
+  {
+    name: "Tom Fisher",
+    handle: "@tomf",
+    avatar: "https://i.pravatar.cc/80?img=20",
+    status: "Active",
+    role: "Motion Designer",
+    email: "tom.f@company.com",
+    teams: ["Design", "Marketing"],
+
+    company: "Phi Real Estate",
+    about: "Property Management Tech",
+    description:
+      "Developing software for efficient property listing and tenant management.",
+    license_use: 2,
+
+    invoice_id: "INV-2025-020",
+    date: "2025-11-01",
+    subscription_type: "Trial",
+
+    document_name: "Video_Intro_Anim.mov",
+    document_size: "15.0 MB",
+    upload_date: "2025-11-21",
+    last_updated_date: "2025-11-21",
+    uploaded_by: "Tom Fisher",
+  },
+];
+
+const teamColumns = [
+  {
+    header: "Name",
+    key: "name",
+    render: (row) => (
+      <div className="flex items-center gap-3">
+        <img src={row.avatar} className="w-8 h-8 rounded-full" alt={row.name} />
+        <div>
+          <p className="font-medium">{row.name}</p>
+          <p className="text-xs text-slate-500">{row.handle}</p>
+        </div>
+      </div>
+    ),
+  },
+  {
+    header: "Status",
+    key: "status",
+    render: (row) => (
+      <span
+        className={`px-2 py-1 rounded-lg text-xs ${
+          row.status === "Active"
+            ? "bg-white border border-gray-default-300 text-success"
+            : "bg-white border border-gray-default-300 text-red-500"
+        }`}
+      >
+        ● {row.status}
+      </span>
+    ),
+  },
+  {
+    header: "Role",
+    key: "role",
+    render: (row) => (
+      <span className="text-gray-default-500 font-normal">{row.role}</span>
+    ),
+  },
+  {
+    header: "Email address",
+    key: "email",
+    render: (row) => (
+      <span className="text-gray-default-500 font-normal">{row.email}</span>
+    ),
+  },
+  {
+    header: "Teams",
+    key: "teams",
+    render: (row) => (
+      <div className="flex gap-2 flex-wrap">
+        {row.teams.map((t, idx) => (
+          <span
+            key={idx}
+            className="px-2 py-1 bg-primary-50 border border-primary-200 text-primary-700 rounded-full text-xs"
+          >
+            {t}
+          </span>
+        ))}
+      </div>
+    ),
+  },
+];
+
+const customerColumns = [
+  {
+    header: "Company",
+    key: "company",
+    render: (row) => (
+      <div className="flex items-center gap-3">
+        <img src={row.avatar} className="w-8 h-8 rounded-full" alt={row.name} />
+        <div>
+          <p className="font-medium">{row.company}</p>
+          <p className="text-xs text-slate-500">{row.handle}</p>
+        </div>
+      </div>
+    ),
+  },
+  {
+    header: "Status",
+    key: "status",
+    render: (row) => (
+      <span
+        className={`
+        px-2 py-1 
+        rounded-lg 
+        text-xs 
+        font-medium
+        whitespace-nowrap
+        ${
+          row.status === "Active"
+            ? "bg-white border border-gray-default-300 text-success"
+            : "bg-white border border-gray-default-300 text-red-500"
+        }
+      `}
+      >
+        <span className="mr-1">●</span>
+        {row.status}
+      </span>
+    ),
+  },
+  {
+    header: "About",
+    key: "about",
+    render: (row) => (
+      <div className="flex items-center gap-3">
+        <div>
+          <p className="font-medium">{row.about}</p>
+          <p className="text-xs text-slate-500">{row.description}</p>
+        </div>
+      </div>
+    ),
+  },
+  {
+    header: "Users",
+    key: "email",
+    render: () => (
+      <div className="flex flex-col gap-3">
+        <AvatarGroup layout="stack" overlap={16} max={4}>
+          <Avatar
+            size="sm"
+            variant="image"
+            color="primary"
+            src="/Adaan-logo-white-col.png"
+            imageScale={0.5}
+          />
+          <Avatar
+            size="sm"
+            variant="image"
+            color="secondary"
+            src="/Adaan-logo-white-col.png"
+            imageScale={0.5}
+          />
+          <Avatar
+            size="sm"
+            variant="image"
+            color="success"
+            src="/Adaan-logo-white-col.png"
+            imageScale={0.5}
+          />
+          <Avatar
+            size="sm"
+            variant="image"
+            color="warning"
+            src="/Adaan-logo-white-col.png"
+            imageScale={0.5}
+          />
+          <Avatar
+            size="sm"
+            variant="image"
+            color="danger"
+            src="/Adaan-logo-white-col.png"
+            imageScale={0.5}
+          />
+        </AvatarGroup>
+      </div>
+    ),
+  },
+  {
+    header: "License Use",
+    key: "license_use",
+    render: (row) => (
+      <div className="flex items-center gap-2 w-28">
+        <Progress
+          type="linear"
+          size={100}
+          value={row.license_use * 10}
+          color="primary"
+          label={`${row.license_use}/10`}
+          linearHeight={5}
+        />
+      </div>
+    ),
+  },
+];
+
+const invoiceColumns = [
+  {
+    header: "Invoice",
+    key: "invoice_id",
+    render: (row) => (
+      <div className="flex items-center gap-3">
+        <div>
+          <p className="font-medium">{row.invoice_id}</p>
+        </div>
+      </div>
+    ),
+  },
+  {
+    header: "Date",
+    key: "date",
+    render: (row) => (
+      <div className="flex items-center text-sm gap-3">
+        <div>
+          <p className="text-xs text-slate-500">{row.date}</p>
+        </div>
+      </div>
+    ),
+  },
+  {
+    header: "Status",
+    key: "status",
+    render: (row) => (
+      <span
+        className={`
+        px-2 py-1 
+        rounded-lg 
+        text-xs 
+        font-medium
+        whitespace-nowrap
+        ${
+          row.status === "Active"
+            ? "bg-white border border-gray-default-300 text-success"
+            : "bg-white border border-gray-default-300 text-red-500"
+        }
+      `}
+      >
+        <span className="mr-1">●</span>
+        {row.status}
+      </span>
+    ),
+  },
+  {
+    header: "Customer",
+    key: "customer",
+    render: (row) => (
+      <div className="flex items-center gap-3">
+        <img src={row.avatar} className="w-8 h-8 rounded-full" alt={row.name} />
+        <div>
+          <p className="font-medium">{row.name}</p>
+          <p className="text-xs text-slate-500">{row.handle}</p>
+        </div>
+      </div>
+    ),
+  },
+  {
+    header: "Subscription Type",
+    key: "subscription_type",
+    render: (row) => (
+      <div className="flex items-center gap-3">
+        <div>
+          <p className="text-sm font-medium text-slate-700">
+            {row.subscription_type}
+          </p>
+        </div>
+      </div>
+    ),
+  },
+];
+
+const fileColumns = [
+  {
+    header: "File Name",
+    key: "document_name",
+    render: (row) => (
+      <div className="flex items-center gap-3">
+        <img src={row.avatar} className="w-8 h-8 rounded-full" alt={row.name} />
+        <div>
+          <p className="font-medium">{row.document_name}</p>
+          <p className="text-xs text-slate-500">{row.document_size}</p>
+        </div>
+      </div>
+    ),
+  },
+  {
+    header: "File Size",
+    key: "document_size",
+    render: (row) => (
+      <div className="flex items-center text-sm gap-3">
+        <div>
+          <p className="text-xs text-slate-500">{row.document_size}</p>
+        </div>
+      </div>
+    ),
+  },
+  {
+    header: "Date Uploaded",
+    key: "upload_date",
+    render: (row) => (
+      <div className="flex items-center gap-3">
+        <div>
+          <p className="text-xs text-slate-500">{row.upload_date}</p>
+        </div>
+      </div>
+    ),
+  },
+  {
+    header: "Last Updated",
+    key: "last_updated_date",
+    render: (row) => (
+      <div className="flex items-center gap-3">
+        <div>
+          <p className="text-xs text-slate-500">{row.last_updated_date}</p>
+        </div>
+      </div>
+    ),
+  },
+  {
+    header: "Uploaded By",
+    key: "uploaded_by",
+    render: (row) => (
+      <div className="flex items-center gap-3">
+        <div>
+          <p className="text-xs text-slate-500">{row.uploaded_by}</p>
+        </div>
+      </div>
+    ),
+  },
+];
+
+export default function TeamTable() {
+  const [page, setPage] = useState(1);
+  const [pageSize, setPageSize] = useState(5);
+
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const filteredRows = useMemo(() => {
+    if (!searchTerm) return allRows;
+    return allRows.filter(
+      (row) =>
+        row.document_name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        row.uploaded_by.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  }, [searchTerm]);
+
+  const paginatedRows = useMemo(() => {
+    const targetRows = allRows;
+
+    const startIndex = (page - 1) * pageSize;
+    const endIndex = startIndex + pageSize;
+    return targetRows.slice(startIndex, endIndex);
+  }, [page, pageSize]);
+
+  return (
+    <div className="rounded-2xl bg-gradient-to-br from-slate-50 to-slate-100 p-6">
+      <div className="grid grid-cols-1 gap-4 ">
+        <div className="text-primary-950-dark">
+          <DataTable
+            title="Team members"
+            description="Overview of team activity."
+            titleBadge={`${allRows.length} users`}
+            columns={teamColumns}
+            data={paginatedRows}
+            selectableRows
+            renderRowActions={() => (
+              <div className="flex gap-3 text-gray-default-500">
+                <button className="hover:text-danger transition-colors">
+                  <Icon
+                    icon="solar:trash-bin-minimalistic-linear"
+                    className="w-5 h-5"
+                  />
+                </button>
+                <button className="hover:text-primary transition-colors">
+                  <Icon icon="solar:pen-linear" className="w-4 h-4" />
+                </button>
+              </div>
+            )}
+            page={page}
+            pageSize={pageSize}
+            totalItems={allRows.length}
+            onPageChange={setPage}
+            onPageSizeChange={setPageSize}
+          />
+        </div>
+
+        {/* CUSTOMERS TABLE */}
+        <div className="text-primary-950-dark ">
+          <DataTable
+            title="Customers"
+            description="These companies have purchased in the last 12 months."
+            columns={customerColumns}
+            data={paginatedRows}
+            selectableRows
+            renderRowActions={() => (
+              <div className="flex gap-3 text-gray-default-500 ">
+                <button className="hover:text-primary transition-colors">
+                  <Icon icon="charm:menu-kebab" className="w-4 h-4" />
+                </button>
+              </div>
+            )}
+            page={page}
+            pageSize={pageSize}
+            totalItems={allRows.length}
+            onPageChange={setPage}
+            onPageSizeChange={setPageSize}
+          />
+        </div>
+
+        {/* INVOICE TABLE */}
+        <div className="text-primary-950-dark">
+          <DataTable
+            title="Invoice"
+            description="These companies have purchased in the last 12 months."
+            columns={invoiceColumns}
+            data={paginatedRows}
+            selectableRows
+            renderRowActions={() => (
+              <div className="flex gap-3 text-gray-default-500">
+                <button className="hover:text-danger transition-colors font-semibold">
+                  Delete
+                </button>
+                <button className="text-primary-200-dark font-semibold hover:text-primary transition-colors">
+                  Edit
+                </button>
+              </div>
+            )}
+            page={page}
+            pageSize={pageSize}
+            totalItems={allRows.length}
+            onPageChange={setPage}
+            onPageSizeChange={setPageSize}
+          />
+        </div>
+
+        {/* FILE UPLOADED TABLE */}
+        <div className="text-primary-950-dark">
+          <DataTable
+            title="File Uploaded"
+            description="Files uploaded in the last 12 months."
+            showHeaderIcon={false}
+            addBtnText="Download"
+            addBtnIconName="solar:cloud-download-linear"
+            exportBtnText="Upload"
+            exportBtnIconName="solar:cloud-upload-linear"
+            columns={fileColumns}
+            data={paginatedRows}
+            selectableRows
+            renderRowActions={() => (
+              <div className="flex gap-3 text-gray-default-500">
+                <button className="hover:text-primary transition-colors">
+                  <Icon icon="charm:menu-kebab" className="w-4 h-4" />
+                </button>
+              </div>
+            )}
+            page={page}
+            pageSize={pageSize}
+            totalItems={allRows.length}
+            onPageChange={setPage}
+            onPageSizeChange={setPageSize}
+          />
+        </div>
+      </div>
+    </div>
+  );
+}

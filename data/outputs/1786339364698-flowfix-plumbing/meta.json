@@ -1,0 +1,35 @@
+{
+  "id": "1786339364698-flowfix-plumbing",
+  "timestamp": 1786339364698,
+  "title": "FlowFix Plumbing",
+  "inputType": "multi_files",
+  "summary": {
+    "colors": [
+      "#f97316",
+      "#ea580c",
+      "#1f2937",
+      "#5f6b76",
+      "#ffd8b3",
+      "#fff8f2",
+      "#fff0e3",
+      "#ffffff"
+    ],
+    "fonts": [
+      "Inter",
+      "Arial",
+      "sans-serif"
+    ],
+    "section_count": 5
+  },
+  "tokenUsage": {
+    "promptTokens": 7559,
+    "outputTokens": 14834,
+    "totalTokens": 23939,
+    "tokenLimitPerMinute": 250000,
+    "tokensRemainingPerMinute": 242441,
+    "usedModelName": "gemini-3.6-flash"
+  },
+  "downloadUrl": "/api/download/1786339364698-flowfix-plumbing?type=zip",
+  "jsonDownloadUrl": "/api/download/1786339364698-flowfix-plumbing?type=json",
+  "createdAt": "2026-08-10T05:22:44.698Z"
+}

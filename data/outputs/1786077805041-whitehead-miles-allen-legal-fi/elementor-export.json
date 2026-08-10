@@ -1,0 +1,1212 @@
+{
+  "version": "0.4",
+  "title": "Whitehead Miles & Allen - Legal Firm Theme",
+  "type": "page",
+  "page_settings": {},
+  "content": [
+    {
+      "id": "hdr_top_bar",
+      "elType": "container",
+      "settings": {
+        "display": "flex",
+        "flex_direction": "row",
+        "flex_justify_content": "space-between",
+        "background_color": "#1c1917",
+        "padding": {
+          "top": "8",
+          "right": "40",
+          "bottom": "8",
+          "left": "40",
+          "unit": "px"
+        }
+      },
+      "elements": [
+        {
+          "id": "hdr_top_left",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "Free first consultation — evening & weekend appointments available.",
+            "title_color": "#ffffff",
+            "typography_font_size": {
+              "size": 12,
+              "unit": "px"
+            }
+          }
+        },
+        {
+          "id": "hdr_top_right",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "Full-service counsel • Fredericton • Est. 1978",
+            "title_color": "#9ca3af",
+            "typography_font_size": {
+              "size": 12,
+              "unit": "px"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "hdr_main_nav",
+      "elType": "container",
+      "settings": {
+        "display": "flex",
+        "flex_direction": "row",
+        "flex_justify_content": "space-between",
+        "flex_align_items": "center",
+        "background_color": "#ffffff",
+        "padding": {
+          "top": "16",
+          "right": "40",
+          "bottom": "16",
+          "left": "40",
+          "unit": "px"
+        }
+      },
+      "elements": [
+        {
+          "id": "hdr_logo",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "Whitehead Miles & Allen\nBARRISTERS · SOLICITORS",
+            "title_color": "#1c1917"
+          }
+        },
+        {
+          "id": "hdr_menu",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "row",
+            "flex_align_items": "center",
+            "gap": {
+              "size": 20,
+              "unit": "px"
+            }
+          },
+          "elements": [
+            {
+              "id": "m_item1",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Practice Areas"
+              }
+            },
+            {
+              "id": "m_item2",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "The Firm"
+              }
+            },
+            {
+              "id": "m_item3",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Advisors"
+              }
+            },
+            {
+              "id": "m_item4",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Fees"
+              }
+            },
+            {
+              "id": "m_item5",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Contact"
+              }
+            },
+            {
+              "id": "m_phone",
+              "elType": "widget",
+              "widgetType": "button",
+              "settings": {
+                "text": "(506) 458-9077"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec_hero",
+      "elType": "container",
+      "settings": {
+        "display": "flex",
+        "flex_direction": "column",
+        "flex_justify_content": "center",
+        "flex_align_items": "center",
+        "background_color": "#1c1917",
+        "padding": {
+          "top": "100",
+          "right": "20",
+          "bottom": "80",
+          "left": "20",
+          "unit": "px"
+        }
+      },
+      "elements": [
+        {
+          "id": "hero_sub",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "FREDERICTON, NB · FULL-SERVICE LAW SINCE 1978",
+            "title_color": "#d1d5db"
+          }
+        },
+        {
+          "id": "hero_title",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "Working together to serve you.",
+            "title_color": "#ffffff"
+          }
+        },
+        {
+          "id": "hero_desc",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+            "editor": "A full-service firm serving Greater Fredericton since 1978 — working together to serve you.",
+            "text_color": "#e5e7eb"
+          }
+        },
+        {
+          "id": "hero_btns",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "row",
+            "gap": {
+              "size": 15,
+              "unit": "px"
+            }
+          },
+          "elements": [
+            {
+              "id": "hero_b1",
+              "elType": "widget",
+              "widgetType": "button",
+              "settings": {
+                "text": "Book a consultation",
+                "background_color": "#8b2625",
+                "text_color": "#ffffff"
+              }
+            },
+            {
+              "id": "hero_b2",
+              "elType": "widget",
+              "widgetType": "button",
+              "settings": {
+                "text": "Our practice areas",
+                "background_color": "transparent",
+                "text_color": "#ffffff"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec_about",
+      "elType": "container",
+      "settings": {
+        "display": "flex",
+        "flex_direction": "row",
+        "background_color": "#f5f2eb",
+        "padding": {
+          "top": "80",
+          "right": "40",
+          "bottom": "80",
+          "left": "40",
+          "unit": "px"
+        }
+      },
+      "elements": [
+        {
+          "id": "about_img_col",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "width": {
+              "size": 45,
+              "unit": "%"
+            }
+          },
+          "elements": [
+            {
+              "id": "about_img",
+              "elType": "widget",
+              "widgetType": "image",
+              "settings": {
+                "image": {
+                  "url": "placeholder.jpg"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "about_txt_col",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "column",
+            "width": {
+              "size": 55,
+              "unit": "%"
+            },
+            "padding": {
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "40",
+              "unit": "px"
+            }
+          },
+          "elements": [
+            {
+              "id": "abt_sub",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "THE FIRM · FREDERICTON",
+                "title_color": "#8b2625"
+              }
+            },
+            {
+              "id": "abt_h",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Your trusted lawyers in Fredericton.",
+                "title_color": "#1c1917"
+              }
+            },
+            {
+              "id": "abt_p",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "We take a team approach to practicing law, so every client benefits from our combined legal expertise..."
+              }
+            },
+            {
+              "id": "abt_sig",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "WMA\nWhitehead Miles & Allen LLP · Fredericton",
+                "title_color": "#4b5563"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec_services",
+      "elType": "container",
+      "settings": {
+        "display": "flex",
+        "flex_direction": "column",
+        "background_color": "#f5f2eb",
+        "padding": {
+          "top": "40",
+          "right": "40",
+          "bottom": "80",
+          "left": "40",
+          "unit": "px"
+        }
+      },
+      "elements": [
+        {
+          "id": "srv_sub",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "PRACTICE AREAS"
+          }
+        },
+        {
+          "id": "srv_title",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "A full-service firm for the matters that shape a life."
+          }
+        },
+        {
+          "id": "srv_grid",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "row",
+            "flex_wrap": "wrap",
+            "gap": {
+              "size": 20,
+              "unit": "px"
+            }
+          },
+          "elements": [
+            {
+              "id": "srv_card_1",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "column",
+                "background_color": "#ffffff",
+                "padding": {
+                  "top": "20",
+                  "right": "20",
+                  "bottom": "20",
+                  "left": "20",
+                  "unit": "px"
+                },
+                "width": {
+                  "size": 31,
+                  "unit": "%"
+                }
+              },
+              "elements": [
+                {
+                  "id": "sc1_img",
+                  "elType": "widget",
+                  "widgetType": "image",
+                  "settings": {}
+                },
+                {
+                  "id": "sc1_title",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Wills & Estate"
+                  }
+                },
+                {
+                  "id": "sc1_desc",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "Personalized will and estate planning so you can plan for the future with confidence."
+                  }
+                },
+                {
+                  "id": "sc1_link",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Learn more",
+                    "title_color": "#8b2625"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "srv_card_2",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "column",
+                "background_color": "#ffffff",
+                "padding": {
+                  "top": "20",
+                  "right": "20",
+                  "bottom": "20",
+                  "left": "20",
+                  "unit": "px"
+                },
+                "width": {
+                  "size": 31,
+                  "unit": "%"
+                }
+              },
+              "elements": [
+                {
+                  "id": "sc2_img",
+                  "elType": "widget",
+                  "widgetType": "image",
+                  "settings": {}
+                },
+                {
+                  "id": "sc2_title",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Corporate"
+                  }
+                },
+                {
+                  "id": "sc2_desc",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "Incorporations, agreements and day-to-day counsel that keep your business on solid ground."
+                  }
+                },
+                {
+                  "id": "sc2_link",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Learn more",
+                    "title_color": "#8b2625"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "srv_card_3",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "column",
+                "background_color": "#ffffff",
+                "padding": {
+                  "top": "20",
+                  "right": "20",
+                  "bottom": "20",
+                  "left": "20",
+                  "unit": "px"
+                },
+                "width": {
+                  "size": 31,
+                  "unit": "%"
+                }
+              },
+              "elements": [
+                {
+                  "id": "sc3_img",
+                  "elType": "widget",
+                  "widgetType": "image",
+                  "settings": {}
+                },
+                {
+                  "id": "sc3_title",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Real Estate"
+                  }
+                },
+                {
+                  "id": "sc3_desc",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "Transactions, title transfers and disputes — handled from first offer to final closing."
+                  }
+                },
+                {
+                  "id": "sc3_link",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Learn more",
+                    "title_color": "#8b2625"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec_stats",
+      "elType": "container",
+      "settings": {
+        "display": "flex",
+        "flex_direction": "row",
+        "flex_justify_content": "space-around",
+        "background_color": "#1c1917",
+        "padding": {
+          "top": "60",
+          "right": "40",
+          "bottom": "60",
+          "left": "40",
+          "unit": "px"
+        }
+      },
+      "elements": [
+        {
+          "id": "st1",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "column"
+          },
+          "elements": [
+            {
+              "id": "st1_num",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "48",
+                "title_color": "#ffffff"
+              }
+            },
+            {
+              "id": "st1_lbl",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Years in practice",
+                "title_color": "#9ca3af"
+              }
+            }
+          ]
+        },
+        {
+          "id": "st2",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "column"
+          },
+          "elements": [
+            {
+              "id": "st2_num",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "1978",
+                "title_color": "#ffffff"
+              }
+            },
+            {
+              "id": "st2_lbl",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Established",
+                "title_color": "#9ca3af"
+              }
+            }
+          ]
+        },
+        {
+          "id": "st3",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "column"
+          },
+          "elements": [
+            {
+              "id": "st3_num",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "9",
+                "title_color": "#ffffff"
+              }
+            },
+            {
+              "id": "st3_lbl",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Practice areas",
+                "title_color": "#9ca3af"
+              }
+            }
+          ]
+        },
+        {
+          "id": "st4",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "column"
+          },
+          "elements": [
+            {
+              "id": "st4_num",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Local",
+                "title_color": "#ffffff"
+              }
+            },
+            {
+              "id": "st4_lbl",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Fredericton, NB",
+                "title_color": "#9ca3af"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec_testimonials",
+      "elType": "container",
+      "settings": {
+        "display": "flex",
+        "flex_direction": "column",
+        "background_color": "#f5f2eb",
+        "padding": {
+          "top": "80",
+          "right": "40",
+          "bottom": "80",
+          "left": "40",
+          "unit": "px"
+        }
+      },
+      "elements": [
+        {
+          "id": "t_sub",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "IN THEIR WORDS"
+          }
+        },
+        {
+          "id": "t_head",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "The kind of trust you only earn over years."
+          }
+        },
+        {
+          "id": "t_grid",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "row",
+            "gap": {
+              "size": 20,
+              "unit": "px"
+            }
+          },
+          "elements": [
+            {
+              "id": "t_card_1",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "column",
+                "background_color": "#e9e4d9",
+                "padding": {
+                  "top": "30",
+                  "right": "30",
+                  "bottom": "30",
+                  "left": "30",
+                  "unit": "px"
+                },
+                "width": {
+                  "size": 50,
+                  "unit": "%"
+                }
+              },
+              "elements": [
+                {
+                  "id": "tc1_stars",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "★★★★★",
+                    "title_color": "#8b2625"
+                  }
+                },
+                {
+                  "id": "tc1_quote",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "“They took a team approach and made a complicated matter feel manageable from the first meeting on.”"
+                  }
+                },
+                {
+                  "id": "tc1_author",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Client review · Greater Fredericton"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "t_card_2",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "column",
+                "background_color": "#e9e4d9",
+                "padding": {
+                  "top": "30",
+                  "right": "30",
+                  "bottom": "30",
+                  "left": "30",
+                  "unit": "px"
+                },
+                "width": {
+                  "size": 50,
+                  "unit": "%"
+                }
+              },
+              "elements": [
+                {
+                  "id": "tc2_stars",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "★★★★★",
+                    "title_color": "#8b2625"
+                  }
+                },
+                {
+                  "id": "tc2_quote",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "“Clear advice, calls returned, and a fair result — exactly what you want from your lawyers.”"
+                  }
+                },
+                {
+                  "id": "tc2_author",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Client review · Fredericton, NB"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec_faq",
+      "elType": "container",
+      "settings": {
+        "display": "flex",
+        "flex_direction": "column",
+        "background_color": "#f5f2eb",
+        "padding": {
+          "top": "80",
+          "right": "40",
+          "bottom": "80",
+          "left": "40",
+          "unit": "px"
+        }
+      },
+      "elements": [
+        {
+          "id": "faq_sub",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "COMMON QUESTIONS"
+          }
+        },
+        {
+          "id": "faq_head",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "Answers before you call."
+          }
+        },
+        {
+          "id": "faq_q1",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "Do you offer a free first consultation?  -"
+          }
+        },
+        {
+          "id": "faq_a1",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+            "editor": "Yes. Your first conversation is complimentary and without obligation..."
+          }
+        },
+        {
+          "id": "faq_q2",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "Do you handle more than one area of law?  +"
+          }
+        },
+        {
+          "id": "faq_q3",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "How are your fees structured?  +"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sec_cta_bottom",
+      "elType": "container",
+      "settings": {
+        "display": "flex",
+        "flex_direction": "column",
+        "flex_align_items": "center",
+        "background_color": "#1c1917",
+        "padding": {
+          "top": "80",
+          "right": "20",
+          "bottom": "80",
+          "left": "20",
+          "unit": "px"
+        }
+      },
+      "elements": [
+        {
+          "id": "cta_h",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "A first conversation costs nothing but the time to call.",
+            "title_color": "#ffffff"
+          }
+        },
+        {
+          "id": "cta_p",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+            "editor": "Tell us what you're facing. We'll tell you plainly, whether and how we can help.",
+            "text_color": "#9ca3af"
+          }
+        },
+        {
+          "id": "cta_btn",
+          "elType": "widget",
+          "widgetType": "button",
+          "settings": {
+            "text": "Book a consultation",
+            "background_color": "#8b2625",
+            "text_color": "#ffffff"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ftr_main",
+      "elType": "container",
+      "settings": {
+        "display": "flex",
+        "flex_direction": "column",
+        "background_color": "#141210",
+        "padding": {
+          "top": "60",
+          "right": "40",
+          "bottom": "30",
+          "left": "40",
+          "unit": "px"
+        }
+      },
+      "elements": [
+        {
+          "id": "ftr_cols",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "row",
+            "flex_justify_content": "space-between"
+          },
+          "elements": [
+            {
+              "id": "ftr_brand",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "column"
+              },
+              "elements": [
+                {
+                  "id": "ftr_title",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Whitehead Miles & Allen",
+                    "title_color": "#ffffff"
+                  }
+                },
+                {
+                  "id": "ftr_desc",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "A full-service law firm serving Greater Fredericton since 1978.",
+                    "text_color": "#9ca3af"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "ftr_links_practice",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "column"
+              },
+              "elements": [
+                {
+                  "id": "f_p_head",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "PRACTICE",
+                    "title_color": "#ffffff"
+                  }
+                },
+                {
+                  "id": "f_p_1",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Wills & Estate",
+                    "title_color": "#9ca3af"
+                  }
+                },
+                {
+                  "id": "f_p_2",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Corporate",
+                    "title_color": "#9ca3af"
+                  }
+                },
+                {
+                  "id": "f_p_3",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Real Estate",
+                    "title_color": "#9ca3af"
+                  }
+                },
+                {
+                  "id": "f_p_4",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Family",
+                    "title_color": "#9ca3af"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "ftr_links_firm",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "column"
+              },
+              "elements": [
+                {
+                  "id": "f_f_head",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "FIRM",
+                    "title_color": "#ffffff"
+                  }
+                },
+                {
+                  "id": "f_f_1",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "About",
+                    "title_color": "#9ca3af"
+                  }
+                },
+                {
+                  "id": "f_f_2",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Advisors",
+                    "title_color": "#9ca3af"
+                  }
+                },
+                {
+                  "id": "f_f_3",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Clients",
+                    "title_color": "#9ca3af"
+                  }
+                },
+                {
+                  "id": "f_f_4",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Contact",
+                    "title_color": "#9ca3af"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "ftr_links_visit",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "column"
+              },
+              "elements": [
+                {
+                  "id": "f_v_head",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "VISIT",
+                    "title_color": "#ffffff"
+                  }
+                },
+                {
+                  "id": "f_v_1",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "111 Main Street\nFredericton, NB E3A 1C6\n(506) 458-9077",
+                    "text_color": "#9ca3af"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ftr_div",
+          "elType": "widget",
+          "widgetType": "divider",
+          "settings": {
+            "color": "#262626"
+          }
+        },
+        {
+          "id": "ftr_bottom",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "row",
+            "flex_justify_content": "space-between"
+          },
+          "elements": [
+            {
+              "id": "ftr_copy",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Copyright Whitehead Miles & Allen LLP",
+                "title_color": "#6b7280",
+                "typography_font_size": {
+                  "size": 12,
+                  "unit": "px"
+                }
+              }
+            },
+            {
+              "id": "ftr_legal",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Privacy · Terms · Legal notice",
+                "title_color": "#6b7280",
+                "typography_font_size": {
+                  "size": 12,
+                  "unit": "px"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "colors": [
+      "#8b2625",
+      "#1c1917",
+      "#f5f2eb",
+      "#ffffff",
+      "#6b7280"
+    ],
+    "fonts": [
+      "Playfair Display",
+      "Inter"
+    ],
+    "section_count": 13
+  },
+  "global_classes": {
+    "primary_btn": {
+      "background_color": "#8b2625",
+      "color": "#ffffff",
+      "border_radius": "2px",
+      "padding": "12px 24px"
+    },
+    "secondary_btn": {
+      "background_color": "transparent",
+      "color": "#1c1917",
+      "border": "1px solid #1c1917",
+      "padding": "12px 24px"
+    },
+    "accent_badge": {
+      "font_size": "11px",
+      "text_transform": "uppercase",
+      "letter_spacing": "1px",
+      "color": "#8b2625"
+    }
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "version": "0.4",
+  "title": "Plumbio Hero Section",
+  "type": "page",
+  "page_settings": {},
+  "content": [
+    {
+      "id": "hero_sec1",
+      "elType": "container",
+      "settings": {
+        "display": "flex",
+        "flex_direction": "column",
+        "flex_justify_content": "center",
+        "flex_align_items": "center",
+        "min_height": {
+          "size": "650",
+          "unit": "px"
+        },
+        "background_background": "classic",
+        "background_color": "#16437e",
+        "padding": {
+          "top": "80",
+          "right": "40",
+          "bottom": "80",
+          "left": "40",
+          "unit": "px"
+        }
+      },
+      "elements": [
+        {
+          "id": "hero_card1",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "column",
+            "flex_justify_content": "center",
+            "flex_align_items": "center",
+            "max_width": {
+              "size": "700",
+              "unit": "px"
+            }
+          },
+          "elements": [
+            {
+              "id": "hero_title",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Exceptional, Punctual & Professional",
+                "header_size": "h1",
+                "align": "center",
+                "title_color": "#ffffff",
+                "typography_font_family": "Montserrat",
+                "typography_font_size": {
+                  "size": "52",
+                  "unit": "px"
+                },
+                "typography_font_weight": "800",
+                "typography_line_height": {
+                  "size": "1.2",
+                  "unit": "em"
+                }
+              }
+            },
+            {
+              "id": "hero_div",
+              "elType": "widget",
+              "widgetType": "divider",
+              "settings": {
+                "style": "solid",
+                "weight": {
+                  "size": "2",
+                  "unit": "px"
+                },
+                "color": "#3898ec",
+                "width": {
+                  "size": "60",
+                  "unit": "px"
+                },
+                "align": "center",
+                "gap": {
+                  "size": "20",
+                  "unit": "px"
+                }
+              }
+            },
+            {
+              "id": "hero_desc",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p style='text-align: center; color: #ffffff; font-family: Inter; font-size: 16px; line-height: 1.6;'>You deserve to have a handy team of plumbers who can install or repair any plumbing system you need.</p>"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

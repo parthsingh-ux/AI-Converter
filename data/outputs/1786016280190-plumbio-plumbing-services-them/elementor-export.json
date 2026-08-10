@@ -1,0 +1,518 @@
+{
+  "version": "0.4",
+  "title": "Plumbio Plumbing & Services Theme",
+  "type": "page",
+  "page_settings": {},
+  "content": [
+    {
+      "id": "hdr0001",
+      "elType": "container",
+      "settings": {
+        "display": "flex",
+        "flex_direction": "column",
+        "background_background": "classic",
+        "background_color": "#ffffff"
+      },
+      "elements": [
+        {
+          "id": "topbar1",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "row",
+            "flex_justify_content": "space-between",
+            "flex_align_items": "center",
+            "background_background": "classic",
+            "background_color": "#184a8c",
+            "padding": {
+              "top": "8",
+              "right": "30",
+              "bottom": "8",
+              "left": "30",
+              "unit": "px"
+            }
+          },
+          "elements": [
+            {
+              "id": "tbleft1",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "row",
+                "flex_align_items": "center",
+                "gap": {
+                  "size": "20",
+                  "unit": "px"
+                }
+              },
+              "elements": [
+                {
+                  "id": "tbtext1",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<span style='color: #ffffff; font-size: 13px; font-family: Inter;'>📍 8494 Signal Hill Road Manassas, VA, 20110 &nbsp;&nbsp;&nbsp; ✉️ E-mail us: needhelp@company.com &nbsp;&nbsp;&nbsp; 💬 24 Hour Service - 7 Days a Week</span>"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "tbright1",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "row",
+                "flex_align_items": "center",
+                "gap": {
+                  "size": "15",
+                  "unit": "px"
+                }
+              },
+              "elements": [
+                {
+                  "id": "tbsocial",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<span style='color: #ffffff; font-size: 13px; font-family: Inter;'>Follow us: &nbsp; 🐦 &nbsp; 📘 &nbsp; 💼 &nbsp; 📸</span>"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mainnav1",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "row",
+            "flex_justify_content": "space-between",
+            "flex_align_items": "center",
+            "padding": {
+              "top": "15",
+              "right": "30",
+              "bottom": "15",
+              "left": "30",
+              "unit": "px"
+            }
+          },
+          "elements": [
+            {
+              "id": "logocon1",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "row",
+                "flex_align_items": "center"
+              },
+              "elements": [
+                {
+                  "id": "logohead",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "💧 Plumbio",
+                    "header_size": "h2",
+                    "title_color": "#184a8c",
+                    "typography_font_family": "Montserrat",
+                    "typography_font_weight": "800",
+                    "typography_font_size": {
+                      "size": "28",
+                      "unit": "px"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "navlinks1",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "row",
+                "flex_align_items": "center",
+                "gap": {
+                  "size": "25",
+                  "unit": "px"
+                }
+              },
+              "elements": [
+                {
+                  "id": "navtxt1",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<div style='font-family: Montserrat; font-weight: 700; font-size: 14px; color: #184a8c; display: flex; gap: 20px;'><a style='color:#184a8c; text-decoration:none;' href='#'>Home</a> <a style='color:#184a8c; text-decoration:none;' href='#'>About ▾</a> <a style='color:#184a8c; text-decoration:none;' href='#'>Services ▾</a> <a style='color:#184a8c; text-decoration:none;' href='#'>Prices</a> <a style='color:#184a8c; text-decoration:none;' href='#'>FAQ</a> <a style='color:#184a8c; text-decoration:none;' href='#'>Blog ▾</a> <a style='color:#184a8c; text-decoration:none;' href='#'>Shop ▾</a> <a style='color:#184a8c; text-decoration:none;' href='#'>Contact ▾</a></div>"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "ctabox1",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "row",
+                "flex_align_items": "center",
+                "gap": {
+                  "size": "20",
+                  "unit": "px"
+                }
+              },
+              "elements": [
+                {
+                  "id": "phonecall",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Need Help Now? Call Us!<br><span style='color:#ff5722; font-size:20px; font-weight:800;'>📞 123-456-789</span>",
+                    "header_size": "h6",
+                    "title_color": "#64748b",
+                    "typography_font_family": "Inter",
+                    "typography_font_size": {
+                      "size": "12",
+                      "unit": "px"
+                    }
+                  }
+                },
+                {
+                  "id": "schedbtn",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "settings": {
+                    "text": "Schedule Online",
+                    "button_type": "default",
+                    "size": "sm",
+                    "text_color": "#184a8c",
+                    "background_color": "#ffffff",
+                    "border_border": "solid",
+                    "border_width": {
+                      "top": "1",
+                      "right": "1",
+                      "bottom": "1",
+                      "left": "1",
+                      "unit": "px"
+                    },
+                    "border_color": "#184a8c",
+                    "border_radius": {
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "unit": "px"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hero_sec1",
+      "elType": "container",
+      "settings": {
+        "display": "flex",
+        "flex_direction": "column",
+        "flex_justify_content": "center",
+        "flex_align_items": "center",
+        "min_height": {
+          "size": "650",
+          "unit": "px"
+        },
+        "background_background": "classic",
+        "background_color": "#16437e",
+        "padding": {
+          "top": "80",
+          "right": "40",
+          "bottom": "80",
+          "left": "40",
+          "unit": "px"
+        }
+      },
+      "elements": [
+        {
+          "id": "hero_card1",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "column",
+            "flex_justify_content": "center",
+            "flex_align_items": "center",
+            "max_width": {
+              "size": "700",
+              "unit": "px"
+            }
+          },
+          "elements": [
+            {
+              "id": "hero_title",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Exceptional, Punctual & Professional",
+                "header_size": "h1",
+                "align": "center",
+                "title_color": "#ffffff",
+                "typography_font_family": "Montserrat",
+                "typography_font_size": {
+                  "size": "52",
+                  "unit": "px"
+                },
+                "typography_font_weight": "800",
+                "typography_line_height": {
+                  "size": "1.2",
+                  "unit": "em"
+                }
+              }
+            },
+            {
+              "id": "hero_div",
+              "elType": "widget",
+              "widgetType": "divider",
+              "settings": {
+                "style": "solid",
+                "weight": {
+                  "size": "2",
+                  "unit": "px"
+                },
+                "color": "#3898ec",
+                "width": {
+                  "size": "60",
+                  "unit": "px"
+                },
+                "align": "center",
+                "gap": {
+                  "size": "20",
+                  "unit": "px"
+                }
+              }
+            },
+            {
+              "id": "hero_desc",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p style='text-align: center; color: #ffffff; font-family: Inter; font-size: 16px; line-height: 1.6;'>You deserve to have a handy team of plumbers who can install or repair any plumbing system you need.</p>"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ftr0001",
+      "elType": "container",
+      "settings": {
+        "display": "flex",
+        "flex_direction": "column",
+        "background_background": "classic",
+        "background_color": "#0d2c54",
+        "padding": {
+          "top": "60",
+          "right": "40",
+          "bottom": "20",
+          "left": "40",
+          "unit": "px"
+        }
+      },
+      "elements": [
+        {
+          "id": "ftr_cols",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "row",
+            "flex_justify_content": "space-between",
+            "gap": {
+              "size": "30",
+              "unit": "px"
+            }
+          },
+          "elements": [
+            {
+              "id": "ftr_col1",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "column",
+                "width": {
+                  "size": "30",
+                  "unit": "%"
+                }
+              },
+              "elements": [
+                {
+                  "id": "ftr_logo",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "💧 Plumbio",
+                    "header_size": "h3",
+                    "title_color": "#ffffff",
+                    "typography_font_family": "Montserrat"
+                  }
+                },
+                {
+                  "id": "ftr_about_text",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p style='color: #94a3b8; font-family: Inter; font-size: 14px;'>Reliable, fast, and professional plumbing services available 24/7. We guarantee high-quality craftsmanship for every residential and commercial project.</p>"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "ftr_col2",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "column",
+                "width": {
+                  "size": "30",
+                  "unit": "%"
+                }
+              },
+              "elements": [
+                {
+                  "id": "ftr_h2",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Our Services",
+                    "header_size": "h4",
+                    "title_color": "#ffffff",
+                    "typography_font_family": "Montserrat"
+                  }
+                },
+                {
+                  "id": "ftr_links",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<ul style='list-style: none; padding: 0; color: #94a3b8; font-family: Inter; line-height: 2;'><li style='color: #94a3b8;'>Drain Cleaning</li><li style='color: #94a3b8;'>Pipe Repair</li><li style='color: #94a3b8;'>Water Heater Installation</li><li style='color: #94a3b8;'>Emergency Plumbing</li></ul>"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "ftr_col3",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "display": "flex",
+                "flex_direction": "column",
+                "width": {
+                  "size": "30",
+                  "unit": "%"
+                }
+              },
+              "elements": [
+                {
+                  "id": "ftr_h3",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Contact Us",
+                    "header_size": "h4",
+                    "title_color": "#ffffff",
+                    "typography_font_family": "Montserrat"
+                  }
+                },
+                {
+                  "id": "ftr_contact_info",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p style='color: #94a3b8; font-family: Inter; font-size: 14px;'>📍 8494 Signal Hill Road Manassas, VA<br>📞 123-456-789<br>✉️ needhelp@company.com</p>"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ftr_copy_sec",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_justify_content": "center",
+            "padding": {
+              "top": "20",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "unit": "px"
+            },
+            "margin": {
+              "top": "30",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "unit": "px"
+            },
+            "border_border": "solid",
+            "border_width": {
+              "top": "1",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "unit": "px"
+            },
+            "border_color": "#1e3a8a"
+          },
+          "elements": [
+            {
+              "id": "copytext",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p style='text-align: center; color: #64748b; font-family: Inter; font-size: 13px;'>© Plumbio All Rights Reserved. Built with Elementor.</p>"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "colors": [
+      "#184a8c",
+      "#3898ec",
+      "#ff5722",
+      "#ffffff",
+      "#0f172a"
+    ],
+    "fonts": [
+      "Montserrat",
+      "Inter"
+    ],
+    "section_count": 1
+  },
+  "global_classes": {
+    "primary_button": {
+      "background_color": "#184a8c",
+      "text_color": "#ffffff",
+      "font_family": "Montserrat"
+    },
+    "accent_text": {
+      "color": "#ff5722",
+      "font_family": "Inter"
+    }
+  }
+}

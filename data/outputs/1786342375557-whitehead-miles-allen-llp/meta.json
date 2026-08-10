@@ -1,0 +1,33 @@
+{
+  "id": "1786342375557-whitehead-miles-allen-llp",
+  "timestamp": 1786342375557,
+  "title": "Whitehead Miles & Allen LLP",
+  "inputType": "multi_files",
+  "summary": {
+    "colors": [
+      "#2B2723",
+      "#A62A2A",
+      "#EDE7DD",
+      "#DBD3C6",
+      "#1A1612",
+      "#FAF6F0",
+      "#6E665C"
+    ],
+    "fonts": [
+      "Cormorant Garamond",
+      "Source Sans 3"
+    ],
+    "section_count": 17
+  },
+  "tokenUsage": {
+    "promptTokens": 115488,
+    "outputTokens": 11729,
+    "totalTokens": 131851,
+    "tokenLimitPerMinute": 250000,
+    "tokensRemainingPerMinute": 134512,
+    "usedModelName": "gemini-3.5-flash"
+  },
+  "downloadUrl": "/api/download/1786342375557-whitehead-miles-allen-llp?type=zip",
+  "jsonDownloadUrl": "/api/download/1786342375557-whitehead-miles-allen-llp?type=json",
+  "createdAt": "2026-08-10T06:12:55.557Z"
+}

@@ -1,0 +1,612 @@
+{
+  "title": "Plumbio - Plumbing & Repair Services Hero & Header",
+  "summary": {
+    "colors": [
+      "#10418C",
+      "#3898F7",
+      "#FF5722",
+      "#FFFFFF",
+      "#0C2340"
+    ],
+    "fonts": [
+      "Poppins",
+      "Sans-Serif"
+    ],
+    "section_count": 1
+  },
+  "header_template": [
+    {
+      "id": "hdr_tp_01",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "display": "flex",
+        "flex_direction": "row",
+        "flex_justify_content": "space-between",
+        "flex_align_items": "center",
+        "background_color": "#10418C",
+        "padding": {
+          "unit": "px",
+          "top": "8",
+          "right": "24",
+          "bottom": "8",
+          "left": "24"
+        }
+      },
+      "elements": [
+        {
+          "id": "hdr_tp_in1",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "row",
+            "flex_justify_content": "flex-start",
+            "flex_align_items": "center",
+            "gap": {
+              "unit": "px",
+              "size": "20"
+            }
+          },
+          "elements": [
+            {
+              "id": "txt_addr01",
+              "elType": "widget",
+              "widgetType": "icon-box",
+              "settings": {
+                "title_text": "8494 Signal Hill Road Manassas, VA, 20110",
+                "selected_icon": {
+                  "value": "fas fa-map-marker-alt"
+                },
+                "title_color": "#FFFFFF",
+                "icon_color": "#3898F7"
+              }
+            },
+            {
+              "id": "txt_mail01",
+              "elType": "widget",
+              "widgetType": "icon-box",
+              "settings": {
+                "title_text": "E-mail us: needhelp@company.com",
+                "selected_icon": {
+                  "value": "fas fa-envelope"
+                },
+                "title_color": "#FFFFFF",
+                "icon_color": "#3898F7"
+              }
+            },
+            {
+              "id": "txt_hours1",
+              "elType": "widget",
+              "widgetType": "icon-box",
+              "settings": {
+                "title_text": "24 Hour Service - 7 Days a Week",
+                "selected_icon": {
+                  "value": "fas fa-clock"
+                },
+                "title_color": "#FFFFFF",
+                "icon_color": "#3898F7"
+              }
+            }
+          ]
+        },
+        {
+          "id": "hdr_tp_in2",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "row",
+            "flex_justify_content": "flex-end",
+            "flex_align_items": "center",
+            "gap": {
+              "unit": "px",
+              "size": "12"
+            }
+          },
+          "elements": [
+            {
+              "id": "txt_soc_lbl",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Follow us:",
+                "header_size": "span",
+                "title_color": "#FFFFFF"
+              }
+            },
+            {
+              "id": "icn_twit01",
+              "elType": "widget",
+              "widgetType": "icon",
+              "settings": {
+                "selected_icon": {
+                  "value": "fab fa-twitter"
+                },
+                "primary_color": "#FFFFFF"
+              }
+            },
+            {
+              "id": "icn_face01",
+              "elType": "widget",
+              "widgetType": "icon",
+              "settings": {
+                "selected_icon": {
+                  "value": "fab fa-facebook-f"
+                },
+                "primary_color": "#FFFFFF"
+              }
+            },
+            {
+              "id": "icn_link01",
+              "elType": "widget",
+              "widgetType": "icon",
+              "settings": {
+                "selected_icon": {
+                  "value": "fab fa-linkedin-in"
+                },
+                "primary_color": "#FFFFFF"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hdr_mn_02",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "display": "flex",
+        "flex_direction": "row",
+        "flex_justify_content": "space-between",
+        "flex_align_items": "center",
+        "background_color": "#FFFFFF",
+        "padding": {
+          "unit": "px",
+          "top": "12",
+          "right": "24",
+          "bottom": "12",
+          "left": "24"
+        }
+      },
+      "elements": [
+        {
+          "id": "hdr_logo_c",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "row",
+            "flex_align_items": "center"
+          },
+          "elements": [
+            {
+              "id": "wgt_logo_img",
+              "elType": "widget",
+              "widgetType": "image",
+              "settings": {
+                "image": {
+                  "url": "https://via.placeholder.com/150x50?text=Plumbio"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "hdr_menu_c",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "row",
+            "flex_justify_content": "center",
+            "flex_align_items": "center"
+          },
+          "elements": [
+            {
+              "id": "wgt_nav_menu",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Home   About   Services   Prices   FAQ   Blog   Shop   Contact",
+                "title_color": "#10418C",
+                "header_size": "h5"
+              }
+            }
+          ]
+        },
+        {
+          "id": "hdr_call_c",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "row",
+            "flex_justify_content": "flex-end",
+            "flex_align_items": "center",
+            "gap": {
+              "unit": "px",
+              "size": "16"
+            }
+          },
+          "elements": [
+            {
+              "id": "wgt_phone_box",
+              "elType": "widget",
+              "widgetType": "icon-box",
+              "settings": {
+                "title_text": "Need Help Now? Call Us!",
+                "description_text": "123-456-789",
+                "selected_icon": {
+                  "value": "fas fa-phone-alt"
+                },
+                "icon_color": "#FF5722",
+                "title_color": "#666666"
+              }
+            },
+            {
+              "id": "btn_sched_online",
+              "elType": "widget",
+              "widgetType": "button",
+              "settings": {
+                "text": "Schedule Online",
+                "button_type": "default",
+                "background_color": "transparent",
+                "text_color": "#10418C",
+                "border_border": "solid",
+                "border_color": "#10418C"
+              }
+            },
+            {
+              "id": "btn_offcanvas",
+              "elType": "widget",
+              "widgetType": "icon",
+              "settings": {
+                "selected_icon": {
+                  "value": "fas fa-bars"
+                },
+                "primary_color": "#FFFFFF",
+                "secondary_color": "#3898F7"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "footer_template": [
+    {
+      "id": "ftr_main_01",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "display": "flex",
+        "flex_direction": "row",
+        "flex_justify_content": "space-between",
+        "background_color": "#0C2340",
+        "padding": {
+          "unit": "px",
+          "top": "60",
+          "right": "40",
+          "bottom": "40",
+          "left": "40"
+        }
+      },
+      "elements": [
+        {
+          "id": "ftr_col_01",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "column",
+            "flex_justify_content": "flex-start",
+            "width": {
+              "unit": "%",
+              "size": "25"
+            }
+          },
+          "elements": [
+            {
+              "id": "ftr_logo_img",
+              "elType": "widget",
+              "widgetType": "image",
+              "settings": {
+                "image": {
+                  "url": "https://via.placeholder.com/150x50?text=Plumbio+Footer"
+                }
+              }
+            },
+            {
+              "id": "ftr_about_txt",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "We provide professional plumbing services round the clock. Fast, reliable and trustworthy plumbing team at your service.",
+                "text_color": "#CCCCCC"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ftr_col_02",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "column",
+            "flex_justify_content": "flex-start",
+            "width": {
+              "unit": "%",
+              "size": "25"
+            }
+          },
+          "elements": [
+            {
+              "id": "ftr_h_links",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Quick Links",
+                "title_color": "#FFFFFF",
+                "header_size": "h4"
+              }
+            },
+            {
+              "id": "ftr_links_txt",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "• About Us\n• Plumbing Services\n• Our Pricing\n• Recent News\n• Contact Us",
+                "text_color": "#CCCCCC"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ftr_col_03",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "column",
+            "flex_justify_content": "flex-start",
+            "width": {
+              "unit": "%",
+              "size": "25"
+            }
+          },
+          "elements": [
+            {
+              "id": "ftr_h_serv",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Our Services",
+                "title_color": "#FFFFFF",
+                "header_size": "h4"
+              }
+            },
+            {
+              "id": "ftr_serv_txt",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "• Drain Cleaning\n• Pipe Replacement\n• Water Heater Repair\n• Leak Detection\n• Emergency Plumbing",
+                "text_color": "#CCCCCC"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ftr_col_04",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "column",
+            "flex_justify_content": "flex-start",
+            "width": {
+              "unit": "%",
+              "size": "25"
+            }
+          },
+          "elements": [
+            {
+              "id": "ftr_h_contact",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Emergency Call",
+                "title_color": "#FFFFFF",
+                "header_size": "h4"
+              }
+            },
+            {
+              "id": "ftr_phone_widget",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "123-456-789",
+                "title_color": "#FF5722",
+                "header_size": "h2"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "content_template": [
+    {
+      "id": "hero_sec_01",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "display": "flex",
+        "flex_direction": "row",
+        "flex_justify_content": "space-between",
+        "flex_align_items": "center",
+        "background_color": "#10418C",
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0"
+        }
+      },
+      "elements": [
+        {
+          "id": "hero_img_c",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "column",
+            "flex_justify_content": "center",
+            "width": {
+              "unit": "%",
+              "size": "45"
+            }
+          },
+          "elements": [
+            {
+              "id": "wgt_plumber_img",
+              "elType": "widget",
+              "widgetType": "image",
+              "settings": {
+                "image": {
+                  "url": "https://via.placeholder.com/800x600?text=Plumbing+Tools+Wrench"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "hero_txt_c",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "column",
+            "flex_justify_content": "center",
+            "flex_align_items": "center",
+            "width": {
+              "unit": "%",
+              "size": "45"
+            },
+            "padding": {
+              "unit": "px",
+              "top": "60",
+              "right": "40",
+              "bottom": "60",
+              "left": "40"
+            }
+          },
+          "elements": [
+            {
+              "id": "hero_heading",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Exceptional, Punctual\n& Professional",
+                "title_color": "#FFFFFF",
+                "align": "center",
+                "header_size": "h1"
+              }
+            },
+            {
+              "id": "hero_divider",
+              "elType": "widget",
+              "widgetType": "divider",
+              "settings": {
+                "color": "#3898F7",
+                "weight": 3,
+                "width": {
+                  "unit": "px",
+                  "size": "60"
+                }
+              }
+            },
+            {
+              "id": "hero_desc",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "You deserve to have a handy team of plumbers who can install or repair any plumbing system you need.",
+                "text_color": "#FFFFFF",
+                "align": "center"
+              }
+            }
+          ]
+        },
+        {
+          "id": "hero_nav_c",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "display": "flex",
+            "flex_direction": "row",
+            "flex_justify_content": "flex-end",
+            "flex_align_items": "flex-end",
+            "width": {
+              "unit": "%",
+              "size": "10"
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "30",
+              "bottom": "30",
+              "left": "0"
+            },
+            "gap": {
+              "unit": "px",
+              "size": "10"
+            }
+          },
+          "elements": [
+            {
+              "id": "btn_arr_left",
+              "elType": "widget",
+              "widgetType": "icon",
+              "settings": {
+                "selected_icon": {
+                  "value": "fas fa-arrow-left"
+                },
+                "primary_color": "#10418C",
+                "secondary_color": "#FFFFFF"
+              }
+            },
+            {
+              "id": "btn_arr_right",
+              "elType": "widget",
+              "widgetType": "icon",
+              "settings": {
+                "selected_icon": {
+                  "value": "fas fa-arrow-right"
+                },
+                "primary_color": "#10418C",
+                "secondary_color": "#FFFFFF"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "global_classes": {
+    "btn_primary": {
+      "background_color": "#FF5722",
+      "text_color": "#FFFFFF",
+      "border_radius": "4px"
+    },
+    "btn_secondary": {
+      "background_color": "#3898F7",
+      "text_color": "#FFFFFF",
+      "border_radius": "4px"
+    }
+  }
+}
