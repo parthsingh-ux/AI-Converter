@@ -46,6 +46,10 @@ import {
   Minimize2,
   Navigation,
   Monitor,
+  ExternalLink,
+  Send,
+  Key,
+  Link2,
 } from "lucide-react";
 
 const INPUT_TYPES = [
@@ -470,6 +474,18 @@ export default function DashboardPage() {
   const [copiedKey, setCopiedKey] = useState(null);
   const [copiedColor, setCopiedColor] = useState(null);
 
+  // WordPress Direct Integration state
+  const [wpConfig, setWpConfig] = useState({
+    site_url: "",
+    username: "",
+    application_password: "",
+    page_title: "",
+    page_slug: "",
+    page_status: "publish",
+  });
+  const [wpConnStatus, setWpConnStatus] = useState(null);
+  const [wpDeployStatus, setWpDeployStatus] = useState(null);
+
   const fileInputRef = useRef(null);
   const folderInputRef = useRef(null);
   const multiFileInputRef = useRef(null);
@@ -632,6 +648,63 @@ export default function DashboardPage() {
     navigator.clipboard.writeText(hex);
     setCopiedColor(hex);
     setTimeout(() => setCopiedColor(null), 2000);
+  };
+
+  // Test connection to WordPress REST API
+  const handleTestWpConnection = async () => {
+    if (!wpConfig.site_url || !wpConfig.username || !wpConfig.application_password) {
+      setWpConnStatus({ loading: false, success: false, error: "Please enter your WP Site URL, Username, and Application Password." });
+      return;
+    }
+    setWpConnStatus({ loading: true });
+    try {
+      const res = await fetch("/api/wordpress/test-connection", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(wpConfig),
+      });
+      const data = await res.json();
+      if (res.ok && data.success) {
+        setWpConnStatus({ loading: false, success: true, message: `Connected as ${data.userName} (${data.siteUrl})` });
+      } else {
+        setWpConnStatus({ loading: false, success: false, error: data.error || "Connection failed." });
+      }
+    } catch (err) {
+      setWpConnStatus({ loading: false, success: false, error: err.message });
+    }
+  };
+
+  // Deploy page directly to WordPress
+  const handleDeployToWordPress = async () => {
+    if (!wpConfig.site_url || !wpConfig.username || !wpConfig.application_password) {
+      setWpDeployStatus({ loading: false, success: false, error: "Please enter your WordPress credentials." });
+      return;
+    }
+    if (!result || !result.templates) {
+      setWpDeployStatus({ loading: false, success: false, error: "No generated template data available to deploy." });
+      return;
+    }
+
+    setWpDeployStatus({ loading: true });
+    try {
+      const res = await fetch("/api/wordpress/deploy", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...wpConfig,
+          page_title: wpConfig.page_title || result.title || "AI Generated Elementor Page",
+          templates: result.templates,
+        }),
+      });
+      const data = await res.json();
+      if (res.ok && data.success) {
+        setWpDeployStatus({ loading: false, success: true, data });
+      } else {
+        setWpDeployStatus({ loading: false, success: false, error: data.error || "Deployment failed." });
+      }
+    } catch (err) {
+      setWpDeployStatus({ loading: false, success: false, error: err.message });
+    }
   };
 
   const handleSubmit = async () => {
@@ -1151,7 +1224,7 @@ export default function DashboardPage() {
           </div>
         </div>
 
-        {/* RIGHT PANEL: CONVERSION STATUS / SUMMARY / DOWNLOADS (5 Cols) */}
+        {/* RIGHT PANEL: CONVERSION STATUS / SUMMARY / DOWNLOADS / WORDPRESS PUSH (5 Cols) */}
         <div className="lg:col-span-5 flex flex-col space-y-6">
           {/* Loading Staged State */}
           {isLoading && (
@@ -1220,7 +1293,7 @@ export default function DashboardPage() {
             </div>
           )}
 
-          {/* Success Results Card & Downloads */}
+          {/* Success Results Card, Downloads & Direct WP Deployment */}
           {result && !isLoading && (
             <div className="flex flex-col space-y-6">
               {/* Summary Card */}
@@ -1302,6 +1375,176 @@ export default function DashboardPage() {
                     <FileJson className="h-4 w-4 text-[#0A69C9]" />
                     <span>Download Raw JSON</span>
                   </a>
+                </div>
+              </div>
+
+              {/* DIRECT WORDPRESS INTEGRATION & INSTANT DEPLOYMENT CARD */}
+              <div className="bg-white rounded-2xl p-6 shadow-sm border border-[#CBD1D7] text-[#021528] space-y-4">
+                <div className="flex items-center justify-between border-b border-[#CBD1D7]/60 pb-3">
+                  <div className="flex items-center space-x-2">
+                    <div className="h-8 w-8 rounded-lg bg-[#0A69C9]/15 flex items-center justify-center text-[#0A69C9]">
+                      <Send className="h-4 w-4" />
+                    </div>
+                    <div>
+                      <h4 className="text-sm font-bold text-[#021528]">Push Directly to WordPress</h4>
+                      <p className="text-[11px] text-[#64707C] font-mono">Create Elementor page instantly via WP REST API</p>
+                    </div>
+                  </div>
+                  <span className="px-2.5 py-0.5 rounded-full text-[10px] font-mono bg-[#0A69C9]/15 text-[#0A69C9] font-bold">
+                    One-Click Deploy
+                  </span>
+                </div>
+
+                <div className="space-y-3 font-mono text-xs">
+                  {/* WP Site URL */}
+                  <div>
+                    <label className="block text-[#64707C] mb-1 font-bold">WordPress Site URL:</label>
+                    <input
+                      type="url"
+                      placeholder="https://my-wordpress-site.com"
+                      value={wpConfig.site_url}
+                      onChange={(e) => setWpConfig((prev) => ({ ...prev, site_url: e.target.value }))}
+                      className="w-full bg-[#F2F4F5] border border-[#CBD1D7] rounded-lg p-2.5 text-[#021528] focus:outline-none focus:border-[#0A69C9]"
+                    />
+                  </div>
+
+                  {/* Username & Application Password */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    <div>
+                      <label className="block text-[#64707C] mb-1 font-bold">WP Username:</label>
+                      <input
+                        type="text"
+                        placeholder="admin"
+                        value={wpConfig.username}
+                        onChange={(e) => setWpConfig((prev) => ({ ...prev, username: e.target.value }))}
+                        className="w-full bg-[#F2F4F5] border border-[#CBD1D7] rounded-lg p-2.5 text-[#021528] focus:outline-none focus:border-[#0A69C9]"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-[#64707C] mb-1 font-bold flex items-center justify-between">
+                        <span>Application Password:</span>
+                        <Key className="h-3 w-3 text-[#0A69C9]" />
+                      </label>
+                      <input
+                        type="password"
+                        placeholder="abcd efgh ijkl mnop"
+                        value={wpConfig.application_password}
+                        onChange={(e) => setWpConfig((prev) => ({ ...prev, application_password: e.target.value }))}
+                        className="w-full bg-[#F2F4F5] border border-[#CBD1D7] rounded-lg p-2.5 text-[#021528] focus:outline-none focus:border-[#0A69C9]"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Target Page Title & Slug */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    <div>
+                      <label className="block text-[#64707C] mb-1 font-bold">Page Title:</label>
+                      <input
+                        type="text"
+                        placeholder={result.title || "Home Page"}
+                        value={wpConfig.page_title}
+                        onChange={(e) => setWpConfig((prev) => ({ ...prev, page_title: e.target.value }))}
+                        className="w-full bg-[#F2F4F5] border border-[#CBD1D7] rounded-lg p-2.5 text-[#021528] focus:outline-none focus:border-[#0A69C9]"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-[#64707C] mb-1 font-bold">Page Status:</label>
+                      <select
+                        value={wpConfig.page_status}
+                        onChange={(e) => setWpConfig((prev) => ({ ...prev, page_status: e.target.value }))}
+                        className="w-full bg-[#F2F4F5] border border-[#CBD1D7] rounded-lg p-2.5 text-[#021528] focus:outline-none focus:border-[#0A69C9]"
+                      >
+                        <option value="publish">Publish Immediately</option>
+                        <option value="draft">Save as Draft</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  {/* Connection Test & Push Action Buttons */}
+                  <div className="flex flex-col sm:flex-row items-center gap-2 pt-2">
+                    <button
+                      type="button"
+                      onClick={handleTestWpConnection}
+                      disabled={wpConnStatus?.loading}
+                      className="w-full sm:w-auto px-4 py-2.5 rounded-lg bg-[#F2F4F5] hover:bg-[#E5E8EB] text-[#021528] font-bold border border-[#CBD1D7] transition-all flex items-center justify-center space-x-1.5"
+                    >
+                      {wpConnStatus?.loading ? (
+                        <Loader2 className="h-3.5 w-3.5 animate-spin text-[#0A69C9]" />
+                      ) : (
+                        <Link2 className="h-3.5 w-3.5 text-[#0A69C9]" />
+                      )}
+                      <span>Test WP Connection</span>
+                    </button>
+
+                    <button
+                      type="button"
+                      onClick={handleDeployToWordPress}
+                      disabled={wpDeployStatus?.loading}
+                      className="flex-1 w-full py-2.5 rounded-lg bg-[#0A69C9] hover:bg-[#0854A1] text-white font-bold transition-all shadow flex items-center justify-center space-x-2"
+                    >
+                      {wpDeployStatus?.loading ? (
+                        <>
+                          <Loader2 className="h-4 w-4 animate-spin text-white" />
+                          <span>Pushing Elementor Page to WordPress...</span>
+                        </>
+                      ) : (
+                        <>
+                          <Send className="h-4 w-4" />
+                          <span>Push Directly to WordPress</span>
+                        </>
+                      )}
+                    </button>
+                  </div>
+
+                  {/* Test Connection Banner */}
+                  {wpConnStatus && !wpConnStatus.loading && (
+                    <div className={`p-3 rounded-lg text-xs font-mono border ${wpConnStatus.success ? "bg-[#12A150]/15 text-[#12A150] border-[#12A150]/30" : "bg-[#DB1439]/15 text-[#DB1439] border-[#DB1439]/30"}`}>
+                      {wpConnStatus.success ? wpConnStatus.message : wpConnStatus.error}
+                    </div>
+                  )}
+
+                  {/* Deployment Success Banner & Direct Links */}
+                  {wpDeployStatus && !wpDeployStatus.loading && (
+                    <div className={`p-4 rounded-xl space-y-2 border ${wpDeployStatus.success ? "bg-[#12A150]/15 border-[#12A150]/40 text-[#021528]" : "bg-[#DB1439]/15 border-[#DB1439]/40 text-[#DB1439]"}`}>
+                      {wpDeployStatus.success ? (
+                        <div className="space-y-2">
+                          <div className="flex items-center space-x-2 text-[#12A150] font-bold">
+                            <CheckCircle2 className="h-4 w-4" />
+                            <span>Successfully Published to WordPress!</span>
+                          </div>
+                          <p className="text-xs text-[#64707C]">
+                            Page <strong>"{wpDeployStatus.data.pageTitle}"</strong> (ID #{wpDeployStatus.data.pageId}) was created with {wpDeployStatus.data.elementorSectionsCount} Elementor containers attached.
+                          </p>
+
+                          <div className="flex flex-wrap items-center gap-2 pt-1">
+                            <a
+                              href={wpDeployStatus.data.pageUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="px-3 py-1.5 rounded-lg bg-[#12A150] hover:bg-[#0E8140] text-white font-bold flex items-center space-x-1.5 shadow"
+                            >
+                              <span>View Live WP Page</span>
+                              <ExternalLink className="h-3.5 w-3.5" />
+                            </a>
+                            <a
+                              href={wpDeployStatus.data.editUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="px-3 py-1.5 rounded-lg bg-[#0A69C9] hover:bg-[#0854A1] text-white font-bold flex items-center space-x-1.5 shadow"
+                            >
+                              <span>Open in Elementor Editor</span>
+                              <ExternalLink className="h-3.5 w-3.5" />
+                            </a>
+                          </div>
+                        </div>
+                      ) : (
+                        <div className="flex items-start space-x-2 text-[#DB1439]">
+                          <AlertTriangle className="h-4 w-4 shrink-0 mt-0.5" />
+                          <span>{wpDeployStatus.error}</span>
+                        </div>
+                      )}
+                    </div>
+                  )}
                 </div>
               </div>
 
