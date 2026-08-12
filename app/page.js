@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import Button from "@/components/Button";
 import Card from "@/components/Card";
 import Badge from "@/components/Badge";
@@ -90,8 +90,8 @@ function RenderNode({ node, depth = 0 }) {
       padding: settings.padding
         ? `${settings.padding.top || 0}px ${settings.padding.right || 0}px ${settings.padding.bottom || 0}px ${settings.padding.left || 0}px`
         : depth === 0
-        ? "60px 0px"
-        : "16px",
+          ? "60px 0px"
+          : "16px",
       borderRadius: settings.border_radius ? `${settings.border_radius.top || 0}px` : undefined,
       maxWidth: isBoxed ? `${boxedWidth}px` : "100%",
       width: "100%",
@@ -439,7 +439,7 @@ export default function DashboardPage() {
   const [textContent, setTextContent] = useState("");
   const [selectedFile, setSelectedFile] = useState(null);
   const [filePreview, setFilePreview] = useState(null);
-  
+
   // Folder state
   const [folderFiles, setFolderFiles] = useState([]);
   const [folderName, setFolderName] = useState("");
@@ -475,16 +475,104 @@ export default function DashboardPage() {
   const [copiedColor, setCopiedColor] = useState(null);
 
   // WordPress Direct Integration state
+  const [wpAuthMode, setWpAuthMode] = useState("mcp_oauth"); // "mcp_oauth" or "basic"
   const [wpConfig, setWpConfig] = useState({
-    site_url: "",
-    username: "",
-    application_password: "",
+    site_url: "https://mcp.adaantest3.com",
+    username: "admin",
+    application_password: "qwerasdfzxcvqwer",
     page_title: "",
     page_slug: "",
     page_status: "publish",
   });
+  const [mcpConfig, setMcpConfig] = useState({
+    server_url: "https://mcp.adaantest3.com/wp-json/mcp/novamira-oauth",
+    access_token: "",
+    connector_name: "novamira-mcp-adaantest3-c",
+  });
+  const [mcpAuthStatus, setMcpAuthStatus] = useState(null);
   const [wpConnStatus, setWpConnStatus] = useState(null);
   const [wpDeployStatus, setWpDeployStatus] = useState(null);
+
+  // Multi-Site State & Saved Sites Manager
+  const [savedSites, setSavedSites] = useState([
+    {
+      name: "adaantest3 Staging",
+      url: "https://mcp.adaantest3.com",
+      username: "admin",
+      appPassword: "qwerasdfzxcvqwer",
+    },
+  ]);
+
+  // Load saved sites on mount
+  useEffect(() => {
+    try {
+      const stored = localStorage.getItem("ai_converter_saved_sites");
+      if (stored) {
+        const parsed = JSON.parse(stored);
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          setSavedSites(parsed);
+        }
+      }
+    } catch (e) {}
+  }, []);
+
+  // Helper to handle site URL change and auto-sync MCP endpoints
+  const handleSiteUrlChange = (newUrl) => {
+    let clean = newUrl.trim();
+    if (clean && !/^https?:\/\//i.test(clean)) {
+      clean = `https://${clean}`;
+    }
+    const cleanOrigin = clean.replace(/\/+$/, "");
+
+    let domainName = "custom";
+    try {
+      const parsed = new URL(cleanOrigin);
+      domainName = parsed.hostname.replace(/[^a-z0-9-]+/gi, "-");
+    } catch {}
+
+    setWpConfig((prev) => ({ ...prev, site_url: cleanOrigin }));
+    setMcpConfig((prev) => ({
+      ...prev,
+      server_url: cleanOrigin ? `${cleanOrigin}/wp-json/mcp/novamira-oauth` : "",
+      connector_name: `novamira-mcp-${domainName}-c`,
+    }));
+  };
+
+  // Helper to select a saved site
+  const handleSelectSavedSite = (site) => {
+    setWpConfig((prev) => ({
+      ...prev,
+      site_url: site.url,
+      username: site.username || prev.username,
+      application_password: site.appPassword || prev.application_password,
+    }));
+    handleSiteUrlChange(site.url);
+  };
+
+  // Helper to save current site to saved sites list
+  const handleSaveCurrentSite = () => {
+    if (!wpConfig.site_url) return;
+    const exists = savedSites.find((s) => s.url === wpConfig.site_url);
+    if (!exists) {
+      let siteName = "Custom Site";
+      try {
+        siteName = new URL(wpConfig.site_url).hostname;
+      } catch {}
+      const updated = [
+        ...savedSites,
+        {
+          name: siteName,
+          url: wpConfig.site_url,
+          username: wpConfig.username,
+          appPassword: wpConfig.application_password,
+        },
+      ];
+      setSavedSites(updated);
+      try {
+        localStorage.setItem("ai_converter_saved_sites", JSON.stringify(updated));
+      } catch (e) {}
+    }
+  };
 
   const fileInputRef = useRef(null);
   const folderInputRef = useRef(null);
@@ -562,7 +650,7 @@ export default function DashboardPage() {
   const handleFolderSelect = async (filesList) => {
     if (!filesList || filesList.length === 0) return;
     const filesArray = Array.from(filesList);
-    
+
     const firstPath = filesArray[0].webkitRelativePath || filesArray[0].name;
     const rootName = firstPath.includes("/") ? firstPath.split("/")[0] : "Selected Folder";
     setFolderName(rootName);
@@ -571,7 +659,7 @@ export default function DashboardPage() {
     for (const f of filesArray) {
       const relativePath = f.webkitRelativePath || f.name;
       const isImage = f.type.startsWith("image/") || /\.(png|jpe?g|webp|gif|svg)$/i.test(f.name);
-      
+
       if (isImage) {
         const base64 = await new Promise((resolve) => {
           const reader = new FileReader();
@@ -650,6 +738,134 @@ export default function DashboardPage() {
     setTimeout(() => setCopiedColor(null), 2000);
   };
 
+  // Listen for OAuth success/error from popups & persist token
+  useEffect(() => {
+    try {
+      const savedToken = localStorage.getItem("mcp_access_token");
+      const savedUrl = localStorage.getItem("mcp_server_url");
+      if (savedToken) {
+        setMcpConfig((prev) => ({
+          ...prev,
+          access_token: savedToken,
+          server_url: savedUrl || prev.server_url,
+        }));
+        setMcpAuthStatus({
+          loading: false,
+          success: true,
+          message: "Connected & Authenticated with Novamira MCP!",
+        });
+      }
+    } catch (e) {}
+
+    const handleMessage = (event) => {
+      if (event.data && event.data.type === "MCP_OAUTH_SUCCESS") {
+        try {
+          if (event.data.accessToken) localStorage.setItem("mcp_access_token", event.data.accessToken);
+          if (event.data.serverUrl) localStorage.setItem("mcp_server_url", event.data.serverUrl);
+        } catch (e) {}
+
+        setMcpConfig((prev) => ({
+          ...prev,
+          access_token: event.data.accessToken,
+        }));
+        setMcpAuthStatus({
+          loading: false,
+          success: true,
+          message: "Connected & Authenticated with Novamira MCP!",
+        });
+      } else if (event.data && event.data.type === "MCP_OAUTH_ERROR") {
+        setMcpAuthStatus({
+          loading: false,
+          success: false,
+          error: event.data.error || "OAuth Authorization Failed.",
+        });
+      }
+    };
+    window.addEventListener("message", handleMessage);
+    return () => window.removeEventListener("message", handleMessage);
+  }, []);
+
+  // Initiate Novamira MCP OAuth flow
+  const handleInitiateMcpAuth = async () => {
+    if (!mcpConfig.server_url) {
+      setMcpAuthStatus({ loading: false, success: false, error: "Please enter your Novamira MCP Server URL." });
+      return;
+    }
+    setMcpAuthStatus({ loading: true });
+    try {
+      const res = await fetch("/api/wordpress/mcp-auth/initiate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ server_url: mcpConfig.server_url, connector_name: mcpConfig.connector_name }),
+      });
+      const data = await res.json();
+      if (res.ok && data.success && data.authorizeUrl) {
+        const width = 600;
+        const height = 700;
+        const left = window.screenX + (window.outerWidth - width) / 2;
+        const top = window.screenY + (window.outerHeight - height) / 2;
+        window.open(
+          data.authorizeUrl,
+          "novamira_mcp_oauth",
+          `width=${width},height=${height},top=${top},left=${left},scrollbars=yes`
+        );
+        setMcpAuthStatus({ loading: false, pending: true, message: "Opening WordPress sign-in window. Please approve authorization..." });
+      } else {
+        setMcpAuthStatus({ loading: false, success: false, error: data.error || "Failed to initiate OAuth." });
+      }
+    } catch (err) {
+      setMcpAuthStatus({ loading: false, success: false, error: err.message });
+    }
+  };
+
+  // Deploy page via Novamira MCP (or direct plugin bridge fallback)
+  const handleDeployViaMcp = async () => {
+    if (!result || !result.templates) {
+      setWpDeployStatus({ loading: false, success: false, error: "Please convert your input design first before deploying." });
+      return;
+    }
+
+    setWpDeployStatus({ loading: true });
+    try {
+      let res;
+      if (mcpConfig.access_token) {
+        res = await fetch("/api/wordpress/mcp-deploy", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            server_url: mcpConfig.server_url,
+            access_token: mcpConfig.access_token,
+            page_title: wpConfig.page_title || result.title || "AI Generated Elementor Page",
+            page_slug: wpConfig.page_slug || "",
+            page_status: wpConfig.page_status || "publish",
+            templates: result.templates,
+          }),
+        });
+      } else {
+        // Direct plugin deployment fallback
+        res = await fetch("/api/wordpress/deploy", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            site_url: mcpConfig.server_url || wpConfig.site_url || "https://mcp.adaantest3.com",
+            page_title: wpConfig.page_title || result.title || "AI Generated Elementor Page",
+            page_slug: wpConfig.page_slug || "",
+            page_status: wpConfig.page_status || "publish",
+            templates: result.templates,
+          }),
+        });
+      }
+      const data = await res.json();
+      if (res.ok && data.success) {
+        setWpDeployStatus({ loading: false, success: true, data });
+      } else {
+        setWpDeployStatus({ loading: false, success: false, error: data.error || "Deployment failed." });
+      }
+    } catch (err) {
+      setWpDeployStatus({ loading: false, success: false, error: err.message });
+    }
+  };
+
   // Test connection to WordPress REST API
   const handleTestWpConnection = async () => {
     if (!wpConfig.site_url || !wpConfig.username || !wpConfig.application_password) {
@@ -676,12 +892,12 @@ export default function DashboardPage() {
 
   // Deploy page directly to WordPress
   const handleDeployToWordPress = async () => {
-    if (!wpConfig.site_url || !wpConfig.username || !wpConfig.application_password) {
-      setWpDeployStatus({ loading: false, success: false, error: "Please enter your WordPress credentials." });
+    if (!wpConfig.site_url) {
+      setWpDeployStatus({ loading: false, success: false, error: "Please enter your WordPress site URL." });
       return;
     }
     if (!result || !result.templates) {
-      setWpDeployStatus({ loading: false, success: false, error: "No generated template data available to deploy." });
+      setWpDeployStatus({ loading: false, success: false, error: "Please convert your input design first before deploying." });
       return;
     }
 
@@ -814,13 +1030,13 @@ export default function DashboardPage() {
               <Zap className="h-6 w-6 text-white" />
             </div>
             <div>
-              <div className="flex items-center space-x-2">
+              {/* <div className="flex items-center space-x-2">
                 <h1 className="text-xl font-extrabold text-[#021528] tracking-wide">AI CONVERTER ENGINE</h1>
                 <span className="flex items-center space-x-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold font-mono uppercase bg-[#12A150]/15 text-[#12A150] border border-[#12A150]/30">
                   <Activity className="h-3 w-3 animate-ping" />
                   <span>Online</span>
                 </span>
-              </div>
+              </div> */}
               <p className="text-xs text-[#64707C] font-mono mt-0.5">
                 Convert HTML Bundles, Separate HTML/CSS/JS Files, System Folders, Images & PDFs
               </p>
@@ -862,13 +1078,12 @@ export default function DashboardPage() {
           {/* Quota Progress Bar */}
           <div className="h-2 w-full bg-[#E5E8EB] rounded-full overflow-hidden border border-[#CBD1D7]">
             <div
-              className={`h-full transition-all duration-700 ${
-                usedPercent > 80
-                  ? "bg-[#DB1439]"
-                  : usedPercent > 50
+              className={`h-full transition-all duration-700 ${usedPercent > 80
+                ? "bg-[#DB1439]"
+                : usedPercent > 50
                   ? "bg-[#DB8700]"
                   : "bg-[#0A69C9]"
-              }`}
+                }`}
               style={{ width: `${Math.max(5, remainingPercent)}%` }}
             />
           </div>
@@ -903,11 +1118,10 @@ export default function DashboardPage() {
                   <button
                     key={type.id}
                     onClick={() => handleTypeChange(type.id)}
-                    className={`flex flex-col items-center justify-center p-2 rounded-lg text-xs font-medium transition-all ${
-                      isActive
-                        ? "bg-[#0A69C9] text-white shadow font-bold scale-[1.02]"
-                        : "text-[#64707C] hover:text-[#021528] hover:bg-[#E5E8EB]"
-                    }`}
+                    className={`flex flex-col items-center justify-center p-2 rounded-lg text-xs font-medium transition-all ${isActive
+                      ? "bg-[#0A69C9] text-white shadow font-bold scale-[1.02]"
+                      : "text-[#64707C] hover:text-[#021528] hover:bg-[#E5E8EB]"
+                      }`}
                   >
                     <Icon className={`h-4 w-4 mb-1 ${isActive ? "text-white" : "text-[#64707C]"}`} />
                     <span className="truncate w-full text-center text-[10px]">{type.label}</span>
@@ -999,11 +1213,10 @@ export default function DashboardPage() {
                       onDragLeave={handleDragLeave}
                       onDrop={handleDrop}
                       onClick={() => multiFileInputRef.current?.click()}
-                      className={`border-2 border-dashed rounded-xl p-8 text-center cursor-pointer transition-all flex flex-col items-center justify-center min-h-[260px] ${
-                        isDragOver
-                          ? "border-[#0A69C9] bg-[#0A69C9]/10"
-                          : "border-[#CBD1D7] hover:border-[#0A69C9] bg-[#F2F4F5]"
-                      }`}
+                      className={`border-2 border-dashed rounded-xl p-8 text-center cursor-pointer transition-all flex flex-col items-center justify-center min-h-[260px] ${isDragOver
+                        ? "border-[#0A69C9] bg-[#0A69C9]/10"
+                        : "border-[#CBD1D7] hover:border-[#0A69C9] bg-[#F2F4F5]"
+                        }`}
                     >
                       <div className="h-16 w-16 rounded-2xl bg-[#0A69C9]/15 border border-[#0A69C9]/30 flex items-center justify-center text-[#0A69C9] mb-3">
                         <Files className="h-8 w-8" />
@@ -1089,11 +1302,10 @@ export default function DashboardPage() {
                       onDragLeave={handleDragLeave}
                       onDrop={handleDrop}
                       onClick={() => folderInputRef.current?.click()}
-                      className={`border-2 border-dashed rounded-xl p-8 text-center cursor-pointer transition-all flex flex-col items-center justify-center min-h-[260px] ${
-                        isDragOver
-                          ? "border-[#0A69C9] bg-[#0A69C9]/10"
-                          : "border-[#CBD1D7] hover:border-[#0A69C9] bg-[#F2F4F5]"
-                      }`}
+                      className={`border-2 border-dashed rounded-xl p-8 text-center cursor-pointer transition-all flex flex-col items-center justify-center min-h-[260px] ${isDragOver
+                        ? "border-[#0A69C9] bg-[#0A69C9]/10"
+                        : "border-[#CBD1D7] hover:border-[#0A69C9] bg-[#F2F4F5]"
+                        }`}
                     >
                       <div className="h-16 w-16 rounded-2xl bg-[#0A69C9]/15 border border-[#0A69C9]/30 flex items-center justify-center text-[#0A69C9] mb-3">
                         <FolderOpen className="h-8 w-8" />
@@ -1115,13 +1327,12 @@ export default function DashboardPage() {
                   onDragLeave={handleDragLeave}
                   onDrop={handleDrop}
                   onClick={() => fileInputRef.current?.click()}
-                  className={`border-2 border-dashed rounded-xl p-8 text-center cursor-pointer transition-all flex flex-col items-center justify-center min-h-[260px] ${
-                    isDragOver
-                      ? "border-[#0A69C9] bg-[#0A69C9]/10"
-                      : selectedFile
+                  className={`border-2 border-dashed rounded-xl p-8 text-center cursor-pointer transition-all flex flex-col items-center justify-center min-h-[260px] ${isDragOver
+                    ? "border-[#0A69C9] bg-[#0A69C9]/10"
+                    : selectedFile
                       ? "border-[#0A69C9] bg-[#F2F4F5]"
                       : "border-[#CBD1D7] hover:border-[#0A69C9] bg-[#F2F4F5]"
-                  }`}
+                    }`}
                 >
                   <input
                     ref={fileInputRef}
@@ -1241,24 +1452,22 @@ export default function DashboardPage() {
                   return (
                     <div key={idx} className="flex items-center space-x-3">
                       <div
-                        className={`h-7 w-7 rounded-full flex items-center justify-center text-xs font-bold font-mono transition-all ${
-                          isPassed
-                            ? "bg-[#12A150]/15 text-[#12A150] border border-[#12A150]/40"
-                            : isCurrent
+                        className={`h-7 w-7 rounded-full flex items-center justify-center text-xs font-bold font-mono transition-all ${isPassed
+                          ? "bg-[#12A150]/15 text-[#12A150] border border-[#12A150]/40"
+                          : isCurrent
                             ? "bg-[#0A69C9]/15 text-[#0A69C9] border border-[#0A69C9] animate-pulse"
                             : "bg-[#F2F4F5] text-[#64707C] border border-[#CBD1D7]"
-                        }`}
+                          }`}
                       >
                         {isPassed ? <CheckCircle2 className="h-4 w-4" /> : idx + 1}
                       </div>
                       <span
-                        className={`text-xs font-medium font-mono ${
-                          isPassed
-                            ? "text-[#64707C] line-through opacity-70"
-                            : isCurrent
+                        className={`text-xs font-medium font-mono ${isPassed
+                          ? "text-[#64707C] line-through opacity-70"
+                          : isCurrent
                             ? "text-[#0A69C9] font-bold"
                             : "text-[#64707C]"
-                        }`}
+                          }`}
                       >
                         {stageText}
                       </span>
@@ -1386,57 +1595,186 @@ export default function DashboardPage() {
                       <Send className="h-4 w-4" />
                     </div>
                     <div>
-                      <h4 className="text-sm font-bold text-[#021528]">Push Directly to WordPress</h4>
-                      <p className="text-[11px] text-[#64707C] font-mono">Create Elementor page instantly via WP REST API</p>
+                      <h4 className="text-sm font-bold text-[#021528]">Push Directly to Any WordPress Site</h4>
+                      <p className="text-[11px] text-[#64707C] font-mono">Connect any site via Novamira MCP, AI Converter Plugin, or REST API</p>
                     </div>
                   </div>
-                  <span className="px-2.5 py-0.5 rounded-full text-[10px] font-mono bg-[#0A69C9]/15 text-[#0A69C9] font-bold">
-                    One-Click Deploy
-                  </span>
+                  <a
+                    href="/ai-converter-connector.zip"
+                    download="ai-converter-connector.zip"
+                    className="px-2.5 py-1 rounded-lg text-[10px] font-mono bg-[#12A150]/15 text-[#12A150] hover:bg-[#12A150]/25 font-bold border border-[#12A150]/30 transition-all flex items-center space-x-1"
+                    title="Download plugin zip for installation on any WordPress site"
+                  >
+                    <Download className="h-3 w-3" />
+                    <span>Download Plugin (.zip)</span>
+                  </a>
+                </div>
+
+                {/* TARGET WORDPRESS SITE SELECTOR & INPUT (MULTI-SITE) */}
+                <div className="space-y-2 bg-[#F2F4F5] p-3.5 rounded-xl border border-[#CBD1D7] font-mono text-xs">
+                  <div className="flex items-center justify-between">
+                    <label className="block text-[#021528] font-bold">Target WordPress Site URL:</label>
+                    <button
+                      type="button"
+                      onClick={handleSaveCurrentSite}
+                      className="text-[10px] text-[#0A69C9] hover:underline font-bold"
+                    >
+                      + Save to Site Favorites
+                    </button>
+                  </div>
+                  <input
+                    type="url"
+                    placeholder="https://your-wordpress-site.com"
+                    value={wpConfig.site_url}
+                    onChange={(e) => handleSiteUrlChange(e.target.value)}
+                    className="w-full bg-white border border-[#CBD1D7] rounded-lg p-2.5 text-[#021528] focus:outline-none focus:border-[#0A69C9] font-mono font-bold"
+                  />
+
+                  {/* Saved Sites Switcher Buttons */}
+                  {savedSites.length > 0 && (
+                    <div className="flex items-center space-x-1.5 pt-1 overflow-x-auto no-scrollbar">
+                      <span className="text-[10px] text-[#64707C] font-bold shrink-0">Quick Switch:</span>
+                      {savedSites.map((site, idx) => (
+                        <button
+                          key={idx}
+                          type="button"
+                          onClick={() => handleSelectSavedSite(site)}
+                          className={`px-2 py-0.5 rounded text-[10px] font-bold truncate max-w-[140px] transition-all ${
+                            wpConfig.site_url === site.url
+                              ? "bg-[#0A69C9] text-white"
+                              : "bg-white text-[#64707C] hover:text-[#021528] border border-[#CBD1D7]"
+                          }`}
+                        >
+                          {site.name}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
+
+                {/* Integration Mode Switcher */}
+                <div className="grid grid-cols-2 gap-1 p-1 bg-[#F2F4F5] rounded-xl border border-[#CBD1D7] text-xs font-mono">
+                  <button
+                    type="button"
+                    onClick={() => setWpAuthMode("mcp_oauth")}
+                    className={`py-2 px-3 rounded-lg font-bold transition-all flex items-center justify-center space-x-1.5 ${
+                      wpAuthMode === "mcp_oauth"
+                        ? "bg-[#0A69C9] text-white shadow"
+                        : "text-[#64707C] hover:text-[#021528]"
+                    }`}
+                  >
+                    <Globe className="h-3.5 w-3.5" />
+                    <span>Novamira MCP (OAuth)</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setWpAuthMode("basic")}
+                    className={`py-2 px-3 rounded-lg font-bold transition-all flex items-center justify-center space-x-1.5 ${
+                      wpAuthMode === "basic"
+                        ? "bg-[#0A69C9] text-white shadow"
+                        : "text-[#64707C] hover:text-[#021528]"
+                    }`}
+                  >
+                    <Key className="h-3.5 w-3.5" />
+                    <span>Basic Auth (App Password)</span>
+                  </button>
                 </div>
 
                 <div className="space-y-3 font-mono text-xs">
-                  {/* WP Site URL */}
-                  <div>
-                    <label className="block text-[#64707C] mb-1 font-bold">WordPress Site URL:</label>
-                    <input
-                      type="url"
-                      placeholder="https://my-wordpress-site.com"
-                      value={wpConfig.site_url}
-                      onChange={(e) => setWpConfig((prev) => ({ ...prev, site_url: e.target.value }))}
-                      className="w-full bg-[#F2F4F5] border border-[#CBD1D7] rounded-lg p-2.5 text-[#021528] focus:outline-none focus:border-[#0A69C9]"
-                    />
-                  </div>
+                  {wpAuthMode === "mcp_oauth" ? (
+                    /* NOVAMIRA REMOTE MCP OAUTH CONNECTOR MODE */
+                    <div className="space-y-3">
+                      <div>
+                        <label className="block text-[#64707C] mb-1 font-bold">Novamira MCP Server Endpoint:</label>
+                        <input
+                          type="url"
+                          placeholder="https://your-wordpress-site.com/wp-json/mcp/novamira-oauth"
+                          value={mcpConfig.server_url}
+                          onChange={(e) => setMcpConfig((prev) => ({ ...prev, server_url: e.target.value }))}
+                          className="w-full bg-[#F2F4F5] border border-[#CBD1D7] rounded-lg p-2.5 text-[#021528] focus:outline-none focus:border-[#0A69C9]"
+                        />
+                      </div>
 
-                  {/* Username & Application Password */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                    <div>
-                      <label className="block text-[#64707C] mb-1 font-bold">WP Username:</label>
-                      <input
-                        type="text"
-                        placeholder="admin"
-                        value={wpConfig.username}
-                        onChange={(e) => setWpConfig((prev) => ({ ...prev, username: e.target.value }))}
-                        className="w-full bg-[#F2F4F5] border border-[#CBD1D7] rounded-lg p-2.5 text-[#021528] focus:outline-none focus:border-[#0A69C9]"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-[#64707C] mb-1 font-bold flex items-center justify-between">
-                        <span>Application Password:</span>
-                        <Key className="h-3 w-3 text-[#0A69C9]" />
-                      </label>
-                      <input
-                        type="password"
-                        placeholder="abcd efgh ijkl mnop"
-                        value={wpConfig.application_password}
-                        onChange={(e) => setWpConfig((prev) => ({ ...prev, application_password: e.target.value }))}
-                        className="w-full bg-[#F2F4F5] border border-[#CBD1D7] rounded-lg p-2.5 text-[#021528] focus:outline-none focus:border-[#0A69C9]"
-                      />
-                    </div>
-                  </div>
+                      {/* OAuth Status / Sign-in Action */}
+                      <div className="pt-1">
+                        {mcpConfig.access_token ? (
+                          <div className="p-3 rounded-lg bg-[#12A150]/15 border border-[#12A150]/30 text-[#12A150] font-bold flex items-center justify-between">
+                            <span className="flex items-center space-x-2">
+                              <CheckCircle2 className="h-4 w-4" />
+                              <span>OAuth Authenticated with Target Site</span>
+                            </span>
+                            <button
+                              type="button"
+                              onClick={() => {
+                                try {
+                                  localStorage.removeItem("mcp_access_token");
+                                } catch (e) {}
+                                setMcpConfig((prev) => ({ ...prev, access_token: "" }));
+                                setMcpAuthStatus(null);
+                              }}
+                              className="text-[10px] underline hover:text-[#DB1439]"
+                            >
+                              Disconnect
+                            </button>
+                          </div>
+                        ) : (
+                          <button
+                            type="button"
+                            onClick={handleInitiateMcpAuth}
+                            disabled={mcpAuthStatus?.loading}
+                            className="w-full py-2.5 rounded-lg bg-[#010B14] hover:bg-[#021528] text-white font-bold transition-all border border-[#148ECD]/40 flex items-center justify-center space-x-2 shadow"
+                          >
+                            {mcpAuthStatus?.loading ? (
+                              <Loader2 className="h-4 w-4 animate-spin text-[#148ECD]" />
+                            ) : (
+                              <Globe className="h-4 w-4 text-[#148ECD]" />
+                            )}
+                            <span>Sign In with Target WordPress Site (OAuth)</span>
+                          </button>
+                        )}
+                      </div>
 
-                  {/* Target Page Title & Slug */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                      {mcpAuthStatus && (
+                        <div className={`p-2.5 rounded-lg text-xs font-mono border ${
+                          mcpAuthStatus.success ? "bg-[#12A150]/15 text-[#12A150] border-[#12A150]/30" : mcpAuthStatus.pending ? "bg-[#0A69C9]/15 text-[#0A69C9] border-[#0A69C9]/30" : "bg-[#DB1439]/15 text-[#DB1439] border-[#DB1439]/30"
+                        }`}>
+                          {mcpAuthStatus.success ? mcpAuthStatus.message : mcpAuthStatus.pending ? mcpAuthStatus.message : mcpAuthStatus.error}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    /* STANDARD WP REST API (APPLICATION PASSWORD) MODE */
+                    <div className="space-y-3">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        <div>
+                          <label className="block text-[#64707C] mb-1 font-bold">WP Username:</label>
+                          <input
+                            type="text"
+                            placeholder="admin"
+                            value={wpConfig.username}
+                            onChange={(e) => setWpConfig((prev) => ({ ...prev, username: e.target.value }))}
+                            className="w-full bg-[#F2F4F5] border border-[#CBD1D7] rounded-lg p-2.5 text-[#021528] focus:outline-none focus:border-[#0A69C9]"
+                          />
+                        </div>
+                        <div>
+                          <label className="block text-[#64707C] mb-1 font-bold flex items-center justify-between">
+                            <span>Application Password:</span>
+                            <Key className="h-3 w-3 text-[#0A69C9]" />
+                          </label>
+                          <input
+                            type="password"
+                            placeholder="abcd efgh ijkl mnop"
+                            value={wpConfig.application_password}
+                            onChange={(e) => setWpConfig((prev) => ({ ...prev, application_password: e.target.value }))}
+                            className="w-full bg-[#F2F4F5] border border-[#CBD1D7] rounded-lg p-2.5 text-[#021528] focus:outline-none focus:border-[#0A69C9]"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Target Page Title & Status (Shared) */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1">
                     <div>
                       <label className="block text-[#64707C] mb-1 font-bold">Page Title:</label>
                       <input
@@ -1460,25 +1798,27 @@ export default function DashboardPage() {
                     </div>
                   </div>
 
-                  {/* Connection Test & Push Action Buttons */}
+                  {/* Deploy Action Button */}
                   <div className="flex flex-col sm:flex-row items-center gap-2 pt-2">
-                    <button
-                      type="button"
-                      onClick={handleTestWpConnection}
-                      disabled={wpConnStatus?.loading}
-                      className="w-full sm:w-auto px-4 py-2.5 rounded-lg bg-[#F2F4F5] hover:bg-[#E5E8EB] text-[#021528] font-bold border border-[#CBD1D7] transition-all flex items-center justify-center space-x-1.5"
-                    >
-                      {wpConnStatus?.loading ? (
-                        <Loader2 className="h-3.5 w-3.5 animate-spin text-[#0A69C9]" />
-                      ) : (
-                        <Link2 className="h-3.5 w-3.5 text-[#0A69C9]" />
-                      )}
-                      <span>Test WP Connection</span>
-                    </button>
+                    {wpAuthMode === "basic" && (
+                      <button
+                        type="button"
+                        onClick={handleTestWpConnection}
+                        disabled={wpConnStatus?.loading}
+                        className="w-full sm:w-auto px-4 py-2.5 rounded-lg bg-[#F2F4F5] hover:bg-[#E5E8EB] text-[#021528] font-bold border border-[#CBD1D7] transition-all flex items-center justify-center space-x-1.5"
+                      >
+                        {wpConnStatus?.loading ? (
+                          <Loader2 className="h-3.5 w-3.5 animate-spin text-[#0A69C9]" />
+                        ) : (
+                          <Link2 className="h-3.5 w-3.5 text-[#0A69C9]" />
+                        )}
+                        <span>Test WP Connection</span>
+                      </button>
+                    )}
 
                     <button
                       type="button"
-                      onClick={handleDeployToWordPress}
+                      onClick={wpAuthMode === "mcp_oauth" ? handleDeployViaMcp : handleDeployToWordPress}
                       disabled={wpDeployStatus?.loading}
                       className="flex-1 w-full py-2.5 rounded-lg bg-[#0A69C9] hover:bg-[#0854A1] text-white font-bold transition-all shadow flex items-center justify-center space-x-2"
                     >
@@ -1490,14 +1830,14 @@ export default function DashboardPage() {
                       ) : (
                         <>
                           <Send className="h-4 w-4" />
-                          <span>Push Directly to WordPress</span>
+                          <span>{wpAuthMode === "mcp_oauth" ? "Push via Novamira MCP" : "Push Directly to WordPress"}</span>
                         </>
                       )}
                     </button>
                   </div>
 
                   {/* Test Connection Banner */}
-                  {wpConnStatus && !wpConnStatus.loading && (
+                  {wpAuthMode === "basic" && wpConnStatus && !wpConnStatus.loading && (
                     <div className={`p-3 rounded-lg text-xs font-mono border ${wpConnStatus.success ? "bg-[#12A150]/15 text-[#12A150] border-[#12A150]/30" : "bg-[#DB1439]/15 text-[#DB1439] border-[#DB1439]/30"}`}>
                       {wpConnStatus.success ? wpConnStatus.message : wpConnStatus.error}
                     </div>

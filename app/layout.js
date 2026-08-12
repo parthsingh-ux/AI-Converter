@@ -16,6 +16,7 @@ function AppLayout({ children }) {
   const navItems = [
     { label: "Dashboard", href: "/", icon: "solar:widget-3-bold" },
     { label: "Theme History", href: "/history", icon: "solar:history-bold" },
+    { label: "Documentation", href: "/docs", icon: "solar:document-bold" },
   ];
 
   return (
@@ -41,9 +42,8 @@ function AppLayout({ children }) {
       <div className="flex flex-1 overflow-hidden">
         {/* SIDEBAR (No extra borders) */}
         <aside
-          className={`bg-[#010B14] p-3 pt-0 flex flex-col transition-all duration-300 shrink-0 ${
-            isSidebarOpen ? "w-60" : "w-20"
-          }`}
+          className={`bg-[#010B14] p-3 pt-0 flex flex-col transition-all duration-300 shrink-0 ${isSidebarOpen ? "w-60" : "w-20"
+            }`}
         >
           {/* Inner Menu Card (Clean borderless) */}
           <div className="bg-[#021528] rounded-2xl p-3 flex flex-col h-full shadow-xl">
@@ -76,13 +76,11 @@ function AppLayout({ children }) {
                   <button
                     key={idx}
                     onClick={() => item.href !== "#" && router.push(item.href)}
-                    className={`w-full flex items-center ${
-                      isSidebarOpen ? "px-3.5 justify-start" : "justify-center"
-                    } py-2.5 rounded-xl font-medium text-sm transition-all ${
-                      isActive
+                    className={`w-full flex items-center ${isSidebarOpen ? "px-3.5 justify-start" : "justify-center"
+                      } py-2.5 rounded-xl font-medium text-sm transition-all ${isActive
                         ? "bg-[#0A69C9] text-white shadow-lg shadow-[#0A69C9]/30 font-semibold"
                         : "text-[#97A3AF] hover:text-white hover:bg-[#191C1F]"
-                    }`}
+                      }`}
                   >
                     <Icon
                       icon={item.icon}

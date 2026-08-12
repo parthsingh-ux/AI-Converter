@@ -1,22 +1,21 @@
 import { NextResponse } from "next/server";
-import { createOrUpdateElementorPage } from "@/lib/wordpressClient";
+import { deployViaMcpToken } from "@/lib/mcpClient";
 
 export async function POST(req) {
   try {
     const body = await req.json();
     const {
-      site_url,
-      username,
-      application_password,
+      server_url,
+      access_token,
       page_title,
       page_slug,
       page_status,
       templates,
     } = body;
 
-    if (!site_url) {
+    if (!server_url || !access_token) {
       return NextResponse.json(
-        { success: false, error: "WordPress site_url is required." },
+        { success: false, error: "Novamira MCP Server URL and Access Token are required." },
         { status: 400 }
       );
     }
@@ -28,10 +27,9 @@ export async function POST(req) {
       );
     }
 
-    const deployResult = await createOrUpdateElementorPage({
-      siteUrl: site_url,
-      username,
-      applicationPassword: application_password,
+    const deployResult = await deployViaMcpToken({
+      siteUrl: server_url,
+      accessToken: access_token,
       pageTitle: page_title || "AI Generated Elementor Page",
       pageSlug: page_slug || "",
       pageStatus: page_status || "publish",
@@ -41,7 +39,7 @@ export async function POST(req) {
     return NextResponse.json(deployResult);
   } catch (err) {
     return NextResponse.json(
-      { success: false, error: err.message || "Failed to deploy page to WordPress site." },
+      { success: false, error: err.message || "Failed to deploy page via Novamira MCP." },
       { status: 500 }
     );
   }
