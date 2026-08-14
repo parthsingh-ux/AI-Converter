@@ -15,6 +15,7 @@ function AppLayout({ children }) {
 
   const navItems = [
     { label: "Dashboard", href: "/", icon: "solar:widget-3-bold" },
+    { label: "Page Deployment", href: "/deploy", icon: "solar:rocket-2-bold" },
     { label: "Theme History", href: "/history", icon: "solar:history-bold" },
     { label: "Documentation", href: "/docs", icon: "solar:document-bold" },
   ];
