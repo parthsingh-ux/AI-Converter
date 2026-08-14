@@ -1,38 +1,61 @@
 import { NextResponse } from "next/server";
 import fs from "fs/promises";
 import path from "path";
+import { getConversions } from "@/lib/dbService";
 
 export async function GET() {
   try {
+    // 1. Primary: Fetch converted themes from MongoDB
+    let mongoConversions = [];
+    try {
+      mongoConversions = await getConversions(100);
+    } catch (dbErr) {
+      console.warn("MongoDB History fetch warning:", dbErr.message);
+    }
+
+    // 2. Secondary: Fallback to local /data/outputs directory
     const outputsDir = path.join(process.cwd(), "data", "outputs");
+    const localHistory = [];
 
     try {
       await fs.access(outputsDir);
-    } catch {
-      // Directory doesn't exist yet
-      return NextResponse.json({ success: true, history: [] });
-    }
+      const entries = await fs.readdir(outputsDir, { withFileTypes: true });
 
-    const entries = await fs.readdir(outputsDir, { withFileTypes: true });
-    const history = [];
-
-    for (const entry of entries) {
-      if (entry.isDirectory()) {
-        const metaPath = path.join(outputsDir, entry.name, "meta.json");
-        try {
-          const metaContent = await fs.readFile(metaPath, "utf-8");
-          const metaData = JSON.parse(metaContent);
-          history.push(metaData);
-        } catch {
-          // Ignore invalid or unreadable folders
+      for (const entry of entries) {
+        if (entry.isDirectory()) {
+          const metaPath = path.join(outputsDir, entry.name, "meta.json");
+          try {
+            const metaContent = await fs.readFile(metaPath, "utf-8");
+            const metaData = JSON.parse(metaContent);
+            localHistory.push(metaData);
+          } catch {
+            // Ignore invalid folder
+          }
         }
       }
+    } catch {
+      // Local outputs dir doesn't exist
     }
 
-    // Sort newest first
-    history.sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
+    // Merge MongoDB and Local history without duplicates
+    const combinedMap = new Map();
+    [...mongoConversions, ...localHistory].forEach((item) => {
+      if (item && (item.id || item.title)) {
+        const key = item.id || item.title;
+        if (!combinedMap.has(key)) {
+          combinedMap.set(key, item);
+        }
+      }
+    });
 
-    return NextResponse.json({ success: true, history });
+    const combinedList = Array.from(combinedMap.values());
+    combinedList.sort((a, b) => (b.timestamp || b.createdAt || 0) - (a.timestamp || a.createdAt || 0));
+
+    return NextResponse.json({
+      success: true,
+      conversions: combinedList,
+      history: combinedList,
+    });
   } catch (error) {
     console.error("Error in /api/history handler:", error);
     return NextResponse.json(
