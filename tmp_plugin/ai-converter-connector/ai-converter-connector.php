@@ -72,6 +72,76 @@ class AI_Converter_Connector_Plugin {
 		return true;
 	}
 
+	/**
+	 * Method 1: Recursively scans Elementor JSON elements and automatically resolves image references 
+	 * to real WordPress Media Library Attachment IDs and URLs matching image filenames or titles.
+	 */
+	private function auto_resolve_media_references( &$elements ) {
+		if ( ! is_array( $elements ) ) {
+			return;
+		}
+
+		foreach ( $elements as &$element ) {
+			if ( ! is_array( $element ) ) {
+				continue;
+			}
+
+			// Check image settings in Elementor widgets or containers
+			if ( isset( $element['settings'] ) && is_array( $element['settings'] ) ) {
+				foreach ( array( 'image', 'background_image', 'hover_background_image', 'logo_image' ) as $img_key ) {
+					if ( isset( $element['settings'][$img_key] ) && is_array( $element['settings'][$img_key] ) ) {
+						$img_setting = &$element['settings'][$img_key];
+						$url = isset( $img_setting['url'] ) ? trim( $img_setting['url'] ) : '';
+						$filename = isset( $img_setting['filename'] ) ? trim( $img_setting['filename'] ) : '';
+
+						// Extract search term from filename or URL basename
+						$search_term = '';
+						if ( ! empty( $filename ) ) {
+							$search_term = pathinfo( $filename, PATHINFO_FILENAME );
+						} else if ( ! empty( $url ) ) {
+							$search_term = pathinfo( parse_url( $url, PHP_URL_PATH ), PATHINFO_FILENAME );
+						}
+
+						if ( ! empty( $search_term ) ) {
+							// 1. Check if attachment exists by URL
+							$attachment_id = 0;
+							if ( ! empty( $url ) ) {
+								$attachment_id = attachment_url_to_postid( $url );
+							}
+
+							// 2. Fallback: Search Media Library by filename/title
+							if ( ! $attachment_id ) {
+								$args = array(
+									'post_type'      => 'attachment',
+									'post_status'    => 'inherit',
+									'posts_per_page' => 1,
+									's'              => $search_term,
+								);
+								$found_media = get_posts( $args );
+								if ( ! empty( $found_media ) ) {
+									$attachment_id = $found_media[0]->ID;
+								}
+							}
+
+							// 3. If attachment found, update ID and full WP upload URL
+							if ( $attachment_id > 0 ) {
+								$img_setting['id'] = $attachment_id;
+								$full_url = wp_get_attachment_url( $attachment_id );
+								if ( $full_url ) {
+									$img_setting['url'] = $full_url;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			// Recursively resolve child elements
+			if ( isset( $element['elements'] ) && is_array( $element['elements'] ) ) {
+				$this->auto_resolve_media_references( $element['elements'] );
+			}
+		}
+	}
 
 	public function handle_status( $request ) {
 		$elementor_active = is_plugin_active( 'elementor/elementor.php' ) || class_exists( '\Elementor\Plugin' );
@@ -124,6 +194,9 @@ class AI_Converter_Connector_Plugin {
 			if ( ! empty( $package['footer']['data'] ) && is_array( $package['footer']['data'] ) ) {
 				$elem_data = array_merge( $elem_data, $package['footer']['data'] );
 			}
+
+			// Method 1: Automatically resolve images by filename/title from WordPress Media Library
+			$this->auto_resolve_media_references( $elem_data );
 
 			$elem_json_str = wp_json_encode( $elem_data );
 
