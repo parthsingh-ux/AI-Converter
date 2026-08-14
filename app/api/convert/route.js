@@ -6,6 +6,7 @@ import { convertInputToElementor } from "@/lib/geminiClient.js";
 import { sanitizeAndRepairElementor } from "@/lib/autoSanitizeElementor.js";
 import { validateTemplate } from "@/lib/validateElementor.js";
 import { buildThemeZip } from "@/lib/packageTheme.js";
+import { saveConversion } from "@/lib/dbService.js";
 
 function sanitizeSlug(text) {
   return (text || "theme")
@@ -253,6 +254,11 @@ export async function POST(req) {
     await fs.writeFile(zipPath, zipBuffer);
     await fs.writeFile(jsonPath, JSON.stringify(rawExportJson, null, 2));
     await fs.writeFile(metaPath, JSON.stringify(metaData, null, 2));
+
+    // Save to MongoDB (non-blocking fallback)
+    await saveConversion(metaData, rawExportJson).catch((dbErr) => {
+      console.warn("MongoDB Non-Blocking Save Notice:", dbErr.message);
+    });
 
     return NextResponse.json({
       success: true,

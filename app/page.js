@@ -43,9 +43,12 @@ import {
   Quote,
   CheckSquare,
   Maximize2,
+  Database,
   Minimize2,
   Navigation,
   Monitor,
+  Tablet,
+  Smartphone,
   ExternalLink,
   Send,
   Key,
@@ -493,6 +496,11 @@ export default function DashboardPage() {
   const [wpConnStatus, setWpConnStatus] = useState(null);
   const [wpDeployStatus, setWpDeployStatus] = useState(null);
 
+  // Full-Width Live Site Replica Modal state & section visibility
+  const [isFullWidthReplicaOpen, setIsFullWidthReplicaOpen] = useState(false);
+  const [replicaViewport, setReplicaViewport] = useState("desktop"); // "desktop", "tablet", "mobile"
+  const [showLiveReplicaSection, setShowLiveReplicaSection] = useState(true);
+
   // Multi-Site State & Saved Sites Manager
   const [savedSites, setSavedSites] = useState([
     {
@@ -578,7 +586,7 @@ export default function DashboardPage() {
   const folderInputRef = useRef(null);
   const multiFileInputRef = useRef(null);
 
-  const activeInputConfig = INPUT_TYPES.find((t) => t.id === selectedType);
+  const activeInputConfig = INPUT_TYPES.find((t) => t.id === selectedType) || INPUT_TYPES[0];
 
   const handleTypeChange = (typeId) => {
     setSelectedType(typeId);
@@ -989,7 +997,17 @@ export default function DashboardPage() {
       clearInterval(stageInterval);
       setCurrentStage(3);
 
-      const data = await res.json();
+      let data;
+      try {
+        data = await res.json();
+      } catch (jsonErr) {
+        const rawText = await res.text().catch(() => "");
+        throw new Error(
+          rawText
+            ? `Server returned invalid response (${res.status} ${res.statusText}): ${rawText.slice(0, 200)}`
+            : `Server returned an empty response (${res.status} ${res.statusText}).`
+        );
+      }
 
       // Update token usage metrics
       if (data.tokenUsage) {
@@ -1022,53 +1040,53 @@ export default function DashboardPage() {
 
   return (
     <div className="space-y-8 font-sans">
-      {/* Top Engine & Token Quota Bar in Clean White Card */}
-      <div className="bg-white rounded-2xl p-5 sm:p-6 shadow-sm border border-[#CBD1D7] text-[#021528] space-y-4">
+      {/* Top Engine & Token Quota Bar in Dark Navy Hero Card */}
+      <div className="bg-[#021528] rounded-2xl p-6 text-white shadow-lg border border-[#148ECD]/30 space-y-4">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div className="flex items-center space-x-3">
             <div className="h-12 w-12 rounded-2xl bg-[#0A69C9] flex items-center justify-center shadow shrink-0">
               <Zap className="h-6 w-6 text-white" />
             </div>
             <div>
-              {/* <div className="flex items-center space-x-2">
-                <h1 className="text-xl font-extrabold text-[#021528] tracking-wide">AI CONVERTER ENGINE</h1>
-                <span className="flex items-center space-x-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold font-mono uppercase bg-[#12A150]/15 text-[#12A150] border border-[#12A150]/30">
-                  <Activity className="h-3 w-3 animate-ping" />
-                  <span>Online</span>
+              <div className="flex items-center space-x-2">
+                <h1 className="text-xl font-extrabold text-white tracking-tight">AI CONVERTER ENGINE</h1>
+                <span className="flex items-center space-x-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold font-mono uppercase bg-[#12A150]/20 text-[#12A150] border border-[#12A150]/30">
+                  <Activity className="h-3 w-3 animate-pulse text-[#12A150]" />
+                  <span>Online & Ready</span>
                 </span>
-              </div> */}
-              <p className="text-xs text-[#64707C] font-mono mt-0.5">
-                Convert HTML Bundles, Separate HTML/CSS/JS Files, System Folders, Images & PDFs
+              </div>
+              <p className="text-xs text-[#97A3AF] font-mono mt-1">
+                Convert HTML Bundles, CSS/JS Files, System Folders, Images & PDFs to Native Elementor Flex Containers
               </p>
             </div>
           </div>
 
           {/* Model & Quota Summary */}
-          <div className="flex flex-wrap items-center gap-3 text-xs font-mono">
-            <div className="bg-[#F2F4F5] px-3 py-1.5 rounded-xl border border-[#CBD1D7] flex items-center space-x-2">
-              <Cpu className="h-3.5 w-3.5 text-[#0A69C9]" />
-              <span className="text-[#021528]">Model: {tokenInfo.modelName}</span>
+          <div className="flex flex-wrap items-center gap-2 text-xs font-mono">
+            <div className="bg-[#010B14] px-3 py-1.5 rounded-xl border border-[#4B545D]/40 text-[#97A3AF] flex items-center space-x-2">
+              <Cpu className="h-3.5 w-3.5 text-[#148ECD]" />
+              <span>Model: <strong className="text-white">{tokenInfo.modelName}</strong></span>
             </div>
-            <div className="bg-[#F2F4F5] px-3 py-1.5 rounded-xl border border-[#CBD1D7] flex items-center space-x-2">
-              <Globe className="h-3.5 w-3.5 text-[#148ECD]" />
-              <span className="text-[#021528]">Standard: Flex Containers v0.4</span>
+            <div className="bg-[#010B14] px-3 py-1.5 rounded-xl border border-[#4B545D]/40 text-[#97A3AF] flex items-center space-x-2">
+              <Globe className="h-3.5 w-3.5 text-[#12A150]" />
+              <span>Standard: <strong className="text-white">Flex Containers v0.4</strong></span>
             </div>
           </div>
         </div>
 
         {/* Live Token Quota Left Tracker Bar */}
-        <div className="bg-[#F2F4F5] rounded-xl p-3.5 border border-[#CBD1D7] space-y-2">
+        <div className="bg-[#010B14] rounded-xl p-3.5 border border-[#4B545D]/40 space-y-2">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between text-xs font-mono gap-1">
             <div className="flex items-center space-x-2">
-              <Gauge className="h-4 w-4 text-[#0A69C9]" />
-              <span className="text-[#021528] font-bold">API Token Quota Left (1-min Window):</span>
+              <Gauge className="h-4 w-4 text-[#148ECD]" />
+              <span className="text-white font-bold">API Token Quota Left (1-min Window):</span>
               <span className={`font-bold ${remainingPercent > 50 ? "text-[#12A150]" : remainingPercent > 20 ? "text-[#DB8700]" : "text-[#DB1439]"}`}>
                 {tokenInfo.remaining.toLocaleString()} / {tokenInfo.limit.toLocaleString()} TPM ({remainingPercent}% available)
               </span>
             </div>
-            <div className="text-[#64707C] text-[11px]">
+            <div className="text-[#97A3AF] text-[11px]">
               {tokenInfo.usedPrompt > 0 ? (
-                <span>Last Request: <strong className="text-[#021528]">{tokenInfo.usedPrompt.toLocaleString()}</strong> input tokens | <strong className="text-[#0A69C9]">{tokenInfo.usedOutput.toLocaleString()}</strong> output tokens</span>
+                <span>Last Request: <strong className="text-white">{tokenInfo.usedPrompt.toLocaleString()}</strong> input tokens | <strong className="text-[#148ECD]">{tokenInfo.usedOutput.toLocaleString()}</strong> output tokens</span>
               ) : (
                 <span>Limit: 250,000 Input Tokens / Minute</span>
               )}
@@ -1076,7 +1094,7 @@ export default function DashboardPage() {
           </div>
 
           {/* Quota Progress Bar */}
-          <div className="h-2 w-full bg-[#E5E8EB] rounded-full overflow-hidden border border-[#CBD1D7]">
+          <div className="h-2 w-full bg-[#191C1F] rounded-full overflow-hidden border border-[#4B545D]/40">
             <div
               className={`h-full transition-all duration-700 ${usedPercent > 80
                 ? "bg-[#DB1439]"
@@ -1417,21 +1435,65 @@ export default function DashboardPage() {
               )}
             </div>
 
-            {/* Convert Action Button using Design System Button */}
-            <Button
-              onClick={handleSubmit}
-              isLoading={isLoading}
-              fullWidth
-              size="lg"
-              color="primary"
-              variant="solid"
-              className="py-4 font-extrabold text-white bg-[#0A69C9] hover:bg-[#0854A1] shadow-md"
-            >
-              <div className="flex items-center justify-center space-x-2">
-                <Sparkles className="h-5 w-5 text-white" />
-                <span>Convert to Elementor Theme Package</span>
+            {/* CREATIVE READY FOR CONVERSION CARD BELOW INPUT SOURCE SELECTOR */}
+            <div className="bg-[#021528] rounded-2xl p-5 sm:p-6 text-white shadow-lg border border-[#148ECD]/30 space-y-4">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-b border-[#148ECD]/20 pb-4">
+                <div className="flex items-center space-x-3">
+                  <div className="h-10 w-10 rounded-xl bg-[#0A69C9] flex items-center justify-center text-white shrink-0 shadow">
+                    <Sparkles className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <div className="flex items-center space-x-2">
+                      <h3 className="text-base font-extrabold text-white tracking-wide">Ready for Conversion</h3>
+                      <span className="flex items-center space-x-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold font-mono uppercase bg-[#12A150]/20 text-[#12A150] border border-[#12A150]/30">
+                        <CheckCircle2 className="h-3 w-3" />
+                        <span>Pipeline Active</span>
+                      </span>
+                    </div>
+                    <p className="text-xs text-[#97A3AF] font-mono mt-0.5">
+                      Transforms raw layout into native Elementor v0.4 Flex Containers
+                    </p>
+                  </div>
+                </div>
+
+                {/* Input Specs Badges */}
+                <div className="flex items-center space-x-2 font-mono text-[11px] shrink-0">
+                  <span className="px-2.5 py-1 rounded-lg bg-[#010B14] border border-[#4B545D]/40 text-[#148ECD] font-bold">
+                    {activeInputConfig?.label || "HTML"} Mode
+                  </span>
+                  <span className="px-2.5 py-1 rounded-lg bg-[#010B14] border border-[#4B545D]/40 text-[#12A150] font-bold flex items-center space-x-1">
+                    <Database className="h-3 w-3" />
+                    <span>MongoDB Sync</span>
+                  </span>
+                </div>
               </div>
-            </Button>
+
+              {/* Large Creative Launch Button */}
+              <Button
+                onClick={handleSubmit}
+                isLoading={isLoading}
+                fullWidth
+                size="lg"
+                color="primary"
+                variant="solid"
+                className="py-4 font-extrabold text-white bg-gradient-to-r from-[#0A69C9] via-[#148ECD] to-[#0A69C9] hover:opacity-95 shadow-xl transition-all scale-[1.01] hover:scale-[1.02] active:scale-[0.99] border border-white/20 rounded-xl"
+              >
+                <div className="flex items-center justify-center space-x-2 font-mono">
+                  <Sparkles className="h-5 w-5 text-white animate-pulse" />
+                  <span className="text-base font-extrabold tracking-wide">CONVERT TO ELEMENTOR THEME PACKAGE</span>
+                </div>
+              </Button>
+
+              <div className="flex items-center justify-between text-[11px] font-mono text-[#97A3AF] pt-1">
+                <span className="flex items-center space-x-1">
+                  <Globe className="h-3.5 w-3.5 text-[#148ECD]" />
+                  <span>Generates Header, Content & Footer Flex Container JSON</span>
+                </span>
+                <span className="hidden sm:inline text-[#12A150] font-bold">
+                  100% Flexbox Compliant
+                </span>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -1507,15 +1569,27 @@ export default function DashboardPage() {
             <div className="flex flex-col space-y-6">
               {/* Summary Card */}
               <div className="bg-white rounded-2xl p-6 shadow-sm border border-[#CBD1D7] text-[#021528]">
-                <div className="flex items-center justify-between border-b border-[#CBD1D7]/60 pb-4 mb-4">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-[#CBD1D7]/60 pb-4 mb-4">
                   <div>
-                    <span className="text-xs font-mono text-[#12A150] font-bold uppercase tracking-wider">
+                    <span className="text-xs font-mono text-[#12A150] font-bold uppercase tracking-wider flex items-center gap-1.5">
+                      <CheckCircle2 className="h-4 w-4" />
                       Conversion Successful
                     </span>
                     <h3 className="text-xl font-extrabold text-[#021528] mt-0.5">{result.title}</h3>
                   </div>
-                  <div className="h-10 w-10 rounded-xl bg-[#12A150]/15 border border-[#12A150]/30 flex items-center justify-center text-[#12A150] shrink-0">
-                    <CheckCircle2 className="h-6 w-6" />
+
+                  <div className="flex items-center space-x-2">
+                    <button
+                      onClick={() => {
+                        setShowLiveReplicaSection(true);
+                        setIsFullWidthReplicaOpen(true);
+                      }}
+                      className="px-4 py-2.5 rounded-xl bg-gradient-to-r from-[#0A69C9] to-[#148ECD] hover:opacity-95 text-white font-extrabold text-xs font-mono transition-all shadow-md flex items-center space-x-2 border border-white/20 scale-[1.01] hover:scale-[1.03]"
+                      title="Expand to Full-Width Interactive Live Site Replica Viewport"
+                    >
+                      <Maximize2 className="h-4 w-4 text-white animate-pulse" />
+                      <span>FULL-WIDTH LIVE SITE REPLICA</span>
+                    </button>
                   </div>
                 </div>
 
@@ -1985,9 +2059,9 @@ export default function DashboardPage() {
       </div>
 
       {/* FULL-WIDTH LIVE VISUAL SITE REPLICA SECTION (AT THE BOTTOM) */}
-      {result && !isLoading && (
+      {result && !isLoading && showLiveReplicaSection && (
         <div className="w-full pt-6">
-          <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-[#CBD1D7] space-y-6 text-[#021528]">
+          <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-[#CBD1D7] space-y-6 text-[#021528] relative">
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between border-b border-[#CBD1D7]/60 pb-4 gap-3">
               <div className="flex items-center space-x-3">
                 <div className="h-10 w-10 rounded-xl bg-[#0A69C9]/15 border border-[#0A69C9]/30 flex items-center justify-center text-[#0A69C9] shrink-0">
@@ -2003,10 +2077,20 @@ export default function DashboardPage() {
                 </div>
               </div>
 
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-3">
                 <span className="px-3 py-1 rounded-full text-xs font-mono bg-[#12A150]/15 text-[#12A150] border border-[#12A150]/30 font-bold">
                   100% Desktop Viewport
                 </span>
+                
+                {/* CLOSE / REMOVE BUTTON */}
+                <button
+                  onClick={() => setShowLiveReplicaSection(false)}
+                  className="p-1.5 rounded-xl bg-[#F2F4F5] hover:bg-[#DB1439]/15 text-[#64707C] hover:text-[#DB1439] transition-all border border-[#CBD1D7] flex items-center space-x-1 font-mono text-xs font-bold"
+                  title="Close / Hide Live Site Replica"
+                >
+                  <X className="h-4 w-4" />
+                  <span className="hidden sm:inline">Close</span>
+                </button>
               </div>
             </div>
 
