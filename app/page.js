@@ -1041,7 +1041,7 @@ export default function DashboardPage() {
   return (
     <div className="space-y-8 font-sans">
       {/* Top Engine & Token Quota Bar in Dark Navy Hero Card */}
-      <div className="bg-[#021528] rounded-2xl p-6 text-white shadow-lg border border-[#148ECD]/30 space-y-4">
+      <div className="bg-primary-900 rounded-2xl p-6 text-white shadow-lg border border-[#148ECD]/30 space-y-4">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div className="flex items-center space-x-3">
             <div className="h-12 w-12 rounded-2xl bg-[#0A69C9] flex items-center justify-center shadow shrink-0">
@@ -1050,14 +1050,14 @@ export default function DashboardPage() {
             <div>
               <div className="flex items-center space-x-2">
                 <h1 className="text-xl font-extrabold text-white tracking-tight">AI CONVERTER ENGINE</h1>
-                <span className="flex items-center space-x-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold font-mono uppercase bg-[#12A150]/20 text-[#12A150] border border-[#12A150]/30">
+                {/* <span className="flex items-center space-x-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold font-mono uppercase bg-[#12A150]/20 text-[#12A150] border border-[#12A150]/30">
                   <Activity className="h-3 w-3 animate-pulse text-[#12A150]" />
                   <span>Online & Ready</span>
-                </span>
+                </span> */}
               </div>
-              <p className="text-xs text-[#97A3AF] font-mono mt-1">
+              {/* <p className="text-xs text-[#97A3AF] font-mono mt-1">
                 Convert HTML Bundles, CSS/JS Files, System Folders, Images & PDFs to Native Elementor Flex Containers
-              </p>
+              </p> */}
             </div>
           </div>
 
@@ -1067,10 +1067,10 @@ export default function DashboardPage() {
               <Cpu className="h-3.5 w-3.5 text-[#148ECD]" />
               <span>Model: <strong className="text-white">{tokenInfo.modelName}</strong></span>
             </div>
-            <div className="bg-[#010B14] px-3 py-1.5 rounded-xl border border-[#4B545D]/40 text-[#97A3AF] flex items-center space-x-2">
+            {/* <div className="bg-[#010B14] px-3 py-1.5 rounded-xl border border-[#4B545D]/40 text-[#97A3AF] flex items-center space-x-2">
               <Globe className="h-3.5 w-3.5 text-[#12A150]" />
               <span>Standard: <strong className="text-white">Flex Containers v0.4</strong></span>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -1445,14 +1445,14 @@ export default function DashboardPage() {
                   <div>
                     <div className="flex items-center space-x-2">
                       <h3 className="text-base font-extrabold text-white tracking-wide">Ready for Conversion</h3>
-                      <span className="flex items-center space-x-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold font-mono uppercase bg-[#12A150]/20 text-[#12A150] border border-[#12A150]/30">
+                      {/* <span className="flex items-center space-x-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold font-mono uppercase bg-[#12A150]/20 text-[#12A150] border border-[#12A150]/30">
                         <CheckCircle2 className="h-3 w-3" />
                         <span>Pipeline Active</span>
-                      </span>
+                      </span> */}
                     </div>
-                    <p className="text-xs text-[#97A3AF] font-mono mt-0.5">
+                    {/* <p className="text-xs text-[#97A3AF] font-mono mt-0.5">
                       Transforms raw layout into native Elementor v0.4 Flex Containers
-                    </p>
+                    </p> */}
                   </div>
                 </div>
 
@@ -1461,10 +1461,10 @@ export default function DashboardPage() {
                   <span className="px-2.5 py-1 rounded-lg bg-[#010B14] border border-[#4B545D]/40 text-[#148ECD] font-bold">
                     {activeInputConfig?.label || "HTML"} Mode
                   </span>
-                  <span className="px-2.5 py-1 rounded-lg bg-[#010B14] border border-[#4B545D]/40 text-[#12A150] font-bold flex items-center space-x-1">
+                  {/* <span className="px-2.5 py-1 rounded-lg bg-[#010B14] border border-[#4B545D]/40 text-[#12A150] font-bold flex items-center space-x-1">
                     <Database className="h-3 w-3" />
                     <span>MongoDB Sync</span>
-                  </span>
+                  </span> */}
                 </div>
               </div>
 
@@ -1478,13 +1478,12 @@ export default function DashboardPage() {
                 variant="solid"
                 className="py-4 font-extrabold text-white bg-gradient-to-r from-[#0A69C9] via-[#148ECD] to-[#0A69C9] hover:opacity-95 shadow-xl transition-all scale-[1.01] hover:scale-[1.02] active:scale-[0.99] border border-white/20 rounded-xl"
               >
-                <div className="flex items-center justify-center space-x-2 font-mono">
-                  <Sparkles className="h-5 w-5 text-white animate-pulse" />
+                <div className="flex items-center justify-center space-x-1 font-mono">
                   <span className="text-base font-extrabold tracking-wide">CONVERT TO ELEMENTOR THEME PACKAGE</span>
                 </div>
               </Button>
 
-              <div className="flex items-center justify-between text-[11px] font-mono text-[#97A3AF] pt-1">
+              {/* <div className="flex items-center justify-between text-[11px] font-mono text-[#97A3AF] pt-1">
                 <span className="flex items-center space-x-1">
                   <Globe className="h-3.5 w-3.5 text-[#148ECD]" />
                   <span>Generates Header, Content & Footer Flex Container JSON</span>
@@ -1492,7 +1491,7 @@ export default function DashboardPage() {
                 <span className="hidden sm:inline text-[#12A150] font-bold">
                   100% Flexbox Compliant
                 </span>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -2050,9 +2049,9 @@ export default function DashboardPage() {
                 <Zap className="h-6 w-6" />
               </div>
               <h3 className="text-base font-bold text-[#021528] mb-1">Ready for Conversion</h3>
-              <p className="text-xs text-[#64707C] leading-relaxed font-mono">
+              {/* <p className="text-xs text-[#64707C] leading-relaxed font-mono">
                 Choose an input format on the left (Files Bundle, System Folder, Bundle HTML, Image, PDF, or JSON) and click "Convert to Elementor Theme Package".
-              </p>
+              </p> */}
             </div>
           )}
         </div>
