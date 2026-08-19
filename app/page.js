@@ -1433,43 +1433,9 @@ export default function DashboardPage() {
                   </div>
                 </div>
               )}
-            </div>
 
-            {/* CREATIVE READY FOR CONVERSION CARD BELOW INPUT SOURCE SELECTOR */}
-            <div className="bg-[#021528] rounded-2xl p-5 sm:p-6 text-white shadow-lg border border-[#148ECD]/30 space-y-4">
-              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-b border-[#148ECD]/20 pb-4">
-                <div className="flex items-center space-x-3">
-                  <div className="h-10 w-10 rounded-xl bg-[#0A69C9] flex items-center justify-center text-white shrink-0 shadow">
-                    <Sparkles className="h-5 w-5" />
-                  </div>
-                  <div>
-                    <div className="flex items-center space-x-2">
-                      <h3 className="text-base font-extrabold text-white tracking-wide">Ready for Conversion</h3>
-                      {/* <span className="flex items-center space-x-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold font-mono uppercase bg-[#12A150]/20 text-[#12A150] border border-[#12A150]/30">
-                        <CheckCircle2 className="h-3 w-3" />
-                        <span>Pipeline Active</span>
-                      </span> */}
-                    </div>
-                    {/* <p className="text-xs text-[#97A3AF] font-mono mt-0.5">
-                      Transforms raw layout into native Elementor v0.4 Flex Containers
-                    </p> */}
-                  </div>
-                </div>
-
-                {/* Input Specs Badges */}
-                <div className="flex items-center space-x-2 font-mono text-[11px] shrink-0">
-                  <span className="px-2.5 py-1 rounded-lg bg-[#010B14] border border-[#4B545D]/40 text-[#148ECD] font-bold">
-                    {activeInputConfig?.label || "HTML"} Mode
-                  </span>
-                  {/* <span className="px-2.5 py-1 rounded-lg bg-[#010B14] border border-[#4B545D]/40 text-[#12A150] font-bold flex items-center space-x-1">
-                    <Database className="h-3 w-3" />
-                    <span>MongoDB Sync</span>
-                  </span> */}
-                </div>
-              </div>
-
-              {/* Large Creative Launch Button */}
-              <Button
+              <div>
+                       <Button
                 onClick={handleSubmit}
                 isLoading={isLoading}
                 fullWidth
@@ -1482,17 +1448,11 @@ export default function DashboardPage() {
                   <span className="text-base font-extrabold tracking-wide">CONVERT TO ELEMENTOR THEME PACKAGE</span>
                 </div>
               </Button>
-
-              {/* <div className="flex items-center justify-between text-[11px] font-mono text-[#97A3AF] pt-1">
-                <span className="flex items-center space-x-1">
-                  <Globe className="h-3.5 w-3.5 text-[#148ECD]" />
-                  <span>Generates Header, Content & Footer Flex Container JSON</span>
-                </span>
-                <span className="hidden sm:inline text-[#12A150] font-bold">
-                  100% Flexbox Compliant
-                </span>
-              </div> */}
+              </div>
+              
             </div>
+
+
           </div>
         </div>
 

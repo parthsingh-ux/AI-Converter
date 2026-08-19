@@ -222,7 +222,10 @@ export async function POST(req) {
       version: "0.4",
       title: title,
       type: "page",
-      page_settings: {},
+      page_settings: {
+        page_template: "elementor_canvas",
+        template: "elementor_canvas",
+      },
       content: [
         ...(Array.isArray(header_template) ? header_template : []),
         ...(Array.isArray(content_template) ? content_template : []),
